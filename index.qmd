@@ -1,0 +1,12 @@
+---
+title: "Les données de fruits et légumes"
+---
+
+Ce site raconte mon expérience sur la création d'un exemple à des fins pédagogiques. 
+
+J'utilise les données de l'étude [CIQUAL](https://ciqual.anses.fr/), menée par l'ANSES [^1].
+
+
+[^1]: "Anses. 2020. Table de composition nutritionnelle des aliments Ciqual"
+
+

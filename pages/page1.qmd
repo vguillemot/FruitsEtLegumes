@@ -1,0 +1,22 @@
+---
+title: "La page 1"
+---
+
+Ceci est la page 1.
+
+```{r setup}
+library(dplyr)
+library(ggplot2)
+theme_set(theme_bw())
+```
+
+Il y aura du code et des graphes.
+
+```{r data and plot}
+tibble(x = rnorm(10), y = x + 0.5*rnorm(10), f = letters[1:10]) %>%
+ggplot(aes(x, y, color = f)) + 
+  geom_point(size = 2) +
+  coord_equal()
+```
+
+

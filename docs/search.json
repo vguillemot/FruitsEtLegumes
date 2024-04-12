@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "pages/page1.html",
+    "href": "pages/page1.html",
+    "title": "La page 1",
+    "section": "",
+    "text": "Ceci est la page 1.\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(ggplot2)\ntheme_set(theme_bw())\n\nIl y aura du code et des graphes.\n\ntibble(x = rnorm(10), y = x + 0.5*rnorm(10), f = letters[1:10]) %&gt;%\nggplot(aes(x, y, color = f)) + \n  geom_point(size = 2) +\n  coord_equal()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Les données de fruits et légumes",
+    "section": "",
+    "text": "Ce site raconte mon expérience sur la création d’un exemple à des fins pédagogiques.\nJ’utilise les données de l’étude CIQUAL, menée par l’ANSES 1."
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Les données de fruits et légumes",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n“Anses. 2020. Table de composition nutritionnelle des aliments Ciqual”↩︎"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Qui sommes-nous?",
+    "section": "",
+    "text": "Ici nous mettrons des détails sur nous!"
+  }
+]
