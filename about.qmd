@@ -2,5 +2,14 @@
 title: "Qui sommes-nous?"
 ---
 
+Nous sommes les contributeur·ice·s de ce projet. Notre but est de construire, à partir des données CIQUAL, un jeu de données utilisable pour un cours de R.
 
-Ici nous mettrons des détails sur nous!
+## Vincent Guillemot
+
+ * Biostatisticien
+ * Intégration de données
+
+## Amaury Vaysse
+
+ * Bioinformaticien
+ * Analyse de données de séquençage

@@ -2,9 +2,44 @@
   {
     "objectID": "pages/page1.html",
     "href": "pages/page1.html",
-    "title": "La page 1",
+    "title": "Pré-traitements",
     "section": "",
-    "text": "Ceci est la page 1.\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(ggplot2)\ntheme_set(theme_bw())\n\nIl y aura du code et des graphes.\n\ntibble(x = rnorm(10), y = x + 0.5*rnorm(10), f = letters[1:10]) %&gt;%\nggplot(aes(x, y, color = f)) + \n  geom_point(size = 2) +\n  coord_equal()"
+    "text": "Les données CIQUAL sont une ressource extrêmement riche : il faut les réduire avant de pouvoir en faire un exemple utile pour un cours de R ou de statistique.\nNous avons déterminé les critères suivants :"
+  },
+  {
+    "objectID": "pages/page1.html#les-données",
+    "href": "pages/page1.html#les-données",
+    "title": "Pré-traitements",
+    "section": "Les données",
+    "text": "Les données\nLes données utilisées se trouvent dans le tableau Table Ciqual 2020_FR_2020 07 07.xls."
+  },
+  {
+    "objectID": "pages/page1.html#fruits-et-légumes",
+    "href": "pages/page1.html#fruits-et-légumes",
+    "title": "Pré-traitements",
+    "section": "Fruits et légumes",
+    "text": "Fruits et légumes\nLe code pour les fruits et légumes est le code “02”, qui contient les sous-graoupes alimentaires\n\n0201 – “légumes”,\n0202 – “pommes de terre et autres tubercules”,\n0203 – “légumineuses”,\n0204 – “fruits”,\n0205 – “fruits à coque et graines oléagineuses”.\n\nJ’ai sélectionné les sous-groupes 0201 et 0204 uniquement pour la suite. Pour les aliments concernés, j’ai choisi les variables :\n\nalim_nom_fr – le nom de l’aliment, qui devient la variable nom,\nalim_ssgrp_nom_fr – le groupe, qui devient la variable groupe,\nEnergie, Règlement UE N° 1169/2011 (kcal/100 g) – l’énergie, en kCal par 100g de fruit, qui devient la variable Energie,\nEau (g/100 g), qui devient la variable Eau,\nProtéines, N x facteur de Jones (g/100 g), qui devient la variable Proteines,\nGlucides (g/100 g), qui devient la variable Glucides,\nLipides (g/100 g), qui devient la variable Lipides,\nSucres (g/100 g), qui devient la variable Sucres,\nFibres alimentaires (g/100 g), qui devient la variable Fibres,\nCalcium (mg/100 g), qui devient la variable Calcium,\nCuivre (mg/100 g), qui devient la variable Cuivre,\nFer (mg/100 g), qui devient la variable Fer,\nMagnésium (mg/100 g), qui devient la variable Magnesium,\nManganèse (mg/100 g), qui devient la variable Manganese,\nPhosphore (mg/100 g), qui devient la variable Phosphore,\nPotassium (mg/100 g), qui devient la variable Potassium,\nZinc (mg/100 g), qui devient la variable Zinc,\nVitamine C (mg/100 g), qui devient la variable VitamineC et écarté tous les fruits et légumes ayant des données manquantes dans les colonnes\n\n\n\nRows: 260 Columns: 19\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \" \"\nchr  (3): nom, groupe, ssgroupe\ndbl (16): Energie, Eau, Proteines, Glucides, Lipides, Sucres, Fibres, Calciu...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nUne première visualisation intéressante concerne la teneur en Vitamine C en fonction des sous-groupes.\n\n\nWarning: The following aesthetics were dropped during statistical transformation: label.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Qui sommes-nous?",
+    "section": "",
+    "text": "Nous sommes les contributeur·ice·s de ce projet. Notre but est de construire, à partir des données CIQUAL, un jeu de données utilisable pour un cours de R."
+  },
+  {
+    "objectID": "about.html#vincent-guillemot",
+    "href": "about.html#vincent-guillemot",
+    "title": "Qui sommes-nous?",
+    "section": "Vincent Guillemot",
+    "text": "Vincent Guillemot\n\nBiostatisticien\nIntégration de données"
+  },
+  {
+    "objectID": "about.html#amaury-vaysse",
+    "href": "about.html#amaury-vaysse",
+    "title": "Qui sommes-nous?",
+    "section": "Amaury Vaysse",
+    "text": "Amaury Vaysse\n\nBioinformaticien\nAnalyse de données de séquençage"
   },
   {
     "objectID": "index.html",
@@ -19,12 +54,5 @@
     "title": "Les données de fruits et légumes",
     "section": "Footnotes",
     "text": "Footnotes\n\n\n“Anses. 2020. Table de composition nutritionnelle des aliments Ciqual”↩︎"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Qui sommes-nous?",
-    "section": "",
-    "text": "Ici nous mettrons des détails sur nous!"
   }
 ]

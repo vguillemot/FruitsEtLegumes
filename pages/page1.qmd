@@ -1,22 +1,143 @@
 ---
-title: "La page 1"
+title: "Pré-traitements"
 ---
 
-Ceci est la page 1.
+Les données CIQUAL sont une ressource extrêmement riche : il faut les réduire avant de pouvoir en faire un exemple utile pour un cours de R ou de statistique.
 
-```{r setup}
+Nous avons déterminé les critères suivants :
+
+   * il ne doit pas y avoir plus d'une dizaine d'observations par groupe,
+   * il doit y avoir un mélange de variables qualitatives et de variables quantitatives
+   * il faut plusieurs "blocs" de données (des groupes de variables)
+   * il ne faut pas de valeurs manquantes
+   * il faut éviter les variables présentant des effets de seuil ou de plafond
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
 library(dplyr)
 library(ggplot2)
+library(ggbeeswarm)
+library(readxl)
+library(plotly)
+
 theme_set(theme_bw())
 ```
 
-Il y aura du code et des graphes.
+## Les données
 
-```{r data and plot}
-tibble(x = rnorm(10), y = x + 0.5*rnorm(10), f = letters[1:10]) %>%
-ggplot(aes(x, y, color = f)) + 
-  geom_point(size = 2) +
-  coord_equal()
+Les données utilisées se trouvent dans le tableau `Table Ciqual 2020_FR_2020 07 07.xls`.
+
+```{r data, eval = FALSE}
+ciqual <- read_excel("../data/Table Ciqual 2020_FR_2020 07 07.xls")
+```
+
+## Fruits et légumes
+
+Le code pour les fruits et légumes est le code "02", qui contient les sous-graoupes alimentaires 
+
+  * `0201` -- "légumes",
+  * `0202` -- "pommes de terre et autres tubercules",
+  * `0203` -- "légumineuses",
+  * `0204` -- "fruits",
+  * `0205` -- "fruits à coque et graines oléagineuses".
+
+J'ai sélectionné les sous-groupes `0201` et `0204` uniquement pour la suite. Pour les aliments concernés, j'ai choisi les variables : 
+
+  * `alim_nom_fr` -- le nom de l'aliment, qui devient la variable `nom`,
+  * `alim_ssgrp_nom_fr` -- le groupe, qui devient la variable `groupe`,
+  * `Energie, Règlement UE N° 1169/2011 (kcal/100 g)` -- l'énergie, en kCal par 100g de fruit, qui devient la variable `Energie`,
+  * `Eau (g/100 g)`, qui devient la variable `Eau`,
+  * `Protéines, N x facteur de Jones (g/100 g)`, qui devient la variable `Proteines`,
+  * `Glucides (g/100 g)`, qui devient la variable `Glucides`,
+  * `Lipides (g/100 g)`, qui devient la variable `Lipides`,
+  * `Sucres (g/100 g)`, qui devient la variable `Sucres`,
+  * `Fibres alimentaires (g/100 g)`, qui devient la variable `Fibres`,
+  * `Calcium (mg/100 g)`, qui devient la variable `Calcium`,
+  * `Cuivre (mg/100 g)`, qui devient la variable `Cuivre`,
+  * `Fer (mg/100 g)`, qui devient la variable `Fer`,
+  * `Magnésium (mg/100 g)`, qui devient la variable `Magnesium`,
+  * `Manganèse (mg/100 g)`, qui devient la variable `Manganese`,
+  * `Phosphore (mg/100 g)`, qui devient la variable `Phosphore`,
+  * `Potassium (mg/100 g)`, qui devient la variable `Potassium`,
+  * `Zinc (mg/100 g)`, qui devient la variable `Zinc`,
+  * `Vitamine C (mg/100 g)`, qui devient la variable `VitamineC`
+et écarté tous les fruits et légumes ayant des données manquantes dans les colonnes 
+
+
+
+
+```{r fruits et légumes, eval = FALSE}
+f <- \(.) as.numeric(gsub(",",".",.))
+fruleg <- ciqual %>%
+  filter(alim_grp_nom_fr == "fruits, légumes, légumineuses et oléagineux") %>%
+  filter(alim_ssgrp_nom_fr %in% c("fruits", "légumes")) %>%
+  mutate(
+    nom = alim_nom_fr,
+    groupe = alim_ssgrp_nom_fr,
+    ssgroupe = alim_ssssgrp_nom_fr,
+    Energie = f(`Energie, Règlement UE N° 1169/2011 (kcal/100 g)`),
+    Eau = f(`Eau (g/100 g)`),
+    Proteines = f(`Protéines, N x facteur de Jones (g/100 g)`),
+    Glucides = f(`Glucides (g/100 g)`), 
+    Lipides = f(`Lipides (g/100 g)`), 
+    Sucres = f(`Sucres (g/100 g)`), 
+    Fibres = f(`Fibres alimentaires (g/100 g)`),
+    Calcium = f(`Calcium (mg/100 g)`),
+    Cuivre = f(`Cuivre (mg/100 g)`),
+    Fer = f(`Fer (mg/100 g)`),
+    Magnesium = f(`Magnésium (mg/100 g)`),
+    Manganese = f(`Manganèse (mg/100 g)`),
+    Phosphore = f(`Phosphore (mg/100 g)`),
+    Potassium = f(`Potassium (mg/100 g)`),
+    Zinc = f(`Zinc (mg/100 g)`),
+    VitamineC = f(`Vitamine C (mg/100 g)`), .keep = "none") %>%
+  tidyr::drop_na(nom, Eau, Proteines, Glucides, Lipides, Sucres)
+readr::write_delim(fruleg, file = "../data/fruleg.tsv")
+```
+
+```{r fruleg}
+fruleg <- readr::read_delim("../data/fruleg.tsv")
+```
+
+Une première visualisation intéressante concerne la teneur en Vitamine C en fonction des sous-groupes.
+
+```{r}
+# fruleg %>% filter(Eau > 0) %>%
+#   ggplot(aes(groupe, Eau, color = groupe)) +
+#   geom_violin(fill = NA, trim = FALSE) +
+#   geom_beeswarm() + 
+#   scale_y_log10()
+# 
+# fruleg %>% filter(VitamineC > 0) %>%
+#   ggplot(aes(groupe, VitamineC, color = groupe)) +
+#   geom_violin(fill = NA, trim = FALSE) +
+#   geom_beeswarm() + 
+#   scale_y_log10()
+# 
+# fruleg %>% 
+#   filter(ssgroupe %in% c("légumes crus", "légumes cuits", "fruits crus"),
+#     VitamineC > 0) %>%
+#   ggplot(aes(ssgroupe, VitamineC, color = ssgroupe)) +
+#   geom_violin(fill = NA, trim = FALSE) +
+#   geom_beeswarm() + 
+#   scale_y_log10()
+# 
+# fruleg %>% 
+#   filter(ssgroupe %in% c("légumes crus", "légumes cuits", "fruits crus"),
+#     Eau > 0) %>%
+#   ggplot(aes(ssgroupe, Eau, color = ssgroupe, label = nom)) +
+#   geom_violin(fill = NA, trim = FALSE) +
+#   geom_beeswarm() + 
+#   scale_y_log10()
+
+g <- fruleg %>% filter(Sucres > 0) %>%
+  ggplot(aes(groupe, Sucres, color = groupe, label = nom)) +
+  geom_violin(fill = NA, trim = FALSE) +
+  geom_beeswarm() + 
+  scale_y_log10()
+
+ggplotly(g)
+
 ```
 
 

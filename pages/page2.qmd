@@ -1,0 +1,11 @@
+---
+title: "Data 1"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+theme_set(theme_bw())
+```
