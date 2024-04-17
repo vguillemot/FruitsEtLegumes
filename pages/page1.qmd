@@ -1,8 +1,8 @@
 ---
-title: "Pré-traitements"
+title: "Extraction des données CIQUAL"
 ---
 
-Les données CIQUAL sont une ressource extrêmement riche : il faut les réduire avant de pouvoir en faire un exemple utile pour un cours de R ou de statistique.
+Les données CIQUAL sont une ressource extrêmement riche : il faut les réduire avant de pouvoir en faire un exemple facielement utilisable pour un cours de R ou de statistique.
 
 Nous avons déterminé les critères suivants :
 
@@ -13,7 +13,7 @@ Nous avons déterminé les critères suivants :
    * il faut éviter les variables présentant des effets de seuil ou de plafond
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
+knitr::opts_chunk$set(echo = FALSE, cache = TRUE, message = FALSE, warning = FALSE)
 library(dplyr)
 library(ggplot2)
 library(ggbeeswarm)
@@ -99,45 +99,29 @@ readr::write_delim(fruleg, file = "../data/fruleg.tsv")
 fruleg <- readr::read_delim("../data/fruleg.tsv")
 ```
 
-Une première visualisation intéressante concerne la teneur en Vitamine C en fonction des sous-groupes.
+Une première visualisation intéressante concerne la teneur en sucres en fonction des deux sous-groupes que nous avons choisis : légumes ou fruits. La représentation que nous avons choisie 
 
-```{r}
-# fruleg %>% filter(Eau > 0) %>%
-#   ggplot(aes(groupe, Eau, color = groupe)) +
-#   geom_violin(fill = NA, trim = FALSE) +
-#   geom_beeswarm() + 
-#   scale_y_log10()
-# 
-# fruleg %>% filter(VitamineC > 0) %>%
-#   ggplot(aes(groupe, VitamineC, color = groupe)) +
-#   geom_violin(fill = NA, trim = FALSE) +
-#   geom_beeswarm() + 
-#   scale_y_log10()
-# 
-# fruleg %>% 
-#   filter(ssgroupe %in% c("légumes crus", "légumes cuits", "fruits crus"),
-#     VitamineC > 0) %>%
-#   ggplot(aes(ssgroupe, VitamineC, color = ssgroupe)) +
-#   geom_violin(fill = NA, trim = FALSE) +
-#   geom_beeswarm() + 
-#   scale_y_log10()
-# 
-# fruleg %>% 
-#   filter(ssgroupe %in% c("légumes crus", "légumes cuits", "fruits crus"),
-#     Eau > 0) %>%
-#   ggplot(aes(ssgroupe, Eau, color = ssgroupe, label = nom)) +
-#   geom_violin(fill = NA, trim = FALSE) +
-#   geom_beeswarm() + 
-#   scale_y_log10()
-
-g <- fruleg %>% filter(Sucres > 0) %>%
+```{r sucres, fig.width = 6}
+g <- fruleg %>% 
+  filter(Sucres > 0) %>%
   ggplot(aes(groupe, Sucres, color = groupe, label = nom)) +
-  geom_violin(fill = NA, trim = FALSE) +
+  geom_violin(fill = NA, trim = FALSE, width = 0.8) +
   geom_beeswarm() + 
   scale_y_log10()
 
-ggplotly(g)
-
+ggplotly(g, tooltip = "label")
 ```
 
+## Blocs
 
+On obtient plusieurs blocs de données : 
+
+  * le bloc "nutrition" : teneurs en lipides, glucides, protéines, eau et fibres.
+  * le bloc "minéraux",
+  * des variables supplémentaires : 
+    + le nom de l'aliment,
+    + son groupe,
+    + son sous-groupe,
+    + sa teneur en vitamine C.
+
+Ces blocs donne accès à un éventail de possibilités très large en termes d'exercice de traitement des données, de visualisation et de statistiques.

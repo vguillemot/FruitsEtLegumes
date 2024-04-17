@@ -1,11 +1,15 @@
 ---
-title: "Les données de fruits et légumes"
+title: "Les données de l'étude CIQUAL"
 ---
 
-Ce site raconte mon expérience sur la création d'un exemple à des fins pédagogiques. 
+Ce site raconte notre expérience de création d'un exemple à des fins pédagogiques. Cela fait plusieurs années que nous à la recherche d'un exemple qui soit facile à présenter, et pour lequel les résultats obtenus soient faciles à interpréter.
 
-J'utilise les données de l'étude [CIQUAL](https://ciqual.anses.fr/), menée par l'ANSES [^1].
+Nous avons choisi d'utiliser les données de l'étude [CIQUAL](https://ciqual.anses.fr/), menée par l'ANSES [^1]. Ces données portent sur la composition de produits alimentaires : c'est un thème qui parle facilement aux élèves, et qui, en cours, prend au plus une minute à expliquer. Pour le moment, cet exemple est en français, mais il est possible de le traduire en anglais.
 
+Nous avons extrait et pré-traités les données sous la forme : 
+
+  * d'un jeu de données sur les [fruits et légumes](data/fruleg.tsv) (au format `tsv`), voir [cette page](pages/page1.qmd)
+  
 
 [^1]: "Anses. 2020. Table de composition nutritionnelle des aliments Ciqual"
 

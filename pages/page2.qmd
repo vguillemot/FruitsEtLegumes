@@ -1,5 +1,5 @@
 ---
-title: "Data 1"
+title: "Exploration des données *fruits et légumes*"
 ---
 
 
@@ -7,5 +7,124 @@ title: "Data 1"
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
+library(gtsummary)
+library(readr)
+library(tidyr)
+
 theme_set(theme_bw())
 ```
+
+
+## Les données
+
+Les données sont lues depuis le fichier tabulé `fruleg.tsv`.
+
+```{r true data, echo = FALSE,  message = FALSE, warning = FALSE}
+fruleg <- read_delim("../data/fruleg.tsv")
+```
+
+```{r data, echo = TRUE,  eval = FALSE}
+fruleg <- read_delim("fruleg.tsv")
+```
+
+Les fruits et légumes sont répartis dans les sous-groupes suivants :
+
+```{r table 1}
+tbl_summary(
+  fruleg %>% 
+    select(groupe, ssgroupe), 
+  by = "groupe")
+```
+
+
+## Valeur nutritionnelle
+
+Pour étudier la valeur nutritionnelle des fruits et légumes sélectionnés, on se concentre sur les teneurs en protéines, lipides, glucides et sucres.
+
+```{r nutrition}
+nutrition <- fruleg %>%
+    select(groupe, Proteines, 
+           Lipides, Glucides, Sucres)
+```
+
+Il n'y a aucune valeur manquante dans ces données, la table suivante décrit les variables nutritionnelles en fonction des groupes (fruits et légumes).
+
+```{r table nutrition}
+tbl_summary(
+  nutrition,
+  by = "groupe")
+```
+
+On réprésente cette information sous la forme de boxplots combinés à des diagrammes en violon
+
+
+```{r boxplots nutrition}
+nutrition %>%
+  pivot_longer(-groupe) %>%
+  ggplot(aes(name, value, color = groupe)) + 
+  geom_violin(aes(fill = groupe), alpha = 0.5) +
+  geom_boxplot(width = 0.2, position = position_dodge(width = 0.9)) +
+  scale_y_log10()
+```
+
+
+
+## Teneur en minéraux
+
+```{r mineraux}
+mineraux <- fruleg %>%
+    select(groupe,
+           Calcium, Cuivre, Fer,
+           Magnesium, Manganese, 
+           Phosphore, Potassium,
+           Zinc)
+```
+
+Il y a des données manquantes dans les colonnes concernant les minéraux, comme indiqué dans le tableau ci-dessous ("*Unknown*").
+
+```{r table minéraux}
+tbl_summary(
+  mineraux,
+  by = "groupe")
+```
+
+La teneur en potassium en fonction de la teneur en phosphate est représentée ci-dessous sous la forme d'un nuage de points.
+
+```{r scatterplots, warning = FALSE}
+gpp <- mineraux %>%
+  ggplot(aes(Potassium, Phosphore, color = groupe)) + 
+  geom_point() + 
+  scale_x_log10() + 
+  scale_y_log10() +
+  stat_ellipse()
+
+gmm <- mineraux %>%
+  ggplot(aes(Magnesium, Manganese, color = groupe)) + 
+  geom_point() + 
+  scale_x_log10() + 
+  scale_y_log10() +
+  stat_ellipse()
+
+ggpubr::ggarrange(
+  gpp, gmm, common.legend = TRUE, legend = "bottom")
+```
+
+
+```{r garbage, echo = FALSE, eval = FALSE}
+GGally::ggpairs(
+  nutrition,
+  aes(color = groupe)
+)
+
+GGally::ggpairs(
+  mineraux,
+  aes(color = groupe)
+)
+```
+
+
+
+
+
+
+

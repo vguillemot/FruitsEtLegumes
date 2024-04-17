@@ -2,7 +2,7 @@
 title: "Qui sommes-nous?"
 ---
 
-Nous sommes les contributeur·ice·s de ce projet. Notre but est de construire, à partir des données CIQUAL, un jeu de données utilisable pour un cours de R.
+Nous sommes les contributeur·ice·s de ce projet. Notre but est de construire, à partir des données CIQUAL, un jeu de données utilisable pour un cours de R (et de stats ?).
 
 ## Vincent Guillemot
 

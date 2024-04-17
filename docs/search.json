@@ -2,30 +2,37 @@
   {
     "objectID": "pages/page1.html",
     "href": "pages/page1.html",
-    "title": "Pré-traitements",
+    "title": "Extraction des données CIQUAL",
     "section": "",
-    "text": "Les données CIQUAL sont une ressource extrêmement riche : il faut les réduire avant de pouvoir en faire un exemple utile pour un cours de R ou de statistique.\nNous avons déterminé les critères suivants :"
+    "text": "Les données CIQUAL sont une ressource extrêmement riche : il faut les réduire avant de pouvoir en faire un exemple facielement utilisable pour un cours de R ou de statistique.\nNous avons déterminé les critères suivants :"
   },
   {
     "objectID": "pages/page1.html#les-données",
     "href": "pages/page1.html#les-données",
-    "title": "Pré-traitements",
+    "title": "Extraction des données CIQUAL",
     "section": "Les données",
     "text": "Les données\nLes données utilisées se trouvent dans le tableau Table Ciqual 2020_FR_2020 07 07.xls."
   },
   {
     "objectID": "pages/page1.html#fruits-et-légumes",
     "href": "pages/page1.html#fruits-et-légumes",
-    "title": "Pré-traitements",
+    "title": "Extraction des données CIQUAL",
     "section": "Fruits et légumes",
-    "text": "Fruits et légumes\nLe code pour les fruits et légumes est le code “02”, qui contient les sous-graoupes alimentaires\n\n0201 – “légumes”,\n0202 – “pommes de terre et autres tubercules”,\n0203 – “légumineuses”,\n0204 – “fruits”,\n0205 – “fruits à coque et graines oléagineuses”.\n\nJ’ai sélectionné les sous-groupes 0201 et 0204 uniquement pour la suite. Pour les aliments concernés, j’ai choisi les variables :\n\nalim_nom_fr – le nom de l’aliment, qui devient la variable nom,\nalim_ssgrp_nom_fr – le groupe, qui devient la variable groupe,\nEnergie, Règlement UE N° 1169/2011 (kcal/100 g) – l’énergie, en kCal par 100g de fruit, qui devient la variable Energie,\nEau (g/100 g), qui devient la variable Eau,\nProtéines, N x facteur de Jones (g/100 g), qui devient la variable Proteines,\nGlucides (g/100 g), qui devient la variable Glucides,\nLipides (g/100 g), qui devient la variable Lipides,\nSucres (g/100 g), qui devient la variable Sucres,\nFibres alimentaires (g/100 g), qui devient la variable Fibres,\nCalcium (mg/100 g), qui devient la variable Calcium,\nCuivre (mg/100 g), qui devient la variable Cuivre,\nFer (mg/100 g), qui devient la variable Fer,\nMagnésium (mg/100 g), qui devient la variable Magnesium,\nManganèse (mg/100 g), qui devient la variable Manganese,\nPhosphore (mg/100 g), qui devient la variable Phosphore,\nPotassium (mg/100 g), qui devient la variable Potassium,\nZinc (mg/100 g), qui devient la variable Zinc,\nVitamine C (mg/100 g), qui devient la variable VitamineC et écarté tous les fruits et légumes ayant des données manquantes dans les colonnes\n\n\n\nRows: 260 Columns: 19\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \" \"\nchr  (3): nom, groupe, ssgroupe\ndbl (16): Energie, Eau, Proteines, Glucides, Lipides, Sucres, Fibres, Calciu...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nUne première visualisation intéressante concerne la teneur en Vitamine C en fonction des sous-groupes.\n\n\nWarning: The following aesthetics were dropped during statistical transformation: label.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?"
+    "text": "Fruits et légumes\nLe code pour les fruits et légumes est le code “02”, qui contient les sous-graoupes alimentaires\n\n0201 – “légumes”,\n0202 – “pommes de terre et autres tubercules”,\n0203 – “légumineuses”,\n0204 – “fruits”,\n0205 – “fruits à coque et graines oléagineuses”.\n\nJ’ai sélectionné les sous-groupes 0201 et 0204 uniquement pour la suite. Pour les aliments concernés, j’ai choisi les variables :\n\nalim_nom_fr – le nom de l’aliment, qui devient la variable nom,\nalim_ssgrp_nom_fr – le groupe, qui devient la variable groupe,\nEnergie, Règlement UE N° 1169/2011 (kcal/100 g) – l’énergie, en kCal par 100g de fruit, qui devient la variable Energie,\nEau (g/100 g), qui devient la variable Eau,\nProtéines, N x facteur de Jones (g/100 g), qui devient la variable Proteines,\nGlucides (g/100 g), qui devient la variable Glucides,\nLipides (g/100 g), qui devient la variable Lipides,\nSucres (g/100 g), qui devient la variable Sucres,\nFibres alimentaires (g/100 g), qui devient la variable Fibres,\nCalcium (mg/100 g), qui devient la variable Calcium,\nCuivre (mg/100 g), qui devient la variable Cuivre,\nFer (mg/100 g), qui devient la variable Fer,\nMagnésium (mg/100 g), qui devient la variable Magnesium,\nManganèse (mg/100 g), qui devient la variable Manganese,\nPhosphore (mg/100 g), qui devient la variable Phosphore,\nPotassium (mg/100 g), qui devient la variable Potassium,\nZinc (mg/100 g), qui devient la variable Zinc,\nVitamine C (mg/100 g), qui devient la variable VitamineC et écarté tous les fruits et légumes ayant des données manquantes dans les colonnes\n\nUne première visualisation intéressante concerne la teneur en sucres en fonction des deux sous-groupes que nous avons choisis : légumes ou fruits. La représentation que nous avons choisie"
+  },
+  {
+    "objectID": "pages/page1.html#blocs",
+    "href": "pages/page1.html#blocs",
+    "title": "Extraction des données CIQUAL",
+    "section": "Blocs",
+    "text": "Blocs\nOn obtient plusieurs blocs de données :\n\nle bloc “nutrition” : teneurs en lipides, glucides, protéines, eau et fibres.\nle bloc “minéraux”,\ndes variables supplémentaires :\n\nle nom de l’aliment,\nson groupe,\nson sous-groupe,\nsa teneur en vitamine C.\n\n\nCes blocs donne accès à un éventail de possibilités très large en termes d’exercice de traitement des données, de visualisation et de statistiques."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Qui sommes-nous?",
     "section": "",
-    "text": "Nous sommes les contributeur·ice·s de ce projet. Notre but est de construire, à partir des données CIQUAL, un jeu de données utilisable pour un cours de R."
+    "text": "Nous sommes les contributeur·ice·s de ce projet. Notre but est de construire, à partir des données CIQUAL, un jeu de données utilisable pour un cours de R (et de stats ?)."
   },
   {
     "objectID": "about.html#vincent-guillemot",
@@ -44,15 +51,43 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Les données de fruits et légumes",
+    "title": "Les données de l’étude CIQUAL",
     "section": "",
-    "text": "Ce site raconte mon expérience sur la création d’un exemple à des fins pédagogiques.\nJ’utilise les données de l’étude CIQUAL, menée par l’ANSES 1."
+    "text": "Ce site raconte notre expérience de création d’un exemple à des fins pédagogiques. Cela fait plusieurs années que nous à la recherche d’un exemple qui soit facile à présenter, et pour lequel les résultats obtenus soient faciles à interpréter.\nNous avons choisi d’utiliser les données de l’étude CIQUAL, menée par l’ANSES 1. Ces données portent sur la composition de produits alimentaires : c’est un thème qui parle facilement aux élèves, et qui, en cours, prend au plus une minute à expliquer. Pour le moment, cet exemple est en français, mais il est possible de le traduire en anglais.\nNous avons extrait et pré-traités les données sous la forme :"
   },
   {
     "objectID": "index.html#footnotes",
     "href": "index.html#footnotes",
-    "title": "Les données de fruits et légumes",
+    "title": "Les données de l’étude CIQUAL",
     "section": "Footnotes",
     "text": "Footnotes\n\n\n“Anses. 2020. Table de composition nutritionnelle des aliments Ciqual”↩︎"
+  },
+  {
+    "objectID": "pages/page2.html",
+    "href": "pages/page2.html",
+    "title": "Exploration des données fruits et légumes",
+    "section": "",
+    "text": "Les données sont lues depuis le fichier tabulé fruleg.tsv.\n\nfruleg &lt;- read_delim(\"fruleg.tsv\")\n\nLes fruits et légumes sont répartis dans les sous-groupes suivants :\n\ntbl_summary(\n  fruleg %&gt;% \n    select(groupe, ssgroupe), \n  by = \"groupe\")\n\n\n\n\n\n  \n    \n      Characteristic\n      fruits, N = 711\n      légumes, N = 1891\n    \n  \n  \n    ssgroupe\n\n\n        compotes et assimilés\n7 (9.9%)\n0 (0%)\n        fruits appertisés\n5 (7.0%)\n0 (0%)\n        fruits crus\n40 (56%)\n0 (0%)\n        fruits et leurs produits de la Martinique\n9 (13%)\n0 (0%)\n        fruits et leurs produits de la Réunion\n1 (1.4%)\n0 (0%)\n        fruits séchés\n9 (13%)\n0 (0%)\n        légumes crus\n0 (0%)\n84 (44%)\n        légumes cuits\n0 (0%)\n97 (51%)\n        légumes et leurs produits de la Martinique\n0 (0%)\n3 (1.6%)\n        légumes séchés ou déshydratés\n0 (0%)\n5 (2.6%)\n  \n  \n  \n    \n      1 n (%)"
+  },
+  {
+    "objectID": "pages/page2.html#les-données",
+    "href": "pages/page2.html#les-données",
+    "title": "Exploration des données fruits et légumes",
+    "section": "",
+    "text": "Les données sont lues depuis le fichier tabulé fruleg.tsv.\n\nfruleg &lt;- read_delim(\"fruleg.tsv\")\n\nLes fruits et légumes sont répartis dans les sous-groupes suivants :\n\ntbl_summary(\n  fruleg %&gt;% \n    select(groupe, ssgroupe), \n  by = \"groupe\")\n\n\n\n\n\n  \n    \n      Characteristic\n      fruits, N = 711\n      légumes, N = 1891\n    \n  \n  \n    ssgroupe\n\n\n        compotes et assimilés\n7 (9.9%)\n0 (0%)\n        fruits appertisés\n5 (7.0%)\n0 (0%)\n        fruits crus\n40 (56%)\n0 (0%)\n        fruits et leurs produits de la Martinique\n9 (13%)\n0 (0%)\n        fruits et leurs produits de la Réunion\n1 (1.4%)\n0 (0%)\n        fruits séchés\n9 (13%)\n0 (0%)\n        légumes crus\n0 (0%)\n84 (44%)\n        légumes cuits\n0 (0%)\n97 (51%)\n        légumes et leurs produits de la Martinique\n0 (0%)\n3 (1.6%)\n        légumes séchés ou déshydratés\n0 (0%)\n5 (2.6%)\n  \n  \n  \n    \n      1 n (%)"
+  },
+  {
+    "objectID": "pages/page2.html#valeur-nutritionnelle",
+    "href": "pages/page2.html#valeur-nutritionnelle",
+    "title": "Exploration des données fruits et légumes",
+    "section": "Valeur nutritionnelle",
+    "text": "Valeur nutritionnelle\nPour étudier la valeur nutritionnelle des fruits et légumes sélectionnés, on se concentre sur les teneurs en protéines, lipides, glucides et sucres.\n\nnutrition &lt;- fruleg %&gt;%\n    select(groupe, Proteines, \n           Lipides, Glucides, Sucres)\n\nIl n’y a aucune valeur manquante dans ces données, la table suivante décrit les variables nutritionnelles en fonction des groupes (fruits et légumes).\n\ntbl_summary(\n  nutrition,\n  by = \"groupe\")\n\n\n\n\n\n  \n    \n      Characteristic\n      fruits, N = 711\n      légumes, N = 1891\n    \n  \n  \n    Proteines\n0.75 (0.49, 1.26)\n1.81 (1.19, 2.60)\n    Lipides\n0.31 (0.17, 0.54)\n0.30 (0.20, 0.48)\n    Glucides\n11 (8, 16)\n4 (2, 6)\n    Sucres\n10 (6, 15)\n2 (1, 4)\n  \n  \n  \n    \n      1 Median (IQR)\n    \n  \n\n\n\n\nOn réprésente cette information sous la forme de boxplots combinés à des diagrammes en violon\n\nnutrition %&gt;%\n  pivot_longer(-groupe) %&gt;%\n  ggplot(aes(name, value, color = groupe)) + \n  geom_violin(aes(fill = groupe), alpha = 0.5) +\n  geom_boxplot(width = 0.2, position = position_dodge(width = 0.9)) +\n  scale_y_log10()\n\nWarning in scale_y_log10(): log-10 transformation introduced infinite values.\nlog-10 transformation introduced infinite values.\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_ydensity()`).\n\n\nWarning: Removed 2 rows containing non-finite outside the scale range\n(`stat_boxplot()`)."
+  },
+  {
+    "objectID": "pages/page2.html#teneur-en-minéraux",
+    "href": "pages/page2.html#teneur-en-minéraux",
+    "title": "Exploration des données fruits et légumes",
+    "section": "Teneur en minéraux",
+    "text": "Teneur en minéraux\n\nmineraux &lt;- fruleg %&gt;%\n    select(groupe,\n           Calcium, Cuivre, Fer,\n           Magnesium, Manganese, \n           Phosphore, Potassium,\n           Zinc)\n\nIl y a des données manquantes dans les colonnes concernant les minéraux, comme indiqué dans le tableau ci-dessous (“Unknown”).\n\ntbl_summary(\n  mineraux,\n  by = \"groupe\")\n\n\n\n\n\n  \n    \n      Characteristic\n      fruits, N = 711\n      légumes, N = 1891\n    \n  \n  \n    Calcium\n14 (8, 39)\n30 (20, 49)\n        Unknown\n9\n11\n    Cuivre\n0.07 (0.04, 0.12)\n0.08 (0.05, 0.13)\n        Unknown\n8\n27\n    Fer\n0.28 (0.14, 0.64)\n0.68 (0.38, 1.01)\n        Unknown\n9\n17\n    Magnesium\n11 (6, 17)\n15 (11, 23)\n        Unknown\n9\n20\n    Manganese\n0.10 (0.04, 0.28)\n0.18 (0.12, 0.29)\n        Unknown\n12\n25\n    Phosphore\n18 (12, 37)\n42 (29, 63)\n        Unknown\n9\n19\n    Potassium\n173 (132, 238)\n240 (188, 340)\n        Unknown\n7\n14\n    Zinc\n0.11 (0.07, 0.22)\n0.28 (0.20, 0.49)\n        Unknown\n11\n23\n  \n  \n  \n    \n      1 Median (IQR)\n    \n  \n\n\n\n\nLa teneur en potassium en fonction de la teneur en phosphate est représentée ci-dessous sous la forme d’un nuage de points.\n\ngpp &lt;- mineraux %&gt;%\n  ggplot(aes(Potassium, Phosphore, color = groupe)) + \n  geom_point() + \n  scale_x_log10() + \n  scale_y_log10() +\n  stat_ellipse()\n\ngmm &lt;- mineraux %&gt;%\n  ggplot(aes(Magnesium, Manganese, color = groupe)) + \n  geom_point() + \n  scale_x_log10() + \n  scale_y_log10() +\n  stat_ellipse()\n\nggpubr::ggarrange(\n  gpp, gmm, common.legend = TRUE, legend = \"bottom\")"
   }
 ]

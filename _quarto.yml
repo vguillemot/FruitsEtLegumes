@@ -6,10 +6,10 @@ website:
   title: "F&L"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
       - href: pages/page1.qmd
-        text: Page 1
+        text: Pré-traitements
+      - href: pages/page2.qmd
+        text: Fruits & Légumes
       - about.qmd
 
 format:
