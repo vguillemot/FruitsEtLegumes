@@ -1,0 +1,45 @@
+---
+title: "Exploration des *fruits crus, légumes crus et légumes cuits*"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(dplyr)
+library(ggplot2)
+library(gtsummary)
+library(plotly)
+library(readr)
+library(tidyr)
+
+theme_set(theme_bw())
+```
+
+
+## Les données
+
+Les données sont lues depuis le fichier tabulé `fruleg.tsv`. Les sous-groupes considérés sont les fruits crus, les légumes cuits et les légumes crus.
+
+```{r true data, echo = FALSE,  message = FALSE, warning = FALSE}
+fruleg2 <- read_delim("../data/fruleg.tsv") %>%
+  filter(
+    ssgroupe %in% 
+      c("fruits crus",
+        "légumes crus",
+        "légumes cuits"))
+
+nutrition2 <- fruleg2 %>%
+    select(ssgroupe, Proteines, 
+           Lipides, Glucides, Sucres)
+```
+
+
+```{r boxplots nutrition}
+nutrition2 %>%
+  pivot_longer(-ssgroupe) %>%
+  ggplot(aes(name, value, color = ssgroupe)) + 
+  geom_violin(aes(fill = ssgroupe), alpha = 0.5) +
+  geom_boxplot(width = 0.2, position = position_dodge(width = 0.9)) +
+  scale_y_log10()
+```
+
+

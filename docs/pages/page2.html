@@ -1,0 +1,2943 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>F&amp;L - Exploration des données fruits et légumes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../site_libs/htmltools-fill-0.5.8/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="../site_libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">F&amp;L</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../pages/page1.html" rel="" target="">
+ <span class="menu-text">Pré-traitements</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../pages/page2.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Fruits &amp; Légumes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">Qui sommes-nous?</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#les-données" id="toc-les-données" class="nav-link active" data-scroll-target="#les-données">Les données</a></li>
+  <li><a href="#valeur-nutritionnelle" id="toc-valeur-nutritionnelle" class="nav-link" data-scroll-target="#valeur-nutritionnelle">Valeur nutritionnelle</a></li>
+  <li><a href="#teneur-en-minéraux" id="toc-teneur-en-minéraux" class="nav-link" data-scroll-target="#teneur-en-minéraux">Teneur en minéraux</a></li>
+  <li><a href="#valeur-énergétique" id="toc-valeur-énergétique" class="nav-link" data-scroll-target="#valeur-énergétique">Valeur énergétique</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Exploration des données <em>fruits et légumes</em></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="les-données" class="level2">
+<h2 class="anchored" data-anchor-id="les-données">Les données</h2>
+<p>Les données sont lues depuis le fichier tabulé <code>fruleg.tsv</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>fruleg <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">"fruleg.tsv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Les fruits et légumes sont répartis dans les sous-groupes suivants :</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="tvqbiztmnd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tvqbiztmnd table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tvqbiztmnd thead, #tvqbiztmnd tbody, #tvqbiztmnd tfoot, #tvqbiztmnd tr, #tvqbiztmnd td, #tvqbiztmnd th {
+  border-style: none;
+}
+
+#tvqbiztmnd p {
+  margin: 0;
+  padding: 0;
+}
+
+#tvqbiztmnd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tvqbiztmnd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tvqbiztmnd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tvqbiztmnd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tvqbiztmnd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tvqbiztmnd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tvqbiztmnd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tvqbiztmnd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tvqbiztmnd .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tvqbiztmnd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tvqbiztmnd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tvqbiztmnd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tvqbiztmnd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tvqbiztmnd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tvqbiztmnd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tvqbiztmnd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tvqbiztmnd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tvqbiztmnd .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tvqbiztmnd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tvqbiztmnd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tvqbiztmnd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tvqbiztmnd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tvqbiztmnd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tvqbiztmnd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tvqbiztmnd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tvqbiztmnd .gt_left {
+  text-align: left;
+}
+
+#tvqbiztmnd .gt_center {
+  text-align: center;
+}
+
+#tvqbiztmnd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tvqbiztmnd .gt_font_normal {
+  font-weight: normal;
+}
+
+#tvqbiztmnd .gt_font_bold {
+  font-weight: bold;
+}
+
+#tvqbiztmnd .gt_font_italic {
+  font-style: italic;
+}
+
+#tvqbiztmnd .gt_super {
+  font-size: 65%;
+}
+
+#tvqbiztmnd .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tvqbiztmnd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tvqbiztmnd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tvqbiztmnd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tvqbiztmnd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tvqbiztmnd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tvqbiztmnd .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Characteristic</strong>"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>fruits</strong>, N = 71<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>fruits</strong>, N = 71<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>légumes</strong>, N = 189<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>légumes</strong>, N = 189<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">ssgroupe</td>
+<td headers="stat_1" class="gt_row gt_center"><br></td>
+<td headers="stat_2" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;compotes et assimilés</td>
+<td headers="stat_1" class="gt_row gt_center">7 (9.9%)</td>
+<td headers="stat_2" class="gt_row gt_center">0 (0%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;fruits appertisés</td>
+<td headers="stat_1" class="gt_row gt_center">5 (7.0%)</td>
+<td headers="stat_2" class="gt_row gt_center">0 (0%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;fruits crus</td>
+<td headers="stat_1" class="gt_row gt_center">40 (56%)</td>
+<td headers="stat_2" class="gt_row gt_center">0 (0%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;fruits et leurs produits de la Martinique</td>
+<td headers="stat_1" class="gt_row gt_center">9 (13%)</td>
+<td headers="stat_2" class="gt_row gt_center">0 (0%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;fruits et leurs produits de la Réunion</td>
+<td headers="stat_1" class="gt_row gt_center">1 (1.4%)</td>
+<td headers="stat_2" class="gt_row gt_center">0 (0%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;fruits séchés</td>
+<td headers="stat_1" class="gt_row gt_center">9 (13%)</td>
+<td headers="stat_2" class="gt_row gt_center">0 (0%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;légumes crus</td>
+<td headers="stat_1" class="gt_row gt_center">0 (0%)</td>
+<td headers="stat_2" class="gt_row gt_center">84 (44%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;légumes cuits</td>
+<td headers="stat_1" class="gt_row gt_center">0 (0%)</td>
+<td headers="stat_2" class="gt_row gt_center">97 (51%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;légumes et leurs produits de la Martinique</td>
+<td headers="stat_1" class="gt_row gt_center">0 (0%)</td>
+<td headers="stat_2" class="gt_row gt_center">3 (1.6%)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;légumes séchés ou déshydratés</td>
+<td headers="stat_1" class="gt_row gt_center">0 (0%)</td>
+<td headers="stat_2" class="gt_row gt_center">5 (2.6%)</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="3"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> n (%)</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="valeur-nutritionnelle" class="level2">
+<h2 class="anchored" data-anchor-id="valeur-nutritionnelle">Valeur nutritionnelle</h2>
+<p>Pour étudier la valeur nutritionnelle des fruits et légumes sélectionnés, on se concentre sur les teneurs en protéines, lipides, glucides et sucres.</p>
+<p>Il n’y a aucune valeur manquante dans ces données, la table suivante décrit les variables nutritionnelles en fonction des groupes (fruits et légumes).</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="djwukihuep" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#djwukihuep table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#djwukihuep thead, #djwukihuep tbody, #djwukihuep tfoot, #djwukihuep tr, #djwukihuep td, #djwukihuep th {
+  border-style: none;
+}
+
+#djwukihuep p {
+  margin: 0;
+  padding: 0;
+}
+
+#djwukihuep .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#djwukihuep .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#djwukihuep .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#djwukihuep .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#djwukihuep .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#djwukihuep .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#djwukihuep .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#djwukihuep .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#djwukihuep .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#djwukihuep .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#djwukihuep .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#djwukihuep .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#djwukihuep .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#djwukihuep .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#djwukihuep .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#djwukihuep .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#djwukihuep .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#djwukihuep .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#djwukihuep .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djwukihuep .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#djwukihuep .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#djwukihuep .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#djwukihuep .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djwukihuep .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#djwukihuep .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#djwukihuep .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#djwukihuep .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djwukihuep .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#djwukihuep .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#djwukihuep .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#djwukihuep .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#djwukihuep .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#djwukihuep .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djwukihuep .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#djwukihuep .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#djwukihuep .gt_left {
+  text-align: left;
+}
+
+#djwukihuep .gt_center {
+  text-align: center;
+}
+
+#djwukihuep .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#djwukihuep .gt_font_normal {
+  font-weight: normal;
+}
+
+#djwukihuep .gt_font_bold {
+  font-weight: bold;
+}
+
+#djwukihuep .gt_font_italic {
+  font-style: italic;
+}
+
+#djwukihuep .gt_super {
+  font-size: 65%;
+}
+
+#djwukihuep .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#djwukihuep .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#djwukihuep .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#djwukihuep .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#djwukihuep .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#djwukihuep .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#djwukihuep .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Characteristic</strong>"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>fruits</strong>, N = 71<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>fruits</strong>, N = 71<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>légumes</strong>, N = 189<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>légumes</strong>, N = 189<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">Proteines</td>
+<td headers="stat_1" class="gt_row gt_center">0.75 (0.49, 1.26)</td>
+<td headers="stat_2" class="gt_row gt_center">1.81 (1.19, 2.60)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Lipides</td>
+<td headers="stat_1" class="gt_row gt_center">0.31 (0.17, 0.54)</td>
+<td headers="stat_2" class="gt_row gt_center">0.30 (0.20, 0.48)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Glucides</td>
+<td headers="stat_1" class="gt_row gt_center">11 (8, 16)</td>
+<td headers="stat_2" class="gt_row gt_center">4 (2, 6)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Sucres</td>
+<td headers="stat_1" class="gt_row gt_center">10 (6, 15)</td>
+<td headers="stat_2" class="gt_row gt_center">2 (1, 4)</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="3"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> Median (IQR)</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+<p>On réprésente cette information sous la forme de boxplots combinés à des diagrammes en violon. On observe un grande variabilité de la teneur en sucres, ou en glucides. Le jeu de données “fruits et légumes” peut servir d’exemple pour illustrer les test de comparaison de deux groupes (non appariés), avec des procédures paramétriques ou non-paramétriques.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in scale_y_log10(): log-10 transformation introduced infinite values.
+log-10 transformation introduced infinite values.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_ydensity()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="page2_files/figure-html/boxplots nutrition-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="teneur-en-minéraux" class="level2">
+<h2 class="anchored" data-anchor-id="teneur-en-minéraux">Teneur en minéraux</h2>
+<p>Il y a des données manquantes dans les colonnes concernant les minéraux, comme indiqué dans le tableau ci-dessous (“<em>Unknown</em>”).</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="newfjjlimb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#newfjjlimb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#newfjjlimb thead, #newfjjlimb tbody, #newfjjlimb tfoot, #newfjjlimb tr, #newfjjlimb td, #newfjjlimb th {
+  border-style: none;
+}
+
+#newfjjlimb p {
+  margin: 0;
+  padding: 0;
+}
+
+#newfjjlimb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#newfjjlimb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#newfjjlimb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#newfjjlimb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#newfjjlimb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#newfjjlimb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#newfjjlimb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#newfjjlimb .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#newfjjlimb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#newfjjlimb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#newfjjlimb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#newfjjlimb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#newfjjlimb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#newfjjlimb .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#newfjjlimb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#newfjjlimb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#newfjjlimb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#newfjjlimb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#newfjjlimb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#newfjjlimb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#newfjjlimb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#newfjjlimb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#newfjjlimb .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#newfjjlimb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#newfjjlimb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#newfjjlimb .gt_left {
+  text-align: left;
+}
+
+#newfjjlimb .gt_center {
+  text-align: center;
+}
+
+#newfjjlimb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#newfjjlimb .gt_font_normal {
+  font-weight: normal;
+}
+
+#newfjjlimb .gt_font_bold {
+  font-weight: bold;
+}
+
+#newfjjlimb .gt_font_italic {
+  font-style: italic;
+}
+
+#newfjjlimb .gt_super {
+  font-size: 65%;
+}
+
+#newfjjlimb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#newfjjlimb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#newfjjlimb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#newfjjlimb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#newfjjlimb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#newfjjlimb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#newfjjlimb .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Characteristic</strong>"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>fruits</strong>, N = 71<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>fruits</strong>, N = 71<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>légumes</strong>, N = 189<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>légumes</strong>, N = 189<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">Calcium</td>
+<td headers="stat_1" class="gt_row gt_center">14 (8, 39)</td>
+<td headers="stat_2" class="gt_row gt_center">30 (20, 49)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">9</td>
+<td headers="stat_2" class="gt_row gt_center">11</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Cuivre</td>
+<td headers="stat_1" class="gt_row gt_center">0.07 (0.04, 0.12)</td>
+<td headers="stat_2" class="gt_row gt_center">0.08 (0.05, 0.13)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">8</td>
+<td headers="stat_2" class="gt_row gt_center">27</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Fer</td>
+<td headers="stat_1" class="gt_row gt_center">0.28 (0.14, 0.64)</td>
+<td headers="stat_2" class="gt_row gt_center">0.68 (0.38, 1.01)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">9</td>
+<td headers="stat_2" class="gt_row gt_center">17</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Magnesium</td>
+<td headers="stat_1" class="gt_row gt_center">11 (6, 17)</td>
+<td headers="stat_2" class="gt_row gt_center">15 (11, 23)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">9</td>
+<td headers="stat_2" class="gt_row gt_center">20</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Manganese</td>
+<td headers="stat_1" class="gt_row gt_center">0.10 (0.04, 0.28)</td>
+<td headers="stat_2" class="gt_row gt_center">0.18 (0.12, 0.29)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">12</td>
+<td headers="stat_2" class="gt_row gt_center">25</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Phosphore</td>
+<td headers="stat_1" class="gt_row gt_center">18 (12, 37)</td>
+<td headers="stat_2" class="gt_row gt_center">42 (29, 63)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">9</td>
+<td headers="stat_2" class="gt_row gt_center">19</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Potassium</td>
+<td headers="stat_1" class="gt_row gt_center">173 (132, 238)</td>
+<td headers="stat_2" class="gt_row gt_center">240 (188, 340)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">7</td>
+<td headers="stat_2" class="gt_row gt_center">14</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Zinc</td>
+<td headers="stat_1" class="gt_row gt_center">0.11 (0.07, 0.22)</td>
+<td headers="stat_2" class="gt_row gt_center">0.28 (0.20, 0.49)</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td headers="stat_1" class="gt_row gt_center">11</td>
+<td headers="stat_2" class="gt_row gt_center">23</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="3"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> Median (IQR)</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+<p>La teneur en potassium en fonction de la teneur en phosphate est représentée ci-dessous sous la forme d’un nuage de points.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="page2_files/figure-html/scatterplots-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="valeur-énergétique" class="level2">
+<h2 class="anchored" data-anchor-id="valeur-énergétique">Valeur énergétique</h2>
+<p>La valeur énergétique est une fonction linéaire de la composition nutritionnelle<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Mais toutes les variables utilisées pour faire ce calcul ne sont pas disponibles pour tous les fruits et légumes de la table. Voici les résultats d’un modèle linéaire appris sur les aliments pour lesquels toutes les variables de la formule utilisée pour calculer la valeur énergétique sont disponible (i.e.&nbsp;sans aucune valeur manquante) :</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="eftuvvapcw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eftuvvapcw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#eftuvvapcw thead, #eftuvvapcw tbody, #eftuvvapcw tfoot, #eftuvvapcw tr, #eftuvvapcw td, #eftuvvapcw th {
+  border-style: none;
+}
+
+#eftuvvapcw p {
+  margin: 0;
+  padding: 0;
+}
+
+#eftuvvapcw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#eftuvvapcw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#eftuvvapcw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#eftuvvapcw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#eftuvvapcw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#eftuvvapcw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#eftuvvapcw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#eftuvvapcw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#eftuvvapcw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#eftuvvapcw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#eftuvvapcw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#eftuvvapcw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#eftuvvapcw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#eftuvvapcw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#eftuvvapcw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eftuvvapcw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#eftuvvapcw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#eftuvvapcw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#eftuvvapcw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eftuvvapcw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#eftuvvapcw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eftuvvapcw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#eftuvvapcw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eftuvvapcw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#eftuvvapcw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eftuvvapcw .gt_left {
+  text-align: left;
+}
+
+#eftuvvapcw .gt_center {
+  text-align: center;
+}
+
+#eftuvvapcw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#eftuvvapcw .gt_font_normal {
+  font-weight: normal;
+}
+
+#eftuvvapcw .gt_font_bold {
+  font-weight: bold;
+}
+
+#eftuvvapcw .gt_font_italic {
+  font-style: italic;
+}
+
+#eftuvvapcw .gt_super {
+  font-size: 65%;
+}
+
+#eftuvvapcw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#eftuvvapcw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#eftuvvapcw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#eftuvvapcw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#eftuvvapcw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#eftuvvapcw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#eftuvvapcw .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Characteristic</strong>"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>Beta</strong>"><strong>Beta</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>95% CI</strong><span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>p-value</strong>"><strong>p-value</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">Lipides</td>
+<td headers="estimate" class="gt_row gt_center">8.9</td>
+<td headers="ci" class="gt_row gt_center">8.7, 9.1</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Alcool</td>
+<td headers="estimate" class="gt_row gt_center"><br></td>
+<td headers="ci" class="gt_row gt_center"><br></td>
+<td headers="p.value" class="gt_row gt_center"><br></td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Proteines</td>
+<td headers="estimate" class="gt_row gt_center">3.9</td>
+<td headers="ci" class="gt_row gt_center">3.2, 4.6</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Glucides</td>
+<td headers="estimate" class="gt_row gt_center">4.0</td>
+<td headers="ci" class="gt_row gt_center">3.9, 4.0</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">AcidesOrganiques</td>
+<td headers="estimate" class="gt_row gt_center">3.1</td>
+<td headers="ci" class="gt_row gt_center">1.3, 4.9</td>
+<td headers="p.value" class="gt_row gt_center">0.003</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Polyols</td>
+<td headers="estimate" class="gt_row gt_center">-1.6</td>
+<td headers="ci" class="gt_row gt_center">-1.8, -1.5</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Fibres</td>
+<td headers="estimate" class="gt_row gt_center">2.1</td>
+<td headers="ci" class="gt_row gt_center">1.5, 2.7</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;">Adjusted R²</td>
+<td headers="estimate" class="gt_row gt_center" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;">1.00</td>
+<td headers="ci" class="gt_row gt_center" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;"><br></td>
+<td headers="p.value" class="gt_row gt_center" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;"><br></td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="4"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> CI = Confidence Interval</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+<p>Sans surprise, la valeur du <span class="math inline">\(R^2\)</span> est quasiment égale à 1. Mais le résultat est également très proche de 1 si on entraîne un modèle uniquement sur la base de la teneur en lipides, protéines et glucides (pour lesquels il n’y a aucune valeur manquante du tout).</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="lwjjdavppx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lwjjdavppx table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#lwjjdavppx thead, #lwjjdavppx tbody, #lwjjdavppx tfoot, #lwjjdavppx tr, #lwjjdavppx td, #lwjjdavppx th {
+  border-style: none;
+}
+
+#lwjjdavppx p {
+  margin: 0;
+  padding: 0;
+}
+
+#lwjjdavppx .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#lwjjdavppx .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#lwjjdavppx .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#lwjjdavppx .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#lwjjdavppx .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#lwjjdavppx .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#lwjjdavppx .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#lwjjdavppx .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#lwjjdavppx .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#lwjjdavppx .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#lwjjdavppx .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#lwjjdavppx .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#lwjjdavppx .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#lwjjdavppx .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#lwjjdavppx .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lwjjdavppx .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#lwjjdavppx .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#lwjjdavppx .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#lwjjdavppx .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lwjjdavppx .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#lwjjdavppx .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lwjjdavppx .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#lwjjdavppx .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lwjjdavppx .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#lwjjdavppx .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#lwjjdavppx .gt_left {
+  text-align: left;
+}
+
+#lwjjdavppx .gt_center {
+  text-align: center;
+}
+
+#lwjjdavppx .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#lwjjdavppx .gt_font_normal {
+  font-weight: normal;
+}
+
+#lwjjdavppx .gt_font_bold {
+  font-weight: bold;
+}
+
+#lwjjdavppx .gt_font_italic {
+  font-style: italic;
+}
+
+#lwjjdavppx .gt_super {
+  font-size: 65%;
+}
+
+#lwjjdavppx .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#lwjjdavppx .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#lwjjdavppx .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#lwjjdavppx .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#lwjjdavppx .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#lwjjdavppx .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#lwjjdavppx .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="<strong>Characteristic</strong>"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>Beta</strong>"><strong>Beta</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>95% CI</strong><span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="<strong>p-value</strong>"><strong>p-value</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">Lipides</td>
+<td headers="estimate" class="gt_row gt_center">9.4</td>
+<td headers="ci" class="gt_row gt_center">9.1, 9.8</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Proteines</td>
+<td headers="estimate" class="gt_row gt_center">4.9</td>
+<td headers="ci" class="gt_row gt_center">4.2, 5.7</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left">Glucides</td>
+<td headers="estimate" class="gt_row gt_center">3.9</td>
+<td headers="ci" class="gt_row gt_center">3.8, 4.0</td>
+<td headers="p.value" class="gt_row gt_center">&lt;0.001</td></tr>
+    <tr><td headers="label" class="gt_row gt_left" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;">Adjusted R²</td>
+<td headers="estimate" class="gt_row gt_center" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;">0.995</td>
+<td headers="ci" class="gt_row gt_center" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;"><br></td>
+<td headers="p.value" class="gt_row gt_center" style="border-top-width: 2px; border-top-style: solid; border-top-color: #D3D3D3;"><br></td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="4"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> CI = Confidence Interval</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+<p>On peut donc estimer dans un premier temps les coefficients de ce modèle “réduit” sur les échantillons pour lesquels la valeur énergétique a pu être calculée, et approcher la valeur énergétique, en se basant uniquement sur les teneurs en protéines, lipides et glucides, pour les fruits et légumes pour lesquels la valeur énergétique est manquante.</p>
+<p>Pour les données qui ne sont pas manquantes, on obtient la prédiction suivante (axe des <span class="math inline">\(y\)</span>) en fonction de la valeur énergétique calculée avec la formule analytique. La valeur énergétique est un peu surestimée pour les petites valeurs, mais ce n’est pas particulièrement gênant pour un jeu de données qui servira à un cours.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-d879a2233917fcd6c71d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d879a2233917fcd6c71d">{"x":{"data":[{"x":[1.0436373803722669,2.6635835166092048],"y":[1.0436373803722669,2.6635835166092048],"text":"","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(190,190,190,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[null,null,1.6919651027673603,2.0043213737826426,1.9063350418050906,1.8356905714924256,1.7817553746524688,1.7611758131557314,1.6748611407378116,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1.8981764834976764,null,null,null,null,null,null,null,null,null,null,null,null,null,1.7745169657285496,2.0086001717619175,null,null,null,null,null,1.9036325160842376,null,null,null,null,null,2.3783979009481375,null,null,2.3598354823398879,2.5065050324048719,2.5899496013257077,null,null,2.3010299956639813,null,null,null,null,null,null,null,null,null,1.9484129657786009],"y":[1.7554043712052705,1.7796419695111734,1.6095764228510157,1.9335181991832631,1.8957894393337664,1.6662188957701494,1.7589462213752616,1.7263463204367944,1.6251472180869897,1.6801477857578655,1.7158404033740575,1.726989647684114,1.6818048631999321,1.8584674754208221,1.2130892146055601,1.688393294502629,1.4543097803764378,1.8979017439269619,1.643174520881693,1.5144866257976286,1.6711851216820404,2.3922033147300201,1.7358137195946912,1.721466498154931,1.6919094908717556,1.8964298566783213,1.6766448577034092,1.7301036985668301,1.8497831059232843,1.5921805068447747,1.5471453967377313,1.6687808238046486,1.7230003681634223,1.6323097383010821,1.5727889936862454,1.5294902081163968,1.7840999294270234,1.4115447497573594,1.6401127829775242,1.745438447614384,2.0114534951481504,2.0814711970095789,1.3048590953052961,1.836886156526458,1.9240308656883529,1.7231414016390558,1.9010909473902635,1.8601473483605386,1.8526921765129065,1.802665433414802,1.7878814784694355,1.8037291082742835,2.404025299431555,2.4276265308536158,2.3781747227893368,2.3655219626487565,2.4952189577547723,2.5853082564479943,2.5390413675014409,2.3691817192801619,2.3397255269441235,1.7685078988821628,1.6943254127034264,2.6560801922614035,1.6680686133190286,1.6953837340042033,1.5510512631205888,1.5428064238242496,1.6882611315746578,1.5444074441087823,1.9450892366256383],"text":["nom: Cassis, cru","nom: Coing, cru","nom: Framboise, crue","nom: Fruit de la passion ou maracudja, pulpe et pépins, cru","nom: Grenade, pulpe et pépins, crue","nom: Groseille, crue","nom: Kiwi, pulpe et graines, cru","nom: Myrtille, crue","nom: Mûre (de ronce), crue","nom: Nectarine ou brugnon, pulpe et peau, crue","nom: Poire, pulpe et peau, crue","nom: Pomme, pulpe et peau, crue","nom: Pêche, pulpe et peau, crue","nom: Raisin noir, cru","nom: Rhubarbe, tige, crue","nom: Pomme, pulpe, crue","nom: Carambole, pulpe, crue","nom: Anone ou chérimole, pulpe, crue","nom: Feijoa, pulpe, crue","nom: Figue de Barbarie, pulpe et graines, crue","nom: Mûre noire (du mûrier), crue","nom: Tamarin, fruit mûr, pulpe, cru","nom: Goyave, pulpe, crue","nom: Pomme Canada, pulpe, crue","nom: Prune, crue","nom: Raisin Chasselas, cru","nom: Poire, pulpe, crue","nom: Griotte, crue","nom: Raisin, cru","nom: Canneberge ou cranberry, crue","nom: Citron, zeste, cru","nom: Myrtille, surgelée, crue","nom: Salade de fruits, crue","nom: Framboise, surgelée, crue","nom: Pomelo (dit Pamplemousse) jaune, pulpe, cru","nom: Pomelo (dit Pamplemousse) rose, pulpe, cru","nom: Kumquat, sans pépin, cru","nom: Melon miel ou melon honeydew, pulpe, cru","nom: Fruits rouges, crus (framboises, fraises, groseilles, cassis)","nom: Fruit cru (aliment moyen)","nom: Compote de pomme","nom: Rhubarbe, tige, cuite, sucrée","nom: Chayote ou christophine ou chouchou, crue","nom: Compote, tout type de fruits, allégée en sucres, rayon frais","nom: Dessert de fruits, tout type de fruits (en taux de sucres : compotes allégées en sucres < desserts de fruits < compotes allégée)","nom: Pomme, pulpe, bouillie/cuite à l'eau","nom: Compote ou assimilé, tout type de fruits, teneur en sucre (allégée en sucres ou non, sans sucres ajoutés...) inconnue (aliment moyen)","nom: Abricot au sirop (sans précision sur léger ou classique), appertisé, égoutté (aliment moyen)","nom: Macédoine ou cocktail ou salade de fruits, au sirop (sans précision sur léger ou classique), appertisé, égouttée (aliment moyen)","nom: Abricot au sirop léger, appertisé, non égoutté","nom: Pêche au sirop léger, appertisée, non égouttée","nom: Poire au sirop léger, appertisée, non égouttée","nom: Abricot, dénoyauté, sec","nom: Datte, pulpe et peau, sèche","nom: Figue, sèche","nom: Pruneau, sec","nom: Raisin, sec","nom: Mélange apéritif de fruits exotiques, sec","nom: Banane, pulpe, sèche","nom: Pomme, sèche","nom: Abricot, dénoyauté, sec, moelleux (réhydraté à 35-45%)","nom: Abricot pays, pulpe, au sirop, appertisé, non égoutté, prélevé à la Martinique","nom: Abricot pays, pulpe, cru, prélevé à la Martinique","nom: Chips d'abricot pays, pulpe, prélevé à la Martinique","nom: Jus de mandarine commune, pur jus filtré, prélevée à la Martinique","nom: Jus de mandarine macaque, pur jus filtré, prélevée à la Martinique","nom: Jus de prune de cythère verte \"géante\" (variété locale), fruit mûr, pur jus filtré, prélevée à la Martinique","nom: Jus de prune de cythère verte \"géante\" (variété locale), fruit vert, pur jus filtré, prélevée à la Martinique","nom: Jus de prune de cythère verte \"naine\" (variété hybride), fruit mûr, pur jus filtré, prélevée à la Martinique","nom: Jus de prune de cythère verte \"naine\" (variété hybride), fruit vert, pur jus filtré, prélevée à la Martinique","nom: Mangue José, pulpe, crue, prélevée à La Réunion (Mangifera indica L.)"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"fruits","legendgroup":"fruits","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2.3117538610557542,1.3364597338485296,null,1.4183012913197455,1.1931245983544616,1.2174839442139063,null,null,null,null,1.5092025223311027,null,null,1.2855573090077739,null,null,null,1.4471580313422192,null,null,null,null,null,null,null,1.5314789170422551,null,null,null,null,null,null,null,1.8135809885681919,1.5198279937757189,1.3891660843645324,null,null,1.4065401804339552,1.5622928644564746,null,2.0211892990699383,null,null,null,null,1.3654879848908996,1.4996870826184039,1.403120521175818,null,null,null,null,1.4871383754771865,null,null,1.7656685547590141,1.5453071164658241,null,null,null,null,null,null,null,null,null,null,1.2013971243204515,null,null,null,null,null,1.4265112613645752,null,1.5599066250361124,1.5327543789924978,null,null,null,null,null,null,null,null,null,1.631443769013172,null,1.3404441148401183,1.2764618041732441,1.3961993470957363,null,null,1.320146286111054,null,1.1903316981702914,null,null,null,null,1.4683473304121573,null,null,1.9111576087399766,null,null,null,1.2624510897304295,null,1.6063813651106049,null,1.3636119798921444,null,2.0253058652647704,null,1.9965116721541787,1.5599066250361124,null,null,1.1172712956557642,1.287801729930226,null,null,null,1.6901960800285136,null,null,null,1.4578818967339924,null,1.255272505103306,null,1.8312296938670634,null,null,null,1.6730209071288962,null,null,null,1.5171958979499742,1.7846172926328754,null,1.4842998393467859,null,null,null,null,1.7909884750888159,null,null,1.9675479762188621,1.7363965022766426,null,1.2695129442179163,null,1.4927603890268375,1.5538830266438743,1.651278013998144,1.6473829701146199,1.424881636631067,1.2278867046136734,1.3710678622717363,1.3636119798921444,1.5751878449276611,1.6190933306267428,1.4785664955938433,1.4183012913197455,1.5390760987927767,1.4409090820652177,1.958085848521085,1.904715545278681,1.5538830266438743,1.4563660331290431,1.5820633629117087,1.403120521175818,1.825426117767823,null,1.6384892569546374,null,null,null,null,2.4996870826184039,2.271841606536499,null,null,null],"y":[2.3216212818905944,1.411179524929024,1.3728258095662882,1.4535407754797771,1.2712904340787456,1.3036512785622978,1.2971982576910934,1.2569979284242003,1.6041406069697899,1.7050604844884274,1.5234123356232996,1.4593404839624047,1.3819139503930928,1.3218273668163154,1.6151989843414216,1.3168799157717541,1.1933712586510354,1.5208158201854485,1.5468505900434926,1.6995736595852995,1.4912554765007742,1.502638830689405,1.4406016339387329,1.3713658595172271,1.4535582321323191,1.5165057301878344,1.8184640684090914,1.4146564266118649,1.4574279001810964,1.4287598883496169,1.8560424215796447,1.1403935722491105,1.706370054632484,1.7989914669342693,1.5071682376697138,1.4093596240146944,1.9936680402243967,1.4154497687675174,1.4612666655434658,1.545061190680566,1.4466859345657161,2.0252827294740903,1.4981564176802047,1.2517100622792261,1.5337996081424639,1.6703028231956352,1.4285669163866426,1.5549046683877803,1.466116965325833,1.2712176426637927,1.3144888992962815,1.5292242071573847,1.2947248448217015,1.4838807263924065,1.2603662309891248,1.667140834343062,1.7425104804313634,1.587543301890721,1.4968623968656232,1.318298904871313,1.5286324000947911,1.5457558953858963,1.4560643242084816,1.6247229528414626,1.4723215068691098,1.7396363885203636,1.5013270663724307,1.7192572228912775,1.2802099623620475,1.3068849182304794,1.7024041272611508,2.0219753713749147,1.2582198883437568,1.5002150008675244,1.4373325433228321,1.5469823920771755,1.5651548378505489,1.532772186215783,1.3615223332961064,1.7004902553486523,1.513831442014852,1.4342290872340437,1.4967160825714418,1.2137802829990183,1.3723743244530122,1.3799824352739825,1.4775073730717481,1.6356896211519827,1.4247311236241456,1.3620993915971817,1.2641448534238746,1.4235597384678316,1.5416604909889866,1.4107997910280425,1.362735646773849,1.5691542067205115,1.2559218280812727,1.1723076434899333,1.5684317942718782,1.3738225687884376,1.354278805967033,1.4431338063304291,1.4101214209455915,1.5684954756982845,1.8978496600712285,1.7760032637641587,1.3726241167162609,1.5166896573800575,1.2982090865773617,2.0332165909590731,1.6067825107173968,1.4280137288814148,1.3451102623183058,1.4204059677435239,2.0251260561102402,1.5930566907151684,1.990565714671092,1.5545681054193019,1.3117982168841058,1.578445988923759,1.1610518488264956,1.3386654612630033,1.4581525644768123,1.3054702718220279,1.6188274514476608,1.6888769393739045,1.5002097604722811,1.4118819273139267,1.4275830555196782,1.4970461953768481,1.5386495434723093,1.27183839217951,1.8027038138581712,1.8201212240579685,1.4770697332749969,1.2176034737219918,1.4387144030187846,1.6495179486177747,1.3293589136943167,1.4787431948731611,1.6299666327310192,1.4977493647997007,1.7940462745247487,1.7086014412178505,1.5013114930665346,1.5033600588761105,1.2218389184459764,1.3266955179320603,1.6856153078827085,1.7976723859877035,1.4943652191694885,1.6971703171656953,1.9632874423220832,1.7064565557892142,1.5256484736137028,1.3195759137196172,1.3814087373634651,1.4866773650792524,1.5420648390951324,1.6355886308771326,1.649035108972714,1.4382048716061191,1.2388340344358533,1.4063363231258053,1.382429937625876,1.6171797107870558,1.5917325866211618,1.522778629925587,1.4605207289435902,1.5508124863188826,1.4290166037062382,1.9216129677675124,1.9051193578482197,1.5554534770800652,1.4366354951372631,1.5958280261023663,1.431990867949958,1.8202290774762038,1.4170157476714131,1.606875930102285,1.3733627216397279,2.4417709135056733,2.5377911290987565,2.4335395027943396,2.4911967917091697,2.2744001959785587,1.4546945359002674,1.505444502301986,2.0437738108023433],"text":["nom: Avocat, pulpe, cru","nom: Champignon, tout type, cru","nom: Salade ou chicorée frisée, crue","nom: Chou-fleur, cru","nom: Concombre, pulpe et peau, cru","nom: Courgette, pulpe et peau, crue","nom: Cresson de fontaine, cru","nom: Laitue, crue","nom: Oignon, cru","nom: Pissenlit, cru","nom: Poireau, cru","nom: Poivron, vert, jaune ou rouge, cru","nom: Potiron, cru","nom: Tomate, crue","nom: Artichaut, cru","nom: Aubergine, crue","nom: Cardon, cru","nom: Champignon de Paris ou champignon de couche, cru","nom: Brocoli, cru","nom: Chou de Bruxelles, cru","nom: Épinard, cru","nom: Haricot vert, cru","nom: Navet, pelé, cru","nom: Chou-rave, cru","nom: Chou vert, cru","nom: Haricot vert, surgelé, cru","nom: Petits pois, crus","nom: Asperge, pelée, crue","nom: Chou-fleur, surgelé, cru","nom: Épinard, surgelé, cru","nom: Petits pois, surgelés, crus","nom: Scarole, crue","nom: Betterave rouge, crue","nom: Légumes, mélange surgelé, crus","nom: Champignon, chanterelle ou girolle, crue","nom: Champignon, morille, crue","nom: Maïs doux, en épis, surgelé, cru","nom: Oseille, crue","nom: Champignon, pleurote, crue","nom: Chou blanc, cru","nom: Tomate verte, crue","nom: Haricot de Lima, cru","nom: Courge doubeurre (butternut), pulpe, crue","nom: Courge, crue","nom: Courge spaghetti, pulpe, crue","nom: Piment, cru","nom: Champignon, oronge vraie, crue","nom: Champignon, cèpe, cru","nom: Champignon, rosé des prés, cru","nom: Chicorée rouge, crue","nom: Chicorée verte, crue","nom: Citrouille, pulpe, crue","nom: Chou chinois ou pak-choi ou pé-tsai, cru","nom: Poivron jaune, cru","nom: Laitue romaine, crue","nom: Pois mange-tout ou pois gourmand, cru","nom: Panais, cru","nom: Bambou, pousse, crue","nom: Cresson alénois, cru","nom: Laitue iceberg, crue","nom: Rutabaga, cru","nom: Haricot beurre, surgelé, cru","nom: Brocoli, surgelé, cru","nom: Chou de Bruxelles, surgelé, cru","nom: Carotte, surgelée, crue","nom: Petits pois et carottes, surgelés, crus","nom: Roquette, crue","nom: Chou frisé, cru","nom: Champignon de Paris ou champignon de couche, surgelé, cru","nom: Courgette, pulpe et peau, surgelée, crue","nom: Artichaut, fond, surgelé, cru","nom: Maïs doux, surgelé, cru","nom: Navet, surgelé, cru","nom: Oignon, surgelé, cru","nom: Poireau, surgelé, cru","nom: Salsifis, surgelé, cru","nom: Oignon rouge, cru","nom: Légumes pour potages, surgelés, crus","nom: Légumes pour ratatouille, surgelés","nom: Printanière de légumes, surgelée, crue (haricots verts, carottes, pomme de terre, petits pois, oignons)","nom: Haricot plat, cru","nom: Asperge, verte, crue","nom: Chou romanesco ou brocoli à pomme, cru","nom: Salade verte, crue, sans assaisonnement","nom: Artichaut, cuit","nom: Asperge, bouillie/cuite à l'eau","nom: Aubergine, cuite","nom: Betterave rouge, cuite","nom: Brocoli, cuit","nom: Carotte, appertisée, égouttée","nom: Carotte, cuite","nom: Champignon, tout type, appertisé, égoutté","nom: Chou de Bruxelles, cuit","nom: Chou vert, cuit","nom: Chou-fleur, cuit","nom: Coeur de palmier, appertisé, égoutté","nom: Courgette, pulpe et peau, cuite","nom: Céleri branche, cuit","nom: Céleri-rave, cuit","nom: Épinard, cuit","nom: Haricot mungo germé ou pousse de \"soja\", appertisé, égoutté","nom: Haricot vert, cuit","nom: Navet, cuit","nom: Oignon, cuit","nom: Petits pois, appertisés, égouttés","nom: Petits pois, cuits","nom: Poireau, cuit","nom: Potiron, appertisé, égoutté","nom: Tomate, pelée, appertisée, égouttée","nom: Maïs doux, en épis, cuit","nom: Macédoine de légumes, appertisée, égouttée","nom: Épinard, appertisé, égoutté","nom: Haricot vert, appertisé, égoutté","nom: Haricot beurre, appertisé, égoutté","nom: Maïs doux, appertisé, égoutté","nom: Artichaut, appertisé, égoutté","nom: Tomate, concentré, appertisé","nom: Haricot vert, surgelé, cuit","nom: Asperge, appertisée, égouttée","nom: Chou de Bruxelles, appertisé, égoutté","nom: Céleri branche, appertisé, égoutté","nom: Champignon de Paris ou champignon de couche, appertisé, égoutté","nom: Salsifis, appertisé, égoutté","nom: Poivron vert, cuit","nom: Poivron rouge, cuit","nom: Petits pois et carottes, appertisés, égouttés","nom: Chou-rave, bouilli/cuit à l'eau","nom: Chou rouge, bouilli/cuit à l'eau","nom: Potiron, cuit","nom: Champignon de Paris ou champignon de couche, bouilli/cuit à l'eau","nom: Épinard, surgelé, cuit","nom: Chou-fleur, surgelé, cuit","nom: Petits pois, surgelés, cuits","nom: Panais, cuit","nom: Courge spaghetti, pulpe, cuite","nom: Tétragone cornue, cuite","nom: Rutabaga, cuit","nom: Tomate, purée, appertisée","nom: Bambou, pousses, appertisées, égouttées","nom: Brocoli, surgelé, cuit","nom: Chou de Bruxelles, surgelé, cuit","nom: Carotte, surgelée, cuite","nom: Champignon, lentin comestible ou shiitaké, cuit","nom: Petits pois et carottes, surgelés, cuits","nom: Pois mange-tout ou pois gourmand, bouilli/cuit à l'eau","nom: Chou frisé, cuit","nom: Chou chinois (pak-choi ou pé-tsai), cuit","nom: Tomate, pulpe et peau, bouillie/cuite à l'eau","nom: Pois mange-tout ou pois gourmands, cuits","nom: Légumes (3-4 sortes en mélange), purée","nom: Brocoli, purée","nom: Tomate, coulis, appertisé (purée de tomates mi-réduite à 11%)","nom: Tomate, double concentré, appertisé","nom: Macédoine de légumes, surgelée, pré-cuite (à recuire)","nom: Poivron rouge, appertisé, égoutté","nom: Asperge blanche, bouillie/cuite à l'eau","nom: Céleri-rave, purée","nom: Tomate, pulpe et peau, rôtie/cuite au four","nom: Chou romanesco ou brocoli à pomme, cuit","nom: Potimarron, pulpe, cuit à l'étouffée","nom: Carotte, purée cuisinée à la crème, préemballée","nom: Asperge verte, bouillie/cuite à l'eau","nom: Bette ou blette, côte et feuille, bouillie/cuite à l'eau","nom: Brocoli, bouilli/cuit à l'eau, croquant","nom: Brocoli, bouilli/cuit à l'eau, fondant","nom: Brocoli, cuit à la vapeur","nom: Carotte, cuite à la vapeur","nom: Chou-fleur, cuit à la vapeur","nom: Céleri rave, bouilli/cuit à l'eau","nom: Haricot beurre, bouilli/cuit à l'eau","nom: Oignon nouveau ou oignon frais ou cébette, sauté/poêlé sans matière grasse","nom: Panais, cuit à l'étouffée","nom: Petits pois, bouillis/cuits à l'eau","nom: Poivron jaune, sauté/poêlé sans matière grasse","nom: Poivron vert, sauté/poêlé sans matière grasse","nom: Potimarron, pulpe, bouilli/cuit à l'eau","nom: Tomate, rôtie/cuite au four","nom: Échalote, sautée/poêlée sans matière grasse","nom: Légumes pour couscous, cuits","nom: Légume cuit (aliment moyen)","nom: Gombo, fruit, cuit","nom: Carotte, déshydratée","nom: Oignon, séché","nom: Tomate, séchée","nom: Champignon, lentin comestible ou shiitaké, séché","nom: Tomate, séchée, à l'huile","nom: Giraumon (variété locale), pulpe, cuit à la vapeur, prélevé à la Martinique","nom: Giraumon (variété phoenix), pulpe, cuit à la vapeur, prélevé à la Martinique","nom: Patate douce, pulpe, cuite à la vapeur, prélevée à la Martinique"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,196,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,191,196,1)"}},"hoveron":"points","name":"légumes","legendgroup":"légumes","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.228310502283108,"r":7.3059360730593621,"b":40.182648401826498,"l":43.105022831050235},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.0436373803722669,2.6635835166092048],"tickmode":"array","ticktext":["30","100","300"],"tickvals":[1.4771212547196624,2,2.4771212547196626],"categoryorder":"array","categoryarray":["30","100","300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Energie (kCal pur 100g)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"scaleanchor":"y","scaleratio":1,"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.0646092412484958,2.731864523262018],"tickmode":"array","ticktext":["30","100","300"],"tickvals":[1.4771212547196624,2,2.4771212547196626],"categoryorder":"array","categoryarray":["30","100","300"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Energie prédite par le modèle réduit","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"scaleanchor":"x","scaleratio":1,"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"groupe","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"4ff817454087":{"intercept":{},"slope":{},"type":"scatter"},"4ff8438f6b00":{"x":{},"y":{},"label":{},"colour":{}}},"cur_data":"4ff817454087","visdat":{"4ff817454087":["function (y) ","x"],"4ff8438f6b00":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>La documentation indique que la valeur énergétique est calculée en utilisant les coefficients suivants : 37 kJ/g (9 kcal/g) pour les lipides, 29 kJ/g (7 kcal/g) pour l’alcool (éthanol), 17 kJ/g (4 kcal/g) pour les protéines, 17 kJ/g (4 kcal/g) pour les glucides (à l’exception des polyols), 13 kJ/g (3 kcal/g) pour les acides organiques, 10 kJ/g (2,4 kcal/g) pour les polyols, 8 kJ/g (2 kcal/g) pour les fibres alimentaires.”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

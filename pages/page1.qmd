@@ -98,6 +98,18 @@ fruleg <- ciqual %>%
     Zinc = f(`Zinc (mg/100 g)`),
     VitamineC = f(`Vitamine C (mg/100 g)`), .keep = "none") %>%
   tidyr::drop_na(nom, Eau, Proteines, Glucides, Lipides, Sucres)
+
+res.lm.red <- lm(Energie ~ Lipides + Proteines + Glucides, data = fruleg)
+fruleg <- fruleg %>% 
+  mutate(EnergiePredite = predict(
+    res.lm.red, 
+    newdata = fruleg %>% 
+      select(Proteines,
+             Lipides,
+             Glucides)),
+    .after = Energie)
+
+
 readr::write_delim(fruleg, file = "../data/fruleg.tsv")
 ```
 

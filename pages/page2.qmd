@@ -2,12 +2,12 @@
 title: "Exploration des données *fruits et légumes*"
 ---
 
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 library(dplyr)
 library(ggplot2)
 library(gtsummary)
+library(plotly)
 library(readr)
 library(tidyr)
 
@@ -55,8 +55,7 @@ tbl_summary(
   by = "groupe")
 ```
 
-On réprésente cette information sous la forme de boxplots combinés à des diagrammes en violon
-
+On réprésente cette information sous la forme de boxplots combinés à des diagrammes en violon. On observe un grande variabilité de la teneur en sucres, ou en glucides. Le jeu de données "fruits et légumes" peut servir d'exemple pour illustrer les test de comparaison de deux groupes (non appariés), avec des procédures paramétriques ou non-paramétriques.
 
 ```{r boxplots nutrition}
 nutrition %>%
@@ -112,41 +111,43 @@ ggpubr::ggarrange(
 
 ## Valeur énergétique
 
-La valeur énergétique est une fonction linéaire de la composition nutritionnelle[^e]. Mais toutes les variables utilisées pour faire ce calcul ne sont pas disponibles pour tous les fruits et légumes de la table. Voici les résultats d'un modèle linéaire contenant toutes les variables de la formule utilisée pour calcule la valeur énergétique : 
+La valeur énergétique est une fonction linéaire de la composition nutritionnelle[^e]. Mais toutes les variables utilisées pour faire ce calcul ne sont pas disponibles pour tous les fruits et légumes de la table. Voici les résultats d'un modèle linéaire appris sur les aliments pour lesquels toutes les variables de la formule utilisée pour calculer la valeur énergétique sont disponible (i.e. sans aucune valeur manquante) : 
 
-```{r energie formule}
+```{r energie formule, echo = FALSE}
 tbl_regression(res.lm.tout <- lm(Energie ~ Lipides + Alcool + Proteines + Glucides + AcidesOrganiques + Polyols + Fibres, data = fruleg)) %>% add_glance_table(include = c(adj.r.squared))
 ```
 
-Sans surprise, la valeur du $R^2$ est quasiment égale à 1. Mais le résultat est également très proche de 1 si on entraîne un modèle uniquement sur la base de la teneur en lipides, protéines et glucides.
+Sans surprise, la valeur du $R^2$ est quasiment égale à 1. Mais le résultat est également très proche de 1 si on entraîne un modèle uniquement sur la base de la teneur en lipides, protéines et glucides (pour lesquels il n'y a aucune valeur manquante du tout).
 
-```{r  energie formule reduite}
+```{r  energie formule reduite, echo = FALSE}
 tbl_regression(res.lm.red <- lm(Energie ~ Lipides + Proteines + Glucides, data = fruleg)) %>% add_glance_table(include = c(adj.r.squared))
 ```
 
-On peut donc estimer dans un premier temps les coefficients de ce modèle "réduit" sur les échantillons pour lesquels la valeur énergétique a pu être calculé, et approcher la valeur énergétique en se basant sur les teneurs en protéines, lipides et glucides pour les fruits et légumes pour lesquels la valeur énergétique est manquante.
+On peut donc estimer dans un premier temps les coefficients de ce modèle "réduit" sur les échantillons pour lesquels la valeur énergétique a pu être calculée, et approcher la valeur énergétique, en se basant uniquement sur les teneurs en protéines, lipides et glucides, pour les fruits et légumes pour lesquels la valeur énergétique est manquante.
 
-```{r prediction}
-fruleg <- fruleg %>% 
-  mutate(EnergiePredite = predict(
-    res.lm.red, 
-    newdata = fruleg %>% 
-      select(Proteines,
-             Lipides,
-             Glucides)))
+Pour les données qui ne sont pas manquantes, on obtient la prédiction suivante (axe des $y$) en fonction de la valeur énergétique calculée avec la formule analytique.
+La valeur énergétique est un peu surestimée pour les petites valeurs, mais ce n'est pas particulièrement gênant pour un jeu de données qui servira à un cours.
+
+
+```{r prediction, echo = FALSE}
+g.energie <- fruleg %>% 
+  ggplot(aes(Energie, EnergiePredite, label = nom, color = groupe)) + 
+  geom_abline(intercept = 0, slope = 1, color = "grey") +
+  geom_point() + 
+  coord_equal() + 
+  labs(
+    x = "Energie (kCal pur 100g)", 
+    y = "Energie prédite par le modèle réduit") + 
+  scale_x_log10() + 
+  scale_y_log10()
+
+ggplotly(g.energie, tooltip = "label")
 ```
 
 
 
 [^e]: La documentation indique que la valeur énergétique est calculée en utilisant les coefficients suivants : 37 kJ/g (9 kcal/g) pour les lipides, 29 kJ/g (7 kcal/g) pour l'alcool (éthanol), 17 kJ/g (4 kcal/g) pour les protéines, 17 kJ/g (4 kcal/g) pour les glucides (à l'exception des polyols), 13 kJ/g (3 kcal/g) pour les acides organiques, 10 kJ/g (2,4 kcal/g) pour les polyols, 8 kJ/g (2 kcal/g) pour les fibres alimentaires."
 
-
-On peut donc entraîner un modèle linéaire sur tous les fruits et légumes 
-
-
-```{r}
-
-```
 
 
 ```{r garbage, echo = FALSE, eval = FALSE}

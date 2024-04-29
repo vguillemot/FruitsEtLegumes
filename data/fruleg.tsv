@@ -1,261 +1,261 @@
-nom groupe ssgroupe Energie Eau Proteines Glucides Lipides Sucres Fibres Calcium Cuivre Fer Magnesium Manganese Phosphore Potassium Zinc VitamineC
-"Avocat, pulpe, cru" légumes "légumes crus" 205 70.3 1.56 0.83 20.6 0.4 3.6 9.4 0.18 0.34 21 0.2 38 430 0.43 NA
-"Champignon, tout type, cru" légumes "légumes crus" 21.7 92.6 2.37 1.88 0.23 1.43 1.72 7.78 0.32 0.69 10.9 0.061 85.6 341 0.65 3.4
-"Salade ou chicorée frisée, crue" légumes "légumes crus" NA 92.9 1.48 2.4 0.25 0.7 2.45 76 0.2 0.85 22.5 0.42 37.5 367 0.61 18.5
-"Chou-fleur, cru" légumes "légumes crus" 26.2 92.9 1.81 2.13 0.7 1.7 2.2 23 0.02 0.27 9.8 0.14 40 270 0.22 4.14
-"Concombre, pulpe et peau, cru" légumes "légumes crus" 15.6 96 0.64 2.54 0.11 1.67 0.6 19.2 0.026 0.13 13.6 0.085 24.7 157 0.095 8.25
-"Courgette, pulpe et peau, crue" légumes "légumes crus" 16.5 94.7 1.23 1.8 0.26 1.79 1.05 18.7 0.052 0.36 17.5 0.18 44.7 262 0.31 17.5
-"Cresson de fontaine, cru" légumes "légumes crus" NA 94.6 2.09 0.9 0.15 0.2 0.85 101 0.11 0.9 19 0.37 64.2 320 0.16 51.5
-"Laitue, crue" légumes "légumes crus" NA 95.3 1.3 1.33 0.2 0.73 1.2 64.6 0.036 0.98 14.9 0.4 29.5 200 0.2 11.8
-"Oignon, cru" légumes "légumes crus" NA 89.6 1.1 6.25 0.62 4.8 1.7 25 NA 1.9e-4 9 0.1 37 190 0.23 3.9
-"Pissenlit, cru" légumes "légumes crus" NA 85.3 2.91 6.1 0.85 0.71 2.7 62.3 0.067 3.1 13.2 0.16 66 397 0.21 37.5
-"Poireau, cru" légumes "légumes crus" 32.3 87.6 1.49 4.9 0.25 3.15 2.27 50.7 0.087 1.5 19 0.34 40.3 208 0.21 18.5
-"Poivron, vert, jaune ou rouge, cru" légumes "légumes crus" NA 92.1 0.8 4.55 0.27 2.7 1.5 7.7 NA 0.4 11.9 0.1 22.5 155 0.13 121
-"Potiron, cru" légumes "légumes crus" NA 91.6 1 3.5 0.1 1.36 0.5 21 0.13 0.8 12 0.13 44 340 0.32 9
-"Tomate, crue" légumes "légumes crus" 19.3 94.1 0.86 2.49 0.26 2.48 1.2 8.14 0.029 0.12 10.1 0.066 26.6 256 0.087 15.5
-"Artichaut, cru" légumes "légumes crus" NA 84.9 3.2 4.92 0.18 0.99 5.4 52 0.23 1.19 47.8 0.26 81.2 387 0.49 11.7
-"Aubergine, crue" légumes "légumes crus" NA 92.9 1.12 2.39 0.14 2.39 2.7 8.7 0.081 0.32 12 0.24 27.2 235 0.16 2.1
-"Cardon, cru" légumes "légumes crus" NA 94 0.7 1.7 0.1 1.5 1.6 70 0.23 0.7 42 0.26 23 400 0.17 2
-"Champignon de Paris ou champignon de couche, cru" légumes "légumes crus" 28 93.9 2.62 3.15 0.36 2.5 1 6.03 0.35 0.31 10.5 0.076 96.6 364 0.5 3.09
-"Brocoli, cru" légumes "légumes crus" NA 88.9 3.95 1.7 0.48 1.7 2.9 45.9 0.059 0.76 21.9 0.4 76.5 357 0.4 106
-"Chou de Bruxelles, cru" légumes "légumes crus" NA 85 3.98 5.67 0.4 2.2 3.95 32.3 0.062 1.15 23.5 0.3 76.4 436 0.43 103
-"Épinard, cru" légumes "légumes crus" NA 91.6 2.62 2.25 0.5 0.32 2.37 114 0.1 3.61 52.5 1.3 45.2 504 0.82 41.1
-"Haricot vert, cru" légumes "légumes crus" NA 90.4 1.85 4.14 0.21 3.26 2.85 48.5 0.063 1.02 21 0.23 38.5 224 0.32 13.6
-"Navet, pelé, cru" légumes "légumes crus" NA 91.9 0.76 4.7 0.1 3.8 1.9 40 0.063 0.4 9.5 0.1 38.5 237 0.25 18.5
-"Chou-rave, cru" légumes "légumes crus" NA 91 1.79 2.35 0.1 2.35 3.6 24 0.13 0.4 19 0.14 46 350 0.03 55.1
-"Chou vert, cru" légumes "légumes crus" NA 91.8 2.53 1.92 0.41 1.92 3.08 96.2 0.049 0.93 18 0.17 32.7 231 0.22 69
-"Haricot vert, surgelé, cru" légumes "légumes crus" 34 89.4 1.97 4.35 0.17 1.96 3.68 51.5 0.063 0.85 22 0.29 40.8 186 0.31 18
-"Petits pois, crus" légumes "légumes crus" NA 79.2 5.84 7 0.55 5.67 5.5 27.5 0.14 1.64 30.5 0.4 119 272 1 41.5
-"Asperge, pelée, crue" légumes "légumes crus" NA 93.3 2.04 2.4 0.21 1.88 1.95 22 0.12 1.32 11.5 0.16 52 202 0.49 8.8
-"Chou-fleur, surgelé, cru" légumes "légumes crus" NA 92.5 2.09 2.64 0.37 1.91 1.82 21.7 0.031 0.51 12 0.2 41.6 193 0.17 51.9
-"Épinard, surgelé, cru" légumes "légumes crus" NA 91.6 2.87 0.89 0.49 0.6 2.7 159 0.12 2.28 50.5 0.53 47.7 398 0.49 21.4
-"Petits pois, surgelés, crus" légumes "légumes crus" NA 80.2 5.86 8.77 0.44 3.87 6.45 27.3 0.15 1.53 25.9 0.35 86.9 158 0.86 20.8
-"Scarole, crue" légumes "légumes crus" NA 93.8 1.25 0.3 0.2 0.23 3.1 52 0.099 0.83 15 0.42 28 314 0.79 6.5
-"Betterave rouge, crue" légumes "légumes crus" NA 86.7 1.74 9.1 0.24 6.76 2.55 22.1 0.098 0.7 19 0.46 38.1 328 0.54 6.45
-"Légumes, mélange surgelé, crus" légumes "légumes crus" 65.1 85.2 2.26 5.71 2.65 2.18 4.7 33 0.093 0.98 24 0.24 59 212 0.45 13.7
-"Champignon, chanterelle ou girolle, crue" légumes "légumes crus" 33.1 88.7 2.28 2.3 0.78 1.87 4.23 8.33 0.39 3.52 10 0.28 53.5 449 0.84 5.5
-"Champignon, morille, crue" légumes "légumes crus" 24.5 89.6 3.16 0.1 0.54 0.044 3.35 43 0.63 1.2 19 0.59 194 411 2.03 5
-"Maïs doux, en épis, surgelé, cru" légumes "légumes crus" NA 73.3 3.36 17 1.19 3.78 2.65 4.18 0.15 0.59 30.3 0.25 108 276 1.05 6.9
-"Oseille, crue" légumes "légumes crus" NA 93 1.84 1.6 0.65 1.54 1.8 44 0.13 2.4 103 0.35 63 390 0.2 48
-"Champignon, pleurote, crue" légumes "légumes crus" 25.5 89.2 3.06 1.5 0.36 0.71 2.4 5 0.24 1.17 18 0.11 120 420 0.77 4
-"Chou blanc, cru" légumes "légumes crus" 36.5 90 1.38 4.63 0.6 4.2 3.5 59 0.02 0.3 11 0.1 33 240 0.16 8.88
-"Tomate verte, crue" légumes "légumes crus" NA 93 1.2 4 0.2 4 1.1 13 0.09 0.51 10 0.1 28 204 0.07 23.4
-"Haricot de Lima, cru" légumes "légumes crus" 105 70.2 6.84 15.3 0.86 1.48 4.9 34 0.32 3.14 58 1.22 136 467 0.78 23.4
-"Courge doubeurre (butternut), pulpe, crue" légumes "légumes crus" NA 86.4 1 5.4 0.1 2.2 2 48 0.072 0.7 34 0.2 33 352 0.15 21
-"Courge, crue" légumes "légumes crus" NA 92.3 1.1 1.6 0.17 1.6 1.3 28.5 0.061 0.6 16.5 0.17 30.5 312 0.26 14.7
-"Courge spaghetti, pulpe, crue" légumes "légumes crus" NA 91.6 0.64 5.41 0.57 2.76 1.5 23 0.037 0.31 12 0.13 12 108 0.19 2.1
-"Piment, cru" légumes "légumes crus" NA 87.9 1.87 7.7 0.32 5.3 1.65 14 0.15 1.12 24 0.21 55.3 331 0.28 155
-"Champignon, oronge vraie, crue" légumes "légumes crus" 23.2 92.9 2 2.45 0.3 1 1.7 17 NA 1.1 NA NA 89 320 0.4 3
-"Champignon, cèpe, cru" légumes "légumes crus" 31.6 90.3 3.13 3.03 0.43 1.7 1.93 23 0.23 1 12 0.17 129 361 0.4 3
-"Champignon, rosé des prés, cru" légumes "légumes crus" 25.3 92.1 2.3 2.45 0.4 1 1.7 10 NA 1.2 NA NA 102 320 0.4 4
-"Chicorée rouge, crue" légumes "légumes crus" NA 94 1.4 1.6 0.1 1.6 3 36 NA 0.3 NA NA 30 180 0.2 10
-"Chicorée verte, crue" légumes "légumes crus" NA 91.2 1.9 0.5 0.5 0.5 1 82.5 0.06 4.15 17 0.3 45 498 0.32 46
-"Citrouille, pulpe, crue" légumes "légumes crus" NA 91.6 1 6 0.1 2.76 0.5 21 0.13 0.8 12 0.13 44 340 0.32 9
-"Chou chinois ou pak-choi ou pé-tsai, cru" légumes "légumes crus" NA 95.2 1.38 1.65 0.2 1.18 1.05 86.4 0.021 0.68 17.5 0.17 37.8 249 0.17 40.3
-"Poivron jaune, cru" légumes "légumes crus" 30.7 91.9 0.94 4.73 0.3 4.3 1.2 8.6 0.07 0.21 12 0.11 23 220 0.23 121
-"Laitue romaine, crue" légumes "légumes crus" NA 94.6 1.24 1.2 0.3 1.19 2.1 33 0.048 0.97 14 0.16 30 247 0.23 14
-"Pois mange-tout ou pois gourmand, cru" légumes "légumes crus" NA 88.3 3.08 6.2 0.27 4 2.63 40.7 0.079 2.08 24 0.24 56.8 200 0.27 60
-"Panais, cru" légumes "légumes crus" 58.3 80.6 1.54 10.1 0.4 4.8 4.7 45.5 0.13 0.7 29.5 0.48 82.5 505 0.72 11.5
-"Bambou, pousse, crue" légumes "légumes crus" 35.1 89.8 2.52 5.08 0.2 3 1.45 15.5 0.19 0.4 3 0.26 54.5 517 1.1 7.5
-"Cresson alénois, cru" légumes "légumes crus" NA 91.1 2.55 2.2 0.6 2.2 1.35 75.5 0.13 1.8 41 0.55 76 368 0.35 52
-"Laitue iceberg, crue" légumes "légumes crus" NA 95.6 1.01 2.45 0.18 1.48 1.15 17.4 0.029 0.43 8.73 0.19 23.6 179 0.21 4.72
-"Rutabaga, cru" légumes "légumes crus" NA 89.5 1.17 5.7 0.13 4.46 2.6 45.2 0.031 0.35 17 0.14 47.8 349 0.21 33
-"Haricot beurre, surgelé, cru" légumes "légumes crus" NA 89.9 2 4.9 0.17 2.5 2.33 51 0.049 0.78 22 0.39 32 186 0.26 16
-"Brocoli, surgelé, cru" légumes "légumes crus" NA 91.5 2.79 1.56 0.44 1.24 2.77 48.5 0.036 0.77 17 0.26 54.5 231 0.41 62.3
-"Chou de Bruxelles, surgelé, cru" légumes "légumes crus" NA 86.3 3.43 4.5 0.33 2.35 4.28 34 0.043 0.82 22 0.29 65.5 427 0.37 77.5
-"Carotte, surgelée, crue" légumes "légumes crus" NA 90.9 0.63 4.99 0.27 4.73 2.76 34.9 0.074 0.41 12 0.17 33 235 0.33 4.32
-"Petits pois et carottes, surgelés, crus" légumes "légumes crus" NA 82.3 3.89 7.1 0.37 3.43 4.3 29.5 0.089 1.2 18 0.24 60 194 0.52 13.6
-"Roquette, crue" légumes "légumes crus" NA 91.7 2.58 2.1 0.66 2.05 1.6 160 0.076 1.46 47 0.32 52 369 0.47 15
-"Chou frisé, cru" légumes "légumes crus" NA 82.8 4.33 4.2 1.07 2.26 4.9 185 0.8 1.74 33.5 0.58 83 378 0.59 145
-"Champignon de Paris ou champignon de couche, surgelé, cru" légumes "légumes crus" 15.9 93.2 1.8 0.83 0.25 0.25 1.97 10 NA 0.8 NA NA NA NA NA 4
-"Courgette, pulpe et peau, surgelée, crue" légumes "légumes crus" NA 94.6 1.19 2.18 0.14 1.56 1.48 20 0.05 0.64 13 0.24 28 218 0.21 9.32
-"Artichaut, fond, surgelé, cru" légumes "légumes crus" NA 84.7 2.08 8.09 0.43 1.89 7.54 NA NA NA NA NA NA NA NA NA
-"Maïs doux, surgelé, cru" légumes "légumes crus" NA 71.8 3.28 19.8 0.78 3.78 2.8 4 0.051 0.68 32 0.16 87 294 0.7 7.2
-"Navet, surgelé, cru" légumes "légumes crus" NA 95.7 0.82 2 0.18 1.9 1.85 23 0.045 0.7 10 0.071 20 137 0.14 4.4
-"Oignon, surgelé, cru" légumes "légumes crus" NA 91.1 1 5.39 0.12 4.59 2.65 26.5 0.035 0.4 8.5 0.1 22.5 133 0.095 5.65
-"Poireau, surgelé, cru" légumes "légumes crus" 26.7 93.2 1.42 3.35 0.29 2.95 2.55 63 NA 0.8 NA NA NA NA NA 26
-"Salsifis, surgelé, cru" légumes "légumes crus" NA 85.8 2.65 4.15 0.15 2.5 5.8 NA NA NA NA NA NA NA NA NA
-"Oignon rouge, cru" légumes "légumes crus" 36.3 90.3 1.31 5.63 0.4 5.2 2.5 22 0.05 0.19 9 0.12 29 190 0.21 4.09
-"Légumes pour potages, surgelés, crus" légumes "légumes crus" 34.1 89.2 1.44 4.69 0.44 2.5 2.86 37 NA 1 NA NA NA NA NA 25
-"Légumes pour ratatouille, surgelés" légumes "légumes crus" NA 94.2 1.01 3.23 0.089 2.88 1.67 NA NA NA NA NA NA NA NA NA
-"Printanière de légumes, surgelée, crue (haricots verts, carottes, pomme de terre, petits pois, oignons)" légumes "légumes crus" NA 85.7 2.4 8.48 0.078 2.62 3.62 NA NA NA NA NA NA NA NA 16
-"Haricot plat, cru" légumes "légumes crus" NA 92.2 1.93 4.47 0.12 1.3 2.97 60 NA 0.8 NA NA NA NA NA 16
-"Asperge, verte, crue" légumes "légumes crus" NA 92.5 2.46 2.03 0.27 1.5 2.15 22.4 NA 1 12.2 NA 85.5 267 NA 15.5
-"Chou romanesco ou brocoli à pomme, cru" légumes "légumes crus" NA 89.8 2.93 2.2 0.4 2.2 2.35 34.5 0.041 0.92 20 0.25 62 300 0.64 70.6
-"Salade verte, crue, sans assaisonnement" légumes "légumes crus" NA 96.1 1.01 1.5 0.1 0.83 1.3 35.3 0.061 0.64 15.3 0.22 23.5 260 0.18 1.95
-"Artichaut, cuit" légumes "légumes cuits" NA 85.8 2.53 0.99 0.28 0.99 8.3 42.9 0.082 0.67 44.6 0.14 73 427 0.29 9.1
-"Asperge, bouillie/cuite à l'eau" légumes "légumes cuits" NA 93.4 2.68 0.81 0.32 0.81 1.8 19.9 0.074 0.74 6.31 0.049 51.5 198 0.2 16.1
-"Aubergine, cuite" légumes "légumes cuits" NA 88.6 1.33 4.17 0.28 3.41 4.3 20.1 0.058 0.25 15 0.12 15 123 0.098 1.3
-"Betterave rouge, cuite" légumes "légumes cuits" 42.8 88.3 1.44 7.13 0.4 6.7 2.5 24 0.07 0.29 17 0.31 18 320 0.29 NA
-"Brocoli, cuit" légumes "légumes cuits" NA 92.5 2.1 1.1 0.78 1.1 1.5 43.3 NA NA 11.2 NA 51 125 NA 23.9
-"Carotte, appertisée, égouttée" légumes "légumes cuits" 21.9 93 0.67 3.4 0.2 2.49 1.75 25 0.1 0.64 8 0.45 24 179 0.26 2.7
-"Carotte, cuite" légumes "légumes cuits" 18.9 93 0.55 2.6 0.1 1.3 2.8 31.5 NA NA 7.5 NA 18 96.4 NA NA
-"Champignon, tout type, appertisé, égoutté" légumes "légumes cuits" 24.9 91.1 1.87 2.56 0.29 2.19 2.4 18.9 0.15 0.79 6.65 0.035 66 129 0.51 0
-"Chou de Bruxelles, cuit" légumes "légumes cuits" NA 87.6 2.6 4.2 0.11 1.7 3.2 36.2 NA NA 16.9 NA 65 324 NA 56.4
-"Chou vert, cuit" légumes "légumes cuits" NA 93.9 1.03 3.04 0.45 2.79 2.4 69.7 0.098 0.28 15.1 0.18 33 190 0.22 27.3
-"Chou-fleur, cuit" légumes "légumes cuits" 20.9 93.7 1.6 1.6 0.46 1.59 2 19.2 0.05 0.31 12.9 0.12 34 238 0.22 9.7
-"Coeur de palmier, appertisé, égoutté" légumes "légumes cuits" NA 90.2 2.45 4.03 0.5 1.5 2.32 58 0.13 3.13 38 1.39 65 177 1.15 7.9
-"Courgette, pulpe et peau, cuite" légumes "légumes cuits" 15.5 93.8 0.93 1.4 0.36 1.39 1.5 19.3 0.085 0.32 22.3 0.089 65 238 0.22 2.9
-"Céleri branche, cuit" légumes "légumes cuits" NA 94.1 0.83 1.2 0.16 1.2 1.6 53.3 0.059 0.42 9 0.11 25 284 0.077 6.1
-"Céleri-rave, cuit" légumes "légumes cuits" NA 90.1 1.3 4.6 0.86 2.8 2.6 52.4 0.12 0.32 15.1 0.27 58 306 0.24 2.7
-"Épinard, cuit" légumes "légumes cuits" NA 92.8 3.2 0.5 0.14 0.47 2.7 140 0.1 2.14 54.4 0.43 40 396 0.65 2.1
-"Haricot mungo germé ou pousse de ""soja"", appertisé, égoutté" légumes "légumes cuits" NA 95.8 1.56 2.36 0.12 1.78 1.63 13.4 0.047 0.26 7.53 0.039 26 31.5 0.11 0.65
-"Haricot vert, cuit" légumes "légumes cuits" 29.4 89.3 2 3 0.17 1 4 55.3 0.081 0.6 22.3 0.19 36 174 0.2 5
-"Navet, cuit" légumes "légumes cuits" NA 93.4 0.9 3.8 0.2 2.9 2.2 37.3 0.045 0.11 8.75 0.045 26 237 0.099 5.6
-"Oignon, cuit" légumes "légumes cuits" NA 90.4 1.3 6.2 0.2 4 1.4 29.2 0.077 0.21 13 0.12 44 220 0.19 2.1
-"Petits pois, appertisés, égouttés" légumes "légumes cuits" 81.5 79.5 5.12 10.7 0.8 3.59 5.75 20.6 0.079 1.29 16.3 0.17 73.1 71.5 0.42 6.9
-"Petits pois, cuits" légumes "légumes cuits" NA 82.9 5.8 4.7 0.87 1.8 5.8 32.7 0.14 1.17 31.9 0.32 96 135 0.8 1.8
-"Poireau, cuit" légumes "légumes cuits" NA 92 1.1 3 0.2 2.11 3.2 25.6 0.12 0.34 8.45 0.075 20 151 0.1 1.3
-"Potiron, appertisé, égoutté" légumes "légumes cuits" NA 90 1.1 5.19 0.28 3.3 2.9 26 0.11 1.39 23 0.15 35 206 0.17 4.2
-"Tomate, pelée, appertisée, égouttée" légumes "légumes cuits" 18.3 94.4 1.07 1.89 0.28 1.88 1.27 21.1 0.06 0.77 9.2 0.073 18 190 0.11 12
-"Maïs doux, en épis, cuit" légumes "légumes cuits" NA 73.4 3.41 18.6 1.5 4.54 2.4 3 0.049 0.45 26 0.17 77 218 0.62 5.5
-"Macédoine de légumes, appertisée, égouttée" légumes "légumes cuits" 40.4 87 2.32 5.59 0.28 1.73 3.16 40.7 0.072 1.05 10.6 0.15 42 291 0.28 5
-"Épinard, appertisé, égoutté" légumes "légumes cuits" NA 91.8 2.81 0.93 0.5 0.4 2.4 127 0.18 2.3 76 0.6 44 346 0.46 14.3
-"Haricot vert, appertisé, égoutté" légumes "légumes cuits" 23.1 92.6 1.33 2.07 0.31 0.77 3.36 42.7 0.13 0.81 13 0.094 25.3 94 0.23 3.1
-"Haricot beurre, appertisé, égoutté" légumes "légumes cuits" NA 92.8 1.22 3.48 0.23 0.86 1.68 25 0.044 0.9 15 0.2 19 104 0.3 4.1
-"Maïs doux, appertisé, égoutté" légumes "légumes cuits" 106 75.4 2.82 18.4 1.68 5.16 3.1 3.51 0.036 0.35 26.9 0.11 53.8 224 0.39 3.55
-"Artichaut, appertisé, égoutté" légumes "légumes cuits" NA 89.9 1.5 6.5 0.2 1.5 3 NA NA NA NA NA NA NA NA NA
-"Tomate, concentré, appertisé" légumes "légumes cuits" 99.2 72 4.4 17.1 0.53 13.3 4.2 45.6 NA 1.2 63.3 NA 103 1010 NA 2.6
-"Haricot vert, surgelé, cuit" légumes "légumes cuits" 36.3 91.4 1.95 5.1 0.19 1.23 3.3 51 0.059 0.68 19 0.29 29 159 0.24 11.6
-"Asperge, appertisée, égouttée" légumes "légumes cuits" NA 94.2 1.58 1.43 0.27 1.23 1.5 15.8 0.076 1.09 8.5 0.16 35 142 0.42 18.4
-"Chou de Bruxelles, appertisé, égoutté" légumes "légumes cuits" NA 88.9 2.5 4.1 0.53 2.5 3.3 26.3 0.03 0.7 12.2 0.1 53 252 0.2 18
-"Céleri branche, appertisé, égoutté" légumes "légumes cuits" 13.1 95 0.63 1.38 0.15 0.8 2 29.2 0.04 NA 8 0.11 NA 281 0.14 NA
-"Champignon de Paris ou champignon de couche, appertisé, égoutté" légumes "légumes cuits" 19.4 92.9 2.23 0.7 0.37 0 2.5 22.2 0.17 0.9 4.85 0.027 47 72.1 0.44 6.5
-"Salsifis, appertisé, égoutté" légumes "légumes cuits" NA 91.5 1.25 4.25 0.15 1 2.5 21 NA NA 8.9 NA NA 173 NA NA
-"Poivron vert, cuit" légumes "légumes cuits" NA 91.9 0.92 2.36 0.2 2.36 1.2 9 0.065 0.46 10 0.12 18 166 0.12 74.4
-"Poivron rouge, cuit" légumes "légumes cuits" NA 90.2 1.4 7 0.3 6 2.2 9 0.01 NA 14 0.1 26 180 0.2 81
-"Petits pois et carottes, appertisés, égouttés" légumes "légumes cuits" 49 87.4 2.51 7.39 0.33 3.58 3.27 23 0.1 0.75 14 0.36 46 100 0.58 6.6
-"Chou-rave, bouilli/cuit à l'eau" légumes "légumes cuits" NA 90.3 1.8 4.4 0.11 2.8 1.1 25 0.13 0.4 19 0.14 45 340 0.31 54
-"Chou rouge, bouilli/cuit à l'eau" légumes "légumes cuits" NA 90.8 1.51 3.32 0.09 3.32 2.6 54.6 0.034 0.66 11.8 0.16 33 262 0.14 34.4
-"Potiron, cuit" légumes "légumes cuits" NA 92 0.81 4.5 0.07 3.1 2 13 0.04 0.18 6.9 0.04 21 230 0.1 0.84
-"Champignon de Paris ou champignon de couche, bouilli/cuit à l'eau" légumes "légumes cuits" 28.7 91.1 2.17 3 0.47 2.34 2.2 6 0.5 1.74 12 0.12 87 356 0.87 4
-"Épinard, surgelé, cuit" légumes "légumes cuits" NA 88.9 4.01 0.51 0.87 0.51 3.7 153 0.16 1.96 82 0.72 50 302 0.49 2.2
-"Chou-fleur, surgelé, cuit" légumes "légumes cuits" 18 94 1.61 1.05 0.22 1.03 2.7 17 0.024 0.41 9 0.15 24 139 0.13 31.3
-"Petits pois, surgelés, cuits" légumes "légumes cuits" NA 79.5 5.15 7.95 0.27 4.65 5.5 24 0.11 1.52 22 0.28 77 110 0.67 9.9
-"Panais, cuit" légumes "légumes cuits" 67.8 80.2 1.32 13.4 0.3 4.8 3.6 37 0.14 0.58 29 0.29 69 367 0.26 13
-"Courge spaghetti, pulpe, cuite" légumes "légumes cuits" NA 92.3 0.66 5.06 0.26 2.53 1.4 21 0.035 0.34 11 0.11 14 117 0.2 3.5
-"Tétragone cornue, cuite" légumes "légumes cuits" NA 94.8 1.3 1 0.17 0.25 1.4 48 0.077 0.66 32 0.53 22 102 0.31 16
-"Rutabaga, cuit" légumes "légumes cuits" NA 91.5 0.93 4.26 0.18 3.95 1.8 18 0.029 0.18 10 0.097 41 216 0.12 18.8
-"Tomate, purée, appertisée" légumes "légumes cuits" 47.1 85.6 1.4 7.54 0.4 3.64 2.38 19.9 0.15 0.6 30 0.16 41.9 798 0.2 9
-"Bambou, pousses, appertisées, égouttées" légumes "légumes cuits" NA 95 1.61 1.9 0.15 1.15 1.25 17 0.098 0.24 3.5 0.14 26.8 196 0.56 1.1
-"Brocoli, surgelé, cuit" légumes "légumes cuits" NA 90.7 3.1 2.36 0.11 1.47 3 51 0.043 0.61 20 0.33 55 180 0.3 40.1
-"Chou de Bruxelles, surgelé, cuit" légumes "légumes cuits" NA 86.7 3.64 4.22 0.39 2.08 4.1 26 0.034 0.48 18 0.21 56 290 0.24 45.7
-"Carotte, surgelée, cuite" légumes "légumes cuits" 32.9 90.3 0.58 4.52 0.68 4.08 3.3 35 0.082 0.53 11 0.17 31 192 0.35 2.3
-"Champignon, lentin comestible ou shiitaké, cuit" légumes "légumes cuits" 60.9 83.5 1.56 12.3 0.22 3.84 2.1 3 0.9 0.44 14 0.2 29 117 1.33 0.3
-"Petits pois et carottes, surgelés, cuits" légumes "légumes cuits" NA 85.8 3.09 7.02 0.42 4.36 3.1 23 0.076 0.94 16 0.2 49 158 0.45 8.1
-"Pois mange-tout ou pois gourmand, bouilli/cuit à l'eau" légumes "légumes cuits" 30.5 90.9 2.25 3.39 0.3 2.3 2.8 35 0.08 0.46 14 0.18 40 100 0.28 20.6
-"Chou frisé, cuit" légumes "légumes cuits" NA 91.2 1.9 3.63 0.4 1.25 2 72 0.16 0.9 18 0.42 28 228 0.24 41
-"Chou chinois (pak-choi ou pé-tsai), cuit" légumes "légumes cuits" NA 95.4 1.53 0.75 0.17 0.75 1.35 62.5 0.024 0.67 10.5 0.15 34 298 0.18 20.9
-"Tomate, pulpe et peau, bouillie/cuite à l'eau" légumes "légumes cuits" NA 94.3 0.95 2.8 0.11 2.49 0.7 11 0.075 0.68 9 0.11 28 218 0.14 22.8
-"Pois mange-tout ou pois gourmands, cuits" légumes "légumes cuits" NA 86.6 3.5 5.92 0.38 4.82 3.1 59 0.09 2.4 28 0.28 58 217 0.49 22
-"Légumes (3-4 sortes en mélange), purée" légumes "légumes cuits" 61.8 86 1.94 4.25 3.4 2.4 3.3 47 0.12 0.67 18 0.18 42 260 0.33 NA
-"Brocoli, purée" légumes "légumes cuits" NA 91.7 2.5 2.75 0.38 1.65 2.39 87 NA 0.9 NA NA NA NA NA 90
-"Tomate, coulis, appertisé (purée de tomates mi-réduite à 11%)" légumes "légumes cuits" NA 88.2 2.05 8.53 0.2 5.5 2.6 NA NA NA NA NA NA NA NA NA
-"Tomate, double concentré, appertisé" légumes "légumes cuits" 92.8 74.3 3.73 17 0.29 16.5 3.62 NA NA NA NA NA NA NA NA NA
-"Macédoine de légumes, surgelée, pré-cuite (à recuire)" légumes "légumes cuits" 54.5 86.4 3.48 6.8 0.28 3.35 5.45 NA NA NA NA NA NA NA NA NA
-"Poivron rouge, appertisé, égoutté" légumes "légumes cuits" NA 90.3 0.91 4.42 0.77 3.64 1.7 25 0.098 0.63 12.5 0.12 19 156 0.15 109
-"Asperge blanche, bouillie/cuite à l'eau" légumes "légumes cuits" 18.6 94.9 1.44 1.63 0.3 1.2 1.3 15 0.09 0.26 7.1 0.07 29 120 0.3 5.16
-"Céleri-rave, purée" légumes "légumes cuits" NA 91.4 1.37 2.83 0.18 2.11 4.01 50 NA 0.5 NA NA NA NA NA 8.3
-"Tomate, pulpe et peau, rôtie/cuite au four" légumes "légumes cuits" 31.1 92 0.88 4.13 0.6 3.7 2.2 10 0.05 0.25 13 0.23 30 300 0.15 14.5
-"Chou romanesco ou brocoli à pomme, cuit" légumes "légumes cuits" 35.8 91.5 3 2.03 0.8 1.6 4.3 32 0.05 0.53 13 0.19 55 260 0.32 15.1
-"Potimarron, pulpe, cuit à l'étouffée" légumes "légumes cuits" 44.8 87.3 1.31 7.05 0.5 4.5 3.3 18 0.08 0.24 10 0.05 33 430 0.27 10.9
-"Carotte, purée cuisinée à la crème, préemballée" légumes "légumes cuits" 44.4 89.6 1.44 4.57 1.6 4.39 3 30 0.04 0.19 6.4 0.08 21 190 0.18 NA
-"Asperge verte, bouillie/cuite à l'eau" légumes "légumes cuits" 26.6 92.7 2.69 1.73 0.3 1.3 2.2 21 0.11 0.64 10 0.13 49 220 0.49 4.73
-"Bette ou blette, côte et feuille, bouillie/cuite à l'eau" légumes "légumes cuits" 16.9 95.2 0.88 1.43 0.3 1 2.5 60 0.04 0.52 10 0.34 18 160 0.11 NA
-"Brocoli, bouilli/cuit à l'eau, croquant" légumes "légumes cuits" 23.5 92.9 2.5 1.23 0.4 0.8 2.6 42 0.11 0.41 12 0.18 44 110 0.23 22.7
-"Brocoli, bouilli/cuit à l'eau, fondant" légumes "légumes cuits" 23.1 93.8 2.19 1.03 0.5 0.6 3 43 0.15 0.33 11 0.17 39 90 0.18 18.1
-"Brocoli, cuit à la vapeur" légumes "légumes cuits" 37.6 89.4 4.13 2.53 0.7 1.5 2.2 36 0.04 0.58 23 0.28 72 340 0.53 20.7
-"Carotte, cuite à la vapeur" légumes "légumes cuits" 41.6 87.7 0.63 7.33 0.3 6.9 3.7 26 0.04 0.22 10 0.18 19 240 0.21 1.28
-"Chou-fleur, cuit à la vapeur" légumes "légumes cuits" 30.1 91.1 2.56 3.41 0.3 2.4 1.8 26 0.03 0.38 12 0.16 46 300 0.28 21.4
-"Céleri rave, bouilli/cuit à l'eau" légumes "légumes cuits" 26.2 91 0.94 4.32 0.3 1.2 2.6 41 0.11 0.27 10 0.16 38 300 0.17 0.87
-"Haricot beurre, bouilli/cuit à l'eau" légumes "légumes cuits" 34.6 89.6 2.19 4.45 0.3 2.2 2.7 56 0.13 0.99 26 0.35 43 210 0.34 7.57
-"Oignon nouveau ou oignon frais ou cébette, sauté/poêlé sans matière grasse" légumes "légumes cuits" 27.6 91.2 1.13 3.56 0.3 2.8 3.1 55 0.03 0.85 11 0.36 26 260 0.21 7.38
-"Panais, cuit à l'étouffée" légumes "légumes cuits" 90.8 73.6 1.94 16.6 0.5 6.2 5.6 44 0.14 0.37 25 0.16 74 510 0.35 7.92
-"Petits pois, bouillis/cuits à l'eau" légumes "légumes cuits" 80.3 77.4 6.38 9.93 0.6 1.6 4.8 38 0.14 1.2 29 0.29 100 190 0.72 11.4
-"Poivron jaune, sauté/poêlé sans matière grasse" légumes "légumes cuits" 35.8 90.5 1 5.33 0.6 4.9 2.2 7.3 0.06 0.23 11 0.09 23 220 0.14 126
-"Poivron vert, sauté/poêlé sans matière grasse" légumes "légumes cuits" 28.6 92.4 1.25 3.53 0.3 3.1 3 6.7 0.05 0.21 9.5 0.08 20 200 0.12 64.6
-"Potimarron, pulpe, bouilli/cuit à l'eau" légumes "légumes cuits" 38.2 88.9 1.06 6.88 0.3 3.5 1.8 18 0.08 0.19 8.5 0.06 27 330 0.24 8.65
-"Tomate, rôtie/cuite au four" légumes "légumes cuits" 25.3 92.6 1 3.53 0.4 3.1 1.9 12 0.03 0.22 9.2 0.18 29 310 0.11 14.9
-"Échalote, sautée/poêlée sans matière grasse" légumes "légumes cuits" 66.9 81.5 2 12.3 0.4 3.8 2.9 22 0.09 0.25 11 0.12 48 270 0.27 0.84
-"Légumes pour couscous, cuits" légumes "légumes cuits" NA 91.7 1.53 2.55 0.43 1.1 2.6 39 0.1 0.7 15 0.2 38 208 0.3 18
-"Légume cuit (aliment moyen)" légumes "légumes cuits" 43.5 88.3 2.11 5.81 0.3 2.48 2.71 30.3 0.097 0.46 17 0.16 51.8 261 0.31 8.84
-"Gombo, fruit, cuit" légumes "légumes cuits" NA 92.6 1.87 2.01 0.21 2.01 2.5 77 0.085 0.28 36 0.29 32 135 0.43 16.3
-"Carotte, déshydratée" légumes "légumes séchés ou déshydratés" NA 4 8.1 56 1.49 38.8 23.6 212 0.37 3.93 118 1.12 346 2540 1.57 14.6
-"Oignon, séché" légumes "légumes séchés ou déshydratés" NA 3.93 8.95 75 0.46 37.4 9.2 257 0.42 1.55 92 1.39 303 1620 1.89 75
-"Tomate, séchée" légumes "légumes séchés ou déshydratés" NA 14.6 14.2 43.3 2.99 37.6 12.3 110 1.42 9.09 194 1.85 356 3430 1.99 39.2
-"Champignon, lentin comestible ou shiitaké, séché" légumes "légumes séchés ou déshydratés" 316 9.5 9.58 63.9 0.99 2.21 11.5 11 5.17 1.72 132 1.18 294 1530 7.66 3.5
-"Tomate, séchée, à l'huile" légumes "légumes séchés ou déshydratés" 187 60.4 4.27 13.4 11.7 6.5 5.63 47 0.47 2.68 81 0.47 139 1570 0.78 102
-"Giraumon (variété locale), pulpe, cuit à la vapeur, prélevé à la Martinique" légumes "légumes et leurs produits de la Martinique" NA 91.8 1.1 4.51 0.097 1.91 2 NA NA NA NA NA NA 321 NA NA
-"Giraumon (variété phoenix), pulpe, cuit à la vapeur, prélevé à la Martinique" légumes "légumes et leurs produits de la Martinique" NA 90.6 1.03 5.62 0.05 1.56 2 NA NA NA NA NA NA 442 NA NA
-"Patate douce, pulpe, cuite à la vapeur, prélevée à la Martinique" légumes "légumes et leurs produits de la Martinique" NA 63.3 1.48 25.2 0.067 0.19 9.2 NA 0.26 NA NA 0.026 NA 425 NA 12.5
-"Cassis, cru" fruits "fruits crus" NA 80.5 1.33 9.68 0.86 9.68 5.8 57.1 0.093 1.17 23 0.28 53.5 330 0.28 181
-"Coing, cru" fruits "fruits crus" NA 83.8 0.51 13.4 0.1 6.3 1.9 11 0.13 0.7 8 NA 17 197 0.04 15
-"Framboise, crue" fruits "fruits crus" 49.2 86.8 1.19 5.83 0.8 5.4 4.3 16 0.04 0.4 20 0.44 29 170 0.24 18.7
-"Fruit de la passion ou maracudja, pulpe et pépins, cru" fruits "fruits crus" 101 73.6 2.13 10.9 3 8.5 6.8 8.1 0.15 0.56 26 0.19 46 240 0.76 25.6
-"Grenade, pulpe et pépins, crue" fruits "fruits crus" 80.6 79.4 1.44 14.3 1.2 13.3 2.3 9.5 0.11 0.17 12 0.1 27 230 0.22 9.02
-"Groseille, crue" fruits "fruits crus" 68.5 82.1 1.56 7.06 0.7 6.63 4.6 38 0.09 0.35 12 0.13 38 230 0.15 29.8
-"Kiwi, pulpe et graines, cru" fruits "fruits crus" 60.5 83.5 0.88 11 0.6 8.9 2.4 29 0.15 0.16 12 0.05 26 290 0.12 81.9
-"Myrtille, crue" fruits "fruits crus" 57.7 84.2 0.87 10.6 0.33 9.96 2.4 6 0.057 0.28 6 0.34 12 77 0.16 9.7
-"Mûre (de ronce), crue" fruits "fruits crus" 47.3 86.1 1.13 6.53 0.7 6.1 5.2 31 0.07 0.4 20 1.1 25 200 0.18 10.1
-"Nectarine ou brugnon, pulpe et peau, crue" fruits "fruits crus" NA 87.6 1.16 8.9 0.31 7.89 1.7 3.38 0.078 0.28 8.31 0.061 26.7 201 0.091 5.4
-"Poire, pulpe et peau, crue" fruits "fruits crus" NA 83.5 0.49 10.9 0.27 9.01 2.9 6.46 0.071 0.072 8.23 0.03 15.4 132 0.097 4.62
-"Pomme, pulpe et peau, crue" fruits "fruits crus" NA 85.4 0.25 11.6 0.25 9.35 1.4 5.34 0.041 0.099 6.47 0.036 14.4 119 0.031 6.25
-"Pêche, pulpe et peau, crue" fruits "fruits crus" NA 88.6 1.08 9 0.33 8.16 1.6 7.32 0.075 0.15 11.2 0.064 21 215 0.12 6.6
-"Raisin noir, cru" fruits "fruits crus" NA 84 0.63 15.6 0.4 15 1.4 8.98 0.078 0.2 6.78 0.051 21.8 152 0.038 10.8
-"Rhubarbe, tige, crue" fruits "fruits crus" NA 92 0.78 1.47 0.23 1.47 2.47 129 0.039 0.28 13.5 0.16 18.6 239 0.17 9.7
-"Pomme, pulpe, crue" fruits "fruits crus" NA 86.7 0.27 10.7 0.13 10.1 1.3 5 0.031 0.07 4 0.038 11 90 0.05 4
-"Carambole, pulpe, crue" fruits "fruits crus" NA 91.4 1.15 3.9 0.32 3.9 2.8 3 0.14 0.08 10 0.037 12 133 0.12 34.4
-"Anone ou chérimole, pulpe, crue" fruits "fruits crus" NA 79.4 1.72 15.4 0.64 12.9 2.65 9 0.069 0.29 17 0.093 26 287 0.16 12.1
-"Feijoa, pulpe, crue" fruits "fruits crus" NA 83.3 0.71 8.2 0.42 8.2 6.4 17 0.036 0.14 9 0.084 19 172 0.06 32.9
-"Figue de Barbarie, pulpe et graines, crue" fruits "fruits crus" NA 88.4 0.37 6 0.31 1.02 4.45 118 0.019 0.25 77 0.58 17.5 175 0.14 12.5
-"Mûre noire (du mûrier), crue" fruits "fruits crus" NA 87.7 1.44 8.1 0.39 8.1 1.7 39 0.06 1.85 18 1.1 38 194 0.12 36.4
-"Tamarin, fruit mûr, pulpe, cru" fruits "fruits crus" NA 31.4 2.65 57.4 0.6 38.8 5.1 74 0.086 2.8 92 NA 113 628 0.1 3.5
-"Goyave, pulpe, crue" fruits "fruits crus" NA 83.5 1.59 9.02 0.73 8.92 5.15 14 0.23 0.26 16 0.15 40 308 0.21 228
-"Pomme Canada, pulpe, crue" fruits "fruits crus" NA 84.4 0.4 11.6 0.1 11 1.6 3.59 0.035 0.14 3.76 0.03 8.61 154 0.09 4
-"Prune, crue" fruits "fruits crus" NA 87 0.66 9.92 0.29 9.92 1.5 7.29 0.06 0.16 6 0.076 17.8 149 0.096 7.25
-"Raisin Chasselas, cru" fruits "fruits crus" 79.1 79.4 0.75 16.9 0.5 16.5 2 16 0.08 0.14 7.5 0.07 21 150 0.07 4.14
-"Poire, pulpe, crue" fruits "fruits crus" NA 85.1 0.3 10.4 0.1 10.4 2.47 11 0.06 0.2 7 0 13 150 0.1 6
-"Griotte, crue" fruits "fruits crus" NA 86.1 1.1 10.5 0.3 8.49 1.65 16 0.1 0.32 9 0.11 15 173 0.1 10
-"Raisin, cru" fruits "fruits crus" NA 80.5 0.72 15.7 0.16 15.5 0.9 10 0.13 0.36 7 0.071 20 191 0.07 3.2
-"Canneberge ou cranberry, crue" fruits "fruits crus" NA 86.8 0.75 7.6 0.13 4.04 5.13 11 0.061 0.44 6 0.36 13.5 98.8 0.1 13.7
-"Citron, zeste, cru" fruits "fruits crus" NA 81.6 1.38 5.4 0.3 4.17 10.6 134 0.092 0.9 15 NA 12 160 0.25 129
-"Myrtille, surgelée, crue" fruits "fruits crus" NA 84.3 0.68 8.9 0.43 8.9 2.81 10 0.035 0.39 4.25 0.18 10 55.5 0.068 8.08
-"Salade de fruits, crue" fruits "fruits crus" NA 78 0.5 11.4 0.15 11.2 1.23 14.5 0.071 0.29 16.4 0.34 16.7 203 0.094 20
-"Framboise, surgelée, crue" fruits "fruits crus" NA 85.9 1.16 6.43 0.8 6.03 6.05 29.9 0.11 0.78 17 1.2 38 228 0.34 24.5
-"Pomelo (dit Pamplemousse) jaune, pulpe, cru" fruits "fruits crus" NA 90.5 0.69 7.31 0.1 7.31 1.1 12 0.05 0.06 9 0.013 8 148 0.07 33.3
-"Pomelo (dit Pamplemousse) rose, pulpe, cru" fruits "fruits crus" NA 88.1 0.77 6.2 0.14 6.2 1.6 22 0.032 0.08 9 0.022 18 135 0.07 31.2
-"Kumquat, sans pépin, cru" fruits "fruits crus" NA 81.9 1.57 9.6 1.18 9.36 5.45 65.5 0.095 0.67 17.5 0.14 19 158 0.13 45
-"Melon miel ou melon honeydew, pulpe, cru" fruits "fruits crus" NA 91.9 0.58 4.3 0.17 4.3 0.75 6 0.033 0.34 9.08 0.034 15.8 237 0.086 16.8
-"Fruits rouges, crus (framboises, fraises, groseilles, cassis)" fruits "fruits crus" NA 84.5 1.11 7.88 0.31 7.4 5.3 40 0.088 1 16.9 0.42 32.6 225 0.22 87
-"Fruit cru (aliment moyen)" fruits "fruits crus" 59.5 84.5 0.7 11.6 0.26 9.89 1.97 14.5 0.059 0.18 12.1 0.12 20.1 197 0.11 20.9
-"Compote de pomme" fruits "compotes et assimilés" 102 72.9 0.23 24.4 0.21 20.7 1.53 4.44 0.043 0.11 5.09 0.027 6 104 0.025 14.5
-"Rhubarbe, tige, cuite, sucrée" fruits "compotes et assimilés" NA 67.8 0.39 29.2 0.05 28.7 2 145 0.027 0.21 12 0.073 8 96 0.08 3.3
-"Chayote ou christophine ou chouchou, crue" fruits "compotes et assimilés" NA 94.2 0.72 2.8 0.12 1.66 1.7 17 0.12 0.34 12 0.19 18 125 0.74 7.7
-"Compote, tout type de fruits, allégée en sucres, rayon frais" fruits "compotes et assimilés" NA 83.9 0.32 14.9 0.48 14.3 1.4 4.7 0.04 0.09 4.7 0.03 9.6 120 NA 10.1
-"Dessert de fruits, tout type de fruits (en taux de sucres : compotes allégées en sucres < desserts de fruits < compotes allégée)" fruits "compotes et assimilés" NA 79.4 0.32 19.5 0.2 16.6 1.61 4 0.04 0.15 4 0.03 9.3 130 NA 11.8
-"Pomme, pulpe, bouillie/cuite à l'eau" fruits "compotes et assimilés" NA 85.5 0.26 11.2 0.36 11 2.4 5 0.035 0.19 3 0.12 8 88 0.04 0.2
-"Compote ou assimilé, tout type de fruits, teneur en sucre (allégée en sucres ou non, sans sucres ajoutés...) inconnue (aliment moyen)" fruits "compotes et assimilés" 80.1 78.9 0.25 18.6 0.15 16.7 1.68 7.87 0.046 0.092 5.59 0.05 10 132 0.033 19.6
-"Abricot au sirop (sans précision sur léger ou classique), appertisé, égoutté (aliment moyen)" fruits "fruits appertisés" NA 81 0.5 16.2 0.25 15.3 1.4 16 0.04 0.13 5.3 0.02 10 130 0.06 0.25
-"Macédoine ou cocktail ou salade de fruits, au sirop (sans précision sur léger ou classique), appertisé, égouttée (aliment moyen)" fruits "fruits appertisés" NA 81.6 0.25 16.2 0.25 13.2 2.02 11.6 0.07 0.11 4.24 0.084 9.04 70.3 0.025 2.91
-"Abricot au sirop léger, appertisé, non égoutté" fruits "fruits appertisés" NA 83.5 0.81 14 0.043 14 0.83 14.3 0.036 0.1 4.74 0.026 9.25 136 0.06 2.28
-"Pêche au sirop léger, appertisée, non égouttée" fruits "fruits appertisés" NA 84.3 0.31 14.1 0.038 12.9 0.92 9.57 0.038 0.13 4.88 0.02 9.79 100 0.054 3.32
-"Poire au sirop léger, appertisée, non égouttée" fruits "fruits appertisés" NA 83.7 0.3 14.5 0.12 12.1 1.23 5 0.049 0.28 4 0.033 7 66 0.08 0.7
-"Abricot, dénoyauté, sec" fruits "fruits séchés" 239 24.7 2.88 59.1 0.5 34.3 8.3 71 0.45 1.4 41 0.27 79 1400 0.35 NA
-"Datte, pulpe et peau, sèche" fruits "fruits séchés" NA 22.9 1.81 64.7 0.25 64.7 7.3 44.9 0.22 0.9 47.3 0.3 62 696 0.23 3
-"Figue, sèche" fruits "fruits séchés" NA 30.1 2.99 54.3 0.87 49.2 9.72 167 0.27 2.12 52.5 0.4 75.1 845 0.51 1.2
-"Pruneau, sec" fruits "fruits séchés" 229 34.9 1.63 55.4 0.4 38.1 5.1 50 0.23 0.38 30 0.25 66 610 0.28 NA
-"Raisin, sec" fruits "fruits séchés" 321 16 3 73.2 0.9 70.3 4.2 54 0.38 1.7 35 0.28 82 960 0.24 NA
-"Mélange apéritif de fruits exotiques, sec" fruits "fruits séchés" 389 11.7 2.19 69.5 10.5 59.4 3.4 43 0.26 1.1 39 0.45 67 530 0.32 0.69
-"Banane, pulpe, sèche" fruits "fruits séchés" NA 3 3.89 78.4 1.81 47.3 9.9 22 0.39 1.15 108 0.57 74 1490 0.61 7
-"Pomme, sèche" fruits "fruits séchés" NA 31.8 0.78 57.2 0.31 54.6 8.7 22 0.12 1.4 10.5 0.15 38 450 0.2 3.9
-"Abricot, dénoyauté, sec, moelleux (réhydraté à 35-45%)" fruits "fruits séchés" 200 39.3 2.31 51.1 0.4 29.9 3.5 53 0.29 0.86 32 0.19 59 980 0.3 NA
-"Abricot pays, pulpe, au sirop, appertisé, non égoutté, prélevé à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 84.5 0.28 13.3 0.1 7.3 1.8 NA NA NA NA NA NA NA NA 0
-"Abricot pays, pulpe, cru, prélevé à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 85.4 0.48 10.8 0.05 3.7 3.1 NA 0.095 NA NA NA NA NA NA NA
-"Chips d'abricot pays, pulpe, prélevé à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 5.13 0.96 68.7 18.7 33.3 6.2 NA NA NA NA NA NA NA NA 0.2
-"Jus de mandarine commune, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 90 0.61 8.63 0.57 8.63 NA NA NA NA NA NA NA 102 NA 26.7
-"Jus de mandarine macaque, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 88.2 0.6 10.8 0 3.87 NA NA NA NA NA NA NA 199 NA 6
-"Jus de prune de cythère verte ""géante"" (variété locale), fruit mûr, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 91.1 0.29 7.13 0.19 4.34 1 NA NA NA NA NA NA NA NA 16.5
-"Jus de prune de cythère verte ""géante"" (variété locale), fruit vert, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 91.7 0.44 6.55 0.28 0.03 0.8 NA NA NA NA NA NA NA NA 21.1
-"Jus de prune de cythère verte ""naine"" (variété hybride), fruit mûr, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 87.8 0.69 9.97 0.21 6.14 0.9 NA NA NA NA NA NA NA NA 34.3
-"Jus de prune de cythère verte ""naine"" (variété hybride), fruit vert, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 91.6 0.67 6.34 0.26 0.19 0.8 NA NA NA NA NA NA NA NA 45.5
-"Mangue José, pulpe, crue, prélevée à La Réunion (Mangifera indica L.)" fruits "fruits et leurs produits de la Réunion" 88.8 77.1 0.75 19.3 0.5 18.4 1.8 14 0.08 0.12 14 0.07 13 150 0.08 2.9
+nom groupe ssgroupe Energie EnergiePredite Eau Proteines Glucides Lipides Sucres Fibres Polyols Alcool AcidesOrganiques Calcium Cuivre Fer Magnesium Manganese Phosphore Potassium Zinc VitamineC
+"Avocat, pulpe, cru" légumes "légumes crus" 205 209.71103414882444 70.3 1.56 0.83 20.6 0.4 3.6 NA 0 1.02 9.4 0.18 0.34 21 0.2 38 430 0.43 NA
+"Champignon, tout type, cru" légumes "légumes crus" 21.7 25.77386354697488 92.6 2.37 1.88 0.23 1.43 1.72 0.45 0 NA 7.78 0.32 0.69 10.9 0.061 85.6 341 0.65 3.4
+"Salade ou chicorée frisée, crue" légumes "légumes crus" NA 23.59531662830103 92.9 1.48 2.4 0.25 0.7 2.45 NA 0 NA 76 0.2 0.85 22.5 0.42 37.5 367 0.61 18.5
+"Chou-fleur, cru" légumes "légumes crus" 26.2 28.414549538576757 92.9 1.81 2.13 0.7 1.7 2.2 NA 0 0.046 23 0.02 0.27 9.8 0.14 40 270 0.22 4.14
+"Concombre, pulpe et peau, cru" légumes "légumes crus" 15.6 18.676282481622014 96 0.64 2.54 0.11 1.67 0.6 0.039 0 0.26 19.2 0.026 0.13 13.6 0.085 24.7 157 0.095 8.25
+"Courgette, pulpe et peau, crue" légumes "légumes crus" 16.5 20.121079572564682 94.7 1.23 1.8 0.26 1.79 1.05 0.014 0 NA 18.7 0.052 0.36 17.5 0.18 44.7 262 0.31 17.5
+"Cresson de fontaine, cru" légumes "légumes crus" NA 19.824318097079765 94.6 2.09 0.9 0.15 0.2 0.85 NA 0 NA 101 0.11 0.9 19 0.37 64.2 320 0.16 51.5
+"Laitue, crue" légumes "légumes crus" NA 18.071655058478523 95.3 1.3 1.33 0.2 0.73 1.2 NA 0 0.13 64.6 0.036 0.98 14.9 0.4 29.5 200 0.2 11.8
+"Oignon, cru" légumes "légumes crus" NA 40.19209155062051 89.6 1.1 6.25 0.62 4.8 1.7 NA 0 0.21 25 NA 1.9e-4 9 0.1 37 190 0.23 3.9
+"Pissenlit, cru" légumes "légumes crus" NA 50.70613221332205 85.3 2.91 6.1 0.85 0.71 2.7 NA 0 NA 62.3 0.067 3.1 13.2 0.16 66 397 0.21 37.5
+"Poireau, cru" légumes "légumes crus" 32.3 33.3743130751109 87.6 1.49 4.9 0.25 3.15 2.27 0.056 0 NA 50.7 0.087 1.5 19 0.34 40.3 208 0.21 18.5
+"Poivron, vert, jaune ou rouge, cru" légumes "légumes crus" NA 28.796551603245387 92.1 0.8 4.55 0.27 2.7 1.5 NA 0 NA 7.7 NA 0.4 11.9 0.1 22.5 155 0.13 121
+"Potiron, cru" légumes "légumes crus" NA 24.094279856591307 91.6 1 3.5 0.1 1.36 0.5 NA 0 NA 21 0.13 0.8 12 0.13 44 340 0.32 9
+"Tomate, crue" légumes "légumes crus" 19.3 20.981057153753937 94.1 0.86 2.49 0.26 2.48 1.2 0.013 0 0.39 8.14 0.029 0.12 10.1 0.066 26.6 256 0.087 15.5
+"Artichaut, cru" légumes "légumes crus" NA 41.228637653222314 84.9 3.2 4.92 0.18 0.99 5.4 NA 0 0.27 52 0.23 1.19 47.8 0.26 81.2 387 0.49 11.7
+"Aubergine, crue" légumes "légumes crus" NA 20.74339874559404 92.9 1.12 2.39 0.14 2.39 2.7 NA 0 0.18 8.7 0.081 0.32 12 0.24 27.2 235 0.16 2.1
+"Cardon, cru" légumes "légumes crus" NA 15.608862635178621 94 0.7 1.7 0.1 1.5 1.6 NA 0 NA 70 0.23 0.7 42 0.26 23 400 0.17 2
+"Champignon de Paris ou champignon de couche, cru" légumes "légumes crus" 28 33.17537343749302 93.9 2.62 3.15 0.36 2.5 1 0.45 0 0.13 6.03 0.35 0.31 10.5 0.076 96.6 364 0.5 3.09
+"Brocoli, cru" légumes "légumes crus" NA 35.22496660454758 88.9 3.95 1.7 0.48 1.7 2.9 NA 0 1.1 45.9 0.059 0.76 21.9 0.4 76.5 357 0.4 106
+"Chou de Bruxelles, cru" légumes "légumes crus" NA 50.06954670154816 85 3.98 5.67 0.4 2.2 3.95 NA 0 NA 32.3 0.062 1.15 23.5 0.3 76.4 436 0.43 103
+"Épinard, cru" légumes "légumes crus" NA 30.992419119171995 91.6 2.62 2.25 0.5 0.32 2.37 NA 0 NA 114 0.1 3.61 52.5 1.3 45.2 504 0.82 41.1
+"Haricot vert, cru" légumes "légumes crus" NA 31.81550570391087 90.4 1.85 4.14 0.21 3.26 2.85 NA 0 0.2 48.5 0.063 1.02 21 0.23 38.5 224 0.32 13.6
+"Navet, pelé, cru" légumes "légumes crus" NA 27.58046817130285 91.9 0.76 4.7 0.1 3.8 1.9 NA 0 NA 40 0.063 0.4 9.5 0.1 38.5 237 0.25 18.5
+"Chou-rave, cru" légumes "légumes crus" NA 23.51613038777063 91 1.79 2.35 0.1 2.35 3.6 NA 0 0.16 24 0.13 0.4 19 0.14 46 350 0.03 55.1
+"Chou vert, cru" légumes "légumes crus" NA 28.41569169650913 91.8 2.53 1.92 0.41 1.92 3.08 NA 0 0.44 96.2 0.049 0.93 18 0.17 32.7 231 0.22 69
+"Haricot vert, surgelé, cru" légumes "légumes crus" 34 32.84775782881496 89.4 1.97 4.35 0.17 1.96 3.68 0.1 0 NA 51.5 0.063 0.85 22 0.29 40.8 186 0.31 18
+"Petits pois, crus" légumes "légumes crus" NA 65.83609578369794 79.2 5.84 7 0.55 5.67 5.5 NA 0 NA 27.5 0.14 1.64 30.5 0.4 119 272 1 41.5
+"Asperge, pelée, crue" légumes "légumes crus" NA 25.981033722735845 93.3 2.04 2.4 0.21 1.88 1.95 NA 0 NA 22 0.12 1.32 11.5 0.16 52 202 0.49 8.8
+"Chou-fleur, surgelé, cru" légumes "légumes crus" NA 28.670013680619913 92.5 2.09 2.64 0.37 1.91 1.82 NA 0 NA 21.7 0.031 0.51 12 0.2 41.6 193 0.17 51.9
+"Épinard, surgelé, cru" légumes "légumes crus" NA 26.838601894601627 91.6 2.87 0.89 0.49 0.6 2.7 NA 0 NA 159 0.12 2.28 50.5 0.53 47.7 398 0.49 21.4
+"Petits pois, surgelés, crus" légumes "légumes crus" NA 71.78644083374972 80.2 5.86 8.77 0.44 3.87 6.45 NA 0 NA 27.3 0.15 1.53 25.9 0.35 86.9 158 0.86 20.8
+"Scarole, crue" légumes "légumes crus" NA 13.816357821938363 93.8 1.25 0.3 0.2 0.23 3.1 NA 0 NA 52 0.099 0.83 15 0.42 28 314 0.79 6.5
+"Betterave rouge, crue" légumes "légumes crus" NA 50.85926207426773 86.7 1.74 9.1 0.24 6.76 2.55 NA 0 NA 22.1 0.098 0.7 19 0.46 38.1 328 0.54 6.45
+"Légumes, mélange surgelé, crus" légumes "légumes crus" 65.1 62.94938143720121 85.2 2.26 5.71 2.65 2.18 4.7 0.035 0 NA 33 0.093 0.98 24 0.24 59 212 0.45 13.7
+"Champignon, chanterelle ou girolle, crue" légumes "légumes crus" 33.1 32.149056926013806 88.7 2.28 2.3 0.78 1.87 4.23 0.43 0 NA 8.33 0.39 3.52 10 0.28 53.5 449 0.84 5.5
+"Champignon, morille, crue" légumes "légumes crus" 24.5 25.666084751881108 89.6 3.16 0.1 0.54 0.044 3.35 0.056 0 NA 43 0.63 1.2 19 0.59 194 411 2.03 5
+"Maïs doux, en épis, surgelé, cru" légumes "légumes crus" NA 98.55258955359278 73.3 3.36 17 1.19 3.78 2.65 NA 0 NA 4.18 0.15 0.59 30.3 0.25 108 276 1.05 6.9
+"Oseille, crue" légumes "légumes crus" NA 26.02853763505903 93 1.84 1.6 0.65 1.54 1.8 NA 0 NA 44 0.13 2.4 103 0.35 63 390 0.2 48
+"Champignon, pleurote, crue" légumes "légumes crus" 25.5 28.92455362965554 89.2 3.06 1.5 0.36 0.71 2.4 0.45 0 NA 5 0.24 1.17 18 0.11 120 420 0.77 4
+"Chou blanc, cru" légumes "légumes crus" 36.5 35.0801297232987 90 1.38 4.63 0.6 4.2 3.5 NA 0 0.18 59 0.02 0.3 11 0.1 33 240 0.16 8.88
+"Tomate verte, crue" légumes "légumes crus" NA 27.96957933328124 93 1.2 4 0.2 4 1.1 NA 0 NA 13 0.09 0.51 10 0.1 28 204 0.07 23.4
+"Haricot de Lima, cru" légumes "légumes crus" 105 105.99435330497326 70.2 6.84 15.3 0.86 1.48 4.9 0.36 0 NA 34 0.32 3.14 58 1.22 136 467 0.78 23.4
+"Courge doubeurre (butternut), pulpe, crue" légumes "légumes crus" NA 31.488822271174346 86.4 1 5.4 0.1 2.2 2 NA 0 NA 48 0.072 0.7 34 0.2 33 352 0.15 21
+"Courge, crue" légumes "légumes crus" NA 17.85295302567613 92.3 1.1 1.6 0.17 1.6 1.3 NA 0 NA 28.5 0.061 0.6 16.5 0.17 30.5 312 0.26 14.7
+"Courge spaghetti, pulpe, crue" légumes "légumes crus" NA 34.18216829968315 91.6 0.64 5.41 0.57 2.76 1.5 NA 0 NA 23 0.037 0.31 12 0.13 12 108 0.19 2.1
+"Piment, cru" légumes "légumes crus" NA 46.80613955893919 87.9 1.87 7.7 0.32 5.3 1.65 NA 0 NA 14 0.15 1.12 24 0.21 55.3 331 0.28 155
+"Champignon, oronge vraie, crue" légumes "légumes crus" 23.2 26.826679230483833 92.9 2 2.45 0.3 1 1.7 0.45 0 NA 17 NA 1.1 NA NA 89 320 0.4 3
+"Champignon, cèpe, cru" légumes "légumes crus" 31.6 35.88431566430687 90.3 3.13 3.03 0.43 1.7 1.93 0.45 0 NA 23 0.23 1 12 0.17 129 361 0.4 3
+"Champignon, rosé des prés, cru" légumes "légumes crus" 25.3 29.24940024271062 92.1 2.3 2.45 0.4 1 1.7 0.45 0 NA 10 NA 1.2 NA NA 102 320 0.4 4
+"Chicorée rouge, crue" légumes "légumes crus" NA 18.67315244161152 94 1.4 1.6 0.1 1.6 3 NA 0 NA 36 NA 0.3 NA NA 30 180 0.2 10
+"Chicorée verte, crue" légumes "légumes crus" NA 20.629509369612286 91.2 1.9 0.5 0.5 0.5 1 NA 0 NA 82.5 0.06 4.15 17 0.3 45 498 0.32 46
+"Citrouille, pulpe, crue" légumes "légumes crus" NA 33.82394092841109 91.6 1 6 0.1 2.76 0.5 NA 0 NA 21 0.13 0.8 12 0.13 44 340 0.32 9
+"Chou chinois ou pak-choi ou pé-tsai, cru" légumes "légumes crus" NA 19.711734675592105 95.2 1.38 1.65 0.2 1.18 1.05 NA 0 NA 86.4 0.021 0.68 17.5 0.17 37.8 249 0.17 40.3
+"Poivron jaune, cru" légumes "légumes crus" 30.7 30.470580379034857 91.9 0.94 4.73 0.3 4.3 1.2 NA 0 1.1 8.6 0.07 0.21 12 0.11 23 220 0.23 121
+"Laitue romaine, crue" légumes "légumes crus" NA 18.212360195327758 94.6 1.24 1.2 0.3 1.19 2.1 NA 0 NA 33 0.048 0.97 14 0.16 30 247 0.23 14
+"Pois mange-tout ou pois gourmand, cru" légumes "légumes crus" NA 46.46659340838499 88.3 3.08 6.2 0.27 4 2.63 NA 0 NA 40.7 0.079 2.08 24 0.24 56.8 200 0.27 60
+"Panais, cru" légumes "légumes crus" 58.3 55.27267462323299 80.6 1.54 10.1 0.4 4.8 4.7 0.81 0 NA 45.5 0.13 0.7 29.5 0.48 82.5 505 0.72 11.5
+"Bambou, pousse, crue" légumes "légumes crus" 35.1 38.68506241499812 89.8 2.52 5.08 0.2 3 1.45 0 0 0 15.5 0.19 0.4 3 0.26 54.5 517 1.1 7.5
+"Cresson alénois, cru" légumes "légumes crus" NA 31.395138035329378 91.1 2.55 2.2 0.6 2.2 1.35 NA 0 NA 75.5 0.13 1.8 41 0.55 76 368 0.35 52
+"Laitue iceberg, crue" légumes "légumes crus" NA 20.81128539143656 95.6 1.01 2.45 0.18 1.48 1.15 NA 0 NA 17.4 0.029 0.43 8.73 0.19 23.6 179 0.21 4.72
+"Rutabaga, cru" légumes "légumes crus" NA 33.77788090338141 89.5 1.17 5.7 0.13 4.46 2.6 NA 0 NA 45.2 0.031 0.35 17 0.14 47.8 349 0.21 33
+"Haricot beurre, surgelé, cru" légumes "légumes crus" NA 35.13628938958556 89.9 2 4.9 0.17 2.5 2.33 NA 0 NA 51 0.049 0.78 22 0.39 32 186 0.26 16
+"Brocoli, surgelé, cru" légumes "légumes crus" NA 28.580138180666502 91.5 2.79 1.56 0.44 1.24 2.77 NA 0 NA 48.5 0.036 0.77 17 0.26 54.5 231 0.41 62.3
+"Chou de Bruxelles, surgelé, cru" légumes "légumes crus" NA 42.14275786171499 86.3 3.43 4.5 0.33 2.35 4.28 NA 0 NA 34 0.043 0.82 22 0.29 65.5 427 0.37 77.5
+"Carotte, surgelée, crue" légumes "légumes crus" NA 29.67027057705429 90.9 0.63 4.99 0.27 4.73 2.76 NA 0 NA 34.9 0.074 0.41 12 0.17 33 235 0.33 4.32
+"Petits pois et carottes, surgelés, crus" légumes "légumes crus" NA 54.908096530961046 82.3 3.89 7.1 0.37 3.43 4.3 NA 0 NA 29.5 0.089 1.2 18 0.24 60 194 0.52 13.6
+"Roquette, crue" légumes "légumes crus" NA 31.719553574941443 91.7 2.58 2.1 0.66 2.05 1.6 NA 0 NA 160 0.076 1.46 47 0.32 52 369 0.47 15
+"Chou frisé, cru" légumes "légumes crus" NA 52.391064524884136 82.8 4.33 4.2 1.07 2.26 4.9 NA 0 NA 185 0.8 1.74 33.5 0.58 83 378 0.59 145
+"Champignon de Paris ou champignon de couche, surgelé, cru" légumes "légumes crus" 15.9 19.063821474880807 93.2 1.8 0.83 0.25 0.25 1.97 0.5 0 NA 10 NA 0.8 NA NA NA NA NA 4
+"Courgette, pulpe et peau, surgelée, crue" légumes "légumes crus" NA 20.271454840491746 94.6 1.19 2.18 0.14 1.56 1.48 NA 0 NA 20 0.05 0.64 13 0.24 28 218 0.21 9.32
+"Artichaut, fond, surgelé, cru" légumes "légumes crus" NA 50.39693529971157 84.7 2.08 8.09 0.43 1.89 7.54 NA 0 NA NA NA NA NA NA NA NA NA NA
+"Maïs doux, surgelé, cru" légumes "légumes crus" NA 105.19022192776045 71.8 3.28 19.8 0.78 3.78 2.8 NA 0 NA 4 0.051 0.68 32 0.16 87 294 0.7 7.2
+"Navet, surgelé, cru" légumes "légumes crus" NA 18.122574273697452 95.7 0.82 2 0.18 1.9 1.85 NA 0 NA 23 0.045 0.7 10 0.071 20 137 0.14 4.4
+"Oignon, surgelé, cru" légumes "légumes crus" NA 31.638435579391935 91.1 1 5.39 0.12 4.59 2.65 NA 0 NA 26.5 0.035 0.4 8.5 0.1 22.5 133 0.095 5.65
+"Poireau, surgelé, cru" légumes "légumes crus" 26.7 27.3736394906618 93.2 1.42 3.35 0.29 2.95 2.55 0.056 0 NA 63 NA 0.8 NA NA NA NA NA 26
+"Salsifis, surgelé, cru" légumes "légumes crus" NA 35.23565848989004 85.8 2.65 4.15 0.15 2.5 5.8 NA 0 NA NA NA NA NA NA NA NA NA NA
+"Oignon rouge, cru" légumes "légumes crus" 36.3 36.74132700204734 90.3 1.31 5.63 0.4 5.2 2.5 NA 0 0.12 22 0.05 0.19 9 0.12 29 190 0.21 4.09
+"Légumes pour potages, surgelés, crus" légumes "légumes crus" 34.1 34.1013982189239 89.2 1.44 4.69 0.44 2.5 2.86 0.048 0 NA 37 NA 1 NA NA NA NA NA 25
+"Légumes pour ratatouille, surgelés" légumes "légumes crus" NA 22.98911926194717 94.2 1.01 3.23 0.089 2.88 1.67 NA 0 NA NA NA NA NA NA NA NA NA NA
+"Printanière de légumes, surgelée, crue (haricots verts, carottes, pomme de terre, petits pois, oignons)" légumes "légumes crus" NA 50.17533206251235 85.7 2.4 8.48 0.078 2.62 3.62 NA 0 NA NA NA NA NA NA NA NA NA 16
+"Haricot plat, cru" légumes "légumes crus" NA 32.646110179039816 92.2 1.93 4.47 0.12 1.3 2.97 NA 0 NA 60 NA 0.8 NA NA NA NA NA 16
+"Asperge, verte, crue" légumes "légumes crus" NA 27.178725491204542 92.5 2.46 2.03 0.27 1.5 2.15 NA 0 NA 22.4 NA 1 12.2 NA 85.5 267 NA 15.5
+"Chou romanesco ou brocoli à pomme, cru" légumes "légumes crus" NA 31.38456275990377 89.8 2.93 2.2 0.4 2.2 2.35 NA 0 NA 34.5 0.041 0.92 20 0.25 62 300 0.64 70.6
+"Salade verte, crue, sans assaisonnement" légumes "légumes crus" NA 16.35988637412556 96.1 1.01 1.5 0.1 0.83 1.3 NA 0 NA 35.3 0.061 0.64 15.3 0.22 23.5 260 0.18 1.95
+"Artichaut, cuit" légumes "légumes cuits" NA 23.570800086510513 85.8 2.53 0.99 0.28 0.99 8.3 NA 0 NA 42.9 0.082 0.67 44.6 0.14 73 427 0.29 9.1
+"Asperge, bouillie/cuite à l'eau" légumes "légumes cuits" NA 23.987359019200447 93.4 2.68 0.81 0.32 0.81 1.8 NA 0 NA 19.9 0.074 0.74 6.31 0.049 51.5 198 0.2 16.1
+"Aubergine, cuite" légumes "légumes cuits" NA 30.026683971055526 88.6 1.33 4.17 0.28 3.41 4.3 NA 0 NA 20.1 0.058 0.25 15 0.12 15 123 0.098 1.3
+"Betterave rouge, cuite" légumes "légumes cuits" 42.8 43.22048352001027 88.3 1.44 7.13 0.4 6.7 2.5 NA 0 0.13 24 0.07 0.29 17 0.31 18 320 0.29 NA
+"Brocoli, cuit" légumes "légumes cuits" NA 26.590782861718846 92.5 2.1 1.1 0.78 1.1 1.5 NA 0 NA 43.3 NA NA 11.2 NA 51 125 NA 23.9
+"Carotte, appertisée, égouttée" légumes "légumes cuits" 21.9 23.019685801570184 93 0.67 3.4 0.2 2.49 1.75 0.13 0 0.19 25 0.1 0.64 8 0.45 24 179 0.26 2.7
+"Carotte, cuite" légumes "légumes cuits" 18.9 18.371509996182525 93 0.55 2.6 0.1 1.3 2.8 0.13 0 NA 31.5 NA NA 7.5 NA 18 96.4 NA NA
+"Champignon, tout type, appertisé, égoutté" légumes "légumes cuits" 24.9 26.51915846652041 91.1 1.87 2.56 0.29 2.19 2.4 0.37 0 0.13 18.9 0.15 0.79 6.65 0.035 66 129 0.51 0
+"Chou de Bruxelles, cuit" légumes "légumes cuits" NA 34.80651093136629 87.6 2.6 4.2 0.11 1.7 3.2 NA 0 NA 36.2 NA NA 16.9 NA 65 324 NA 56.4
+"Chou vert, cuit" légumes "légumes cuits" NA 25.75133751318194 93.9 1.03 3.04 0.45 2.79 2.4 NA 0 NA 69.7 0.098 0.28 15.1 0.18 33 190 0.22 27.3
+"Chou-fleur, cuit" légumes "légumes cuits" 20.9 23.053435086500812 93.7 1.6 1.6 0.46 1.59 2 0.015 0 NA 19.2 0.05 0.31 12.9 0.12 34 238 0.22 9.7
+"Coeur de palmier, appertisé, égoutté" légumes "légumes cuits" NA 37.0812364274763 90.2 2.45 4.03 0.5 1.5 2.32 NA 0 NA 58 0.13 3.13 38 1.39 65 177 1.15 7.9
+"Courgette, pulpe et peau, cuite" légumes "légumes cuits" 15.5 18.02693231389543 93.8 0.93 1.4 0.36 1.39 1.5 0.0088 0 NA 19.3 0.085 0.32 22.3 0.089 65 238 0.22 2.9
+"Céleri branche, cuit" légumes "légumes cuits" NA 14.869886153200332 94.1 0.83 1.2 0.16 1.2 1.6 NA 0 NA 53.3 0.059 0.42 9 0.11 25 284 0.077 6.1
+"Céleri-rave, cuit" légumes "légumes cuits" NA 37.019606173079524 90.1 1.3 4.6 0.86 2.8 2.6 NA 0 NA 52.4 0.12 0.32 15.1 0.27 58 306 0.24 2.7
+"Épinard, cuit" légumes "légumes cuits" NA 23.649532973235193 92.8 3.2 0.5 0.14 0.47 2.7 NA 0 NA 140 0.1 2.14 54.4 0.43 40 396 0.65 2.1
+"Haricot mungo germé ou pousse de ""soja"", appertisé, égoutté" légumes "légumes cuits" NA 22.608867359790906 95.8 1.56 2.36 0.12 1.78 1.63 NA 0 NA 13.4 0.047 0.26 7.53 0.039 26 31.5 0.11 0.65
+"Haricot vert, cuit" légumes "légumes cuits" 29.4 27.741746975002528 89.3 2 3 0.17 1 4 0.062 0 NA 55.3 0.081 0.6 22.3 0.19 36 174 0.2 5
+"Navet, cuit" légumes "légumes cuits" NA 25.71114519783322 93.4 0.9 3.8 0.2 2.9 2.2 NA 0 NA 37.3 0.045 0.11 8.75 0.045 26 237 0.099 5.6
+"Oignon, cuit" légumes "légumes cuits" NA 37.02503482638347 90.4 1.3 6.2 0.2 4 1.4 NA 0 NA 29.2 0.077 0.21 13 0.12 44 220 0.19 2.1
+"Petits pois, appertisés, égouttés" légumes "légumes cuits" 81.5 79.04049657701624 79.5 5.12 10.7 0.8 3.59 5.75 0.29 0 NA 20.6 0.079 1.29 16.3 0.17 73.1 71.5 0.42 6.9
+"Petits pois, cuits" légumes "légumes cuits" NA 59.70397733774134 82.9 5.8 4.7 0.87 1.8 5.8 NA 0 NA 32.7 0.14 1.17 31.9 0.32 96 135 0.8 1.8
+"Poireau, cuit" légumes "légumes cuits" NA 23.584361154652512 92 1.1 3 0.2 2.11 3.2 NA 0 NA 25.6 0.12 0.34 8.45 0.075 20 151 0.1 1.3
+"Potiron, appertisé, égoutté" légumes "légumes cuits" NA 32.861672063586134 90 1.1 5.19 0.28 3.3 2.9 NA 0 NA 26 0.11 1.39 23 0.15 35 206 0.17 4.2
+"Tomate, pelée, appertisée, égouttée" légumes "légumes cuits" 18.3 19.870513323813768 94.4 1.07 1.89 0.28 1.88 1.27 0.0075 0 0.46 21.1 0.06 0.77 9.2 0.073 18 190 0.11 12
+"Maïs doux, en épis, cuit" légumes "légumes cuits" NA 107.94849477833334 73.4 3.41 18.6 1.5 4.54 2.4 NA 0 NA 3 0.049 0.45 26 0.17 77 218 0.62 5.5
+"Macédoine de légumes, appertisée, égouttée" légumes "légumes cuits" 40.4 40.437333583867215 87 2.32 5.59 0.28 1.73 3.16 0.039 0 NA 40.7 0.072 1.05 10.6 0.15 42 291 0.28 5
+"Épinard, appertisé, égoutté" légumes "légumes cuits" NA 26.792530198062693 91.8 2.81 0.93 0.5 0.4 2.4 NA 0 0.07 127 0.18 2.3 76 0.6 44 346 0.46 14.3
+"Haricot vert, appertisé, égoutté" légumes "légumes cuits" 23.1 22.13656659948421 92.6 1.33 2.07 0.31 0.77 3.36 0.3 0 0.15 42.7 0.13 0.81 13 0.094 25.3 94 0.23 3.1
+"Haricot beurre, appertisé, égoutté" légumes "légumes cuits" NA 26.327278509080195 92.8 1.22 3.48 0.23 0.86 1.68 NA 0 NA 25 0.044 0.9 15 0.2 19 104 0.3 4.1
+"Maïs doux, appertisé, égoutté" légumes "légumes cuits" 106 105.95612234071677 75.4 2.82 18.4 1.68 5.16 3.1 0.13 0 NA 3.51 0.036 0.35 26.9 0.11 53.8 224 0.39 3.55
+"Artichaut, appertisé, égoutté" légumes "légumes cuits" NA 39.17930165480347 89.9 1.5 6.5 0.2 1.5 3 NA 0 NA NA NA NA NA NA NA NA NA NA
+"Tomate, concentré, appertisé" légumes "légumes cuits" 99.2 97.85110056277331 72 4.4 17.1 0.53 13.3 4.2 0 0 NA 45.6 NA 1.2 63.3 NA 103 1010 NA 2.6
+"Haricot vert, surgelé, cuit" légumes "légumes cuits" 36.3 35.856517352885604 91.4 1.95 5.1 0.19 1.23 3.3 0.1 0 NA 51 0.059 0.68 19 0.29 29 159 0.24 11.6
+"Asperge, appertisée, égouttée" légumes "légumes cuits" NA 20.502093834840636 94.2 1.58 1.43 0.27 1.23 1.5 NA 0 NA 15.8 0.076 1.09 8.5 0.16 35 142 0.42 18.4
+"Chou de Bruxelles, appertisé, égoutté" légumes "légumes cuits" NA 37.88314174119496 88.9 2.5 4.1 0.53 2.5 3.3 NA 0 NA 26.3 0.03 0.7 12.2 0.1 53 252 0.2 18
+"Céleri branche, appertisé, égoutté" légumes "légumes cuits" 13.1 14.489448274317294 95 0.63 1.38 0.15 0.8 2 0.17 0 NA 29.2 0.04 NA 8 0.11 NA 281 0.14 NA
+"Champignon de Paris ou champignon de couche, appertisé, égoutté" légumes "légumes cuits" 19.4 21.810491938748896 92.9 2.23 0.7 0.37 0 2.5 0.4 0 NA 22.2 0.17 0.9 4.85 0.027 47 72.1 0.44 6.5
+"Salsifis, appertisé, égoutté" légumes "légumes cuits" NA 28.71789243415145 91.5 1.25 4.25 0.15 1 2.5 NA 0 NA 21 NA NA 8.9 NA NA 173 NA NA
+"Poivron vert, cuit" légumes "légumes cuits" NA 20.205531170445184 91.9 0.92 2.36 0.2 2.36 1.2 NA 0 NA 9 0.065 0.46 10 0.12 18 166 0.12 74.4
+"Poivron rouge, cuit" légumes "légumes cuits" NA 41.57453988179096 90.2 1.4 7 0.3 6 2.2 NA 0 NA 9 0.01 NA 14 0.1 26 180 0.2 81
+"Petits pois et carottes, appertisés, égouttés" légumes "légumes cuits" 49 48.85139156165118 87.4 2.51 7.39 0.33 3.58 3.27 0.039 0 NA 23 0.1 0.75 14 0.36 46 100 0.58 6.6
+"Chou-rave, bouilli/cuit à l'eau" légumes "légumes cuits" NA 31.63805381790537 90.3 1.8 4.4 0.11 2.8 1.1 NA 0 NA 25 0.13 0.4 19 0.14 45 340 0.31 54
+"Chou rouge, bouilli/cuit à l'eau" légumes "légumes cuits" NA 25.815582407661992 90.8 1.51 3.32 0.09 3.32 2.6 NA 0 NA 54.6 0.034 0.66 11.8 0.16 33 262 0.14 34.4
+"Potiron, cuit" légumes "légumes cuits" NA 26.76597423175037 92 0.81 4.5 0.07 3.1 2 NA 0 NA 13 0.04 0.18 6.9 0.04 21 230 0.1 0.84
+"Champignon de Paris ou champignon de couche, bouilli/cuit à l'eau" légumes "légumes cuits" 28.7 31.408427637406962 91.1 2.17 3 0.47 2.34 2.2 0.4 0 NA 6 0.5 1.74 12 0.12 87 356 0.87 4
+"Épinard, surgelé, cuit" légumes "légumes cuits" NA 34.566033258146824 88.9 4.01 0.51 0.87 0.51 3.7 NA 0 NA 153 0.16 1.96 82 0.72 50 302 0.49 2.2
+"Chou-fleur, surgelé, cuit" légumes "légumes cuits" 18 18.699861595632097 94 1.61 1.05 0.22 1.03 2.7 0.017 0 NA 17 0.024 0.41 9 0.15 24 139 0.13 31.3
+"Petits pois, surgelés, cuits" légumes "légumes cuits" NA 63.48977878160567 79.5 5.15 7.95 0.27 4.65 5.5 NA 0 NA 24 0.11 1.52 22 0.28 77 110 0.67 9.9
+"Panais, cuit" légumes "légumes cuits" 67.8 66.08778922572897 80.2 1.32 13.4 0.3 4.8 3.6 0.61 0 NA 37 0.14 0.58 29 0.29 69 367 0.26 13
+"Courge spaghetti, pulpe, cuite" légumes "légumes cuits" NA 29.99644123578305 92.3 0.66 5.06 0.26 2.53 1.4 NA 0 NA 21 0.035 0.34 11 0.11 14 117 0.2 3.5
+"Tétragone cornue, cuite" légumes "légumes cuits" NA 16.504541868241006 94.8 1.3 1 0.17 0.25 1.4 NA 0 NA 48 0.077 0.66 32 0.53 22 102 0.31 16
+"Rutabaga, cuit" légumes "légumes cuits" NA 27.46087700751343 91.5 0.93 4.26 0.18 3.95 1.8 NA 0 NA 18 0.029 0.18 10 0.097 41 216 0.12 18.8
+"Tomate, purée, appertisée" légumes "légumes cuits" 47.1 44.61880643582839 85.6 1.4 7.54 0.4 3.64 2.38 0.011 0 1 19.9 0.15 0.6 30 0.16 41.9 798 0.2 9
+"Bambou, pousses, appertisées, égouttées" légumes "légumes cuits" NA 21.348084526283778 95 1.61 1.9 0.15 1.15 1.25 NA 0 NA 17 0.098 0.24 3.5 0.14 26.8 196 0.56 1.1
+"Brocoli, surgelé, cuit" légumes "légumes cuits" NA 30.112249132010994 90.7 3.1 2.36 0.11 1.47 3 NA 0 NA 51 0.043 0.61 20 0.33 55 180 0.3 40.1
+"Chou de Bruxelles, surgelé, cuit" légumes "légumes cuits" NA 42.65467455397749 86.7 3.64 4.22 0.39 2.08 4.1 NA 0 NA 26 0.034 0.48 18 0.21 56 290 0.24 45.7
+"Carotte, surgelée, cuite" légumes "légumes cuits" 32.9 31.459322446951603 90.3 0.58 4.52 0.68 4.08 3.3 0.13 0 NA 35 0.082 0.53 11 0.17 31 192 0.35 2.3
+"Champignon, lentin comestible ou shiitaké, cuit" légumes "légumes cuits" 60.9 62.23665954387073 83.5 1.56 12.3 0.22 3.84 2.1 0.4 0 NA 3 0.9 0.44 14 0.2 29 117 1.33 0.3
+"Petits pois et carottes, surgelés, cuits" légumes "légumes cuits" NA 51.12124725871848 85.8 3.09 7.02 0.42 4.36 3.1 NA 0 NA 23 0.076 0.94 16 0.2 49 158 0.45 8.1
+"Pois mange-tout ou pois gourmand, bouilli/cuit à l'eau" légumes "légumes cuits" 30.5 31.718416168240104 90.9 2.25 3.39 0.3 2.3 2.8 NA 0 0.0043 35 0.08 0.46 14 0.18 40 100 0.28 20.6
+"Chou frisé, cuit" légumes "légumes cuits" NA 31.868385269006307 91.2 1.9 3.63 0.4 1.25 2 NA 0 NA 72 0.16 0.9 18 0.42 28 228 0.24 41
+"Chou chinois (pak-choi ou pé-tsai), cuit" légumes "légumes cuits" NA 16.666289385830897 95.4 1.53 0.75 0.17 0.75 1.35 NA 0 NA 62.5 0.024 0.67 10.5 0.15 34 298 0.18 20.9
+"Tomate, pulpe et peau, bouillie/cuite à l'eau" légumes "légumes cuits" NA 21.217563857783794 94.3 0.95 2.8 0.11 2.49 0.7 NA 0 NA 11 0.075 0.68 9 0.11 28 218 0.14 22.8
+"Pois mange-tout ou pois gourmands, cuits" légumes "légumes cuits" NA 48.48588285670137 86.6 3.5 5.92 0.38 4.82 3.1 NA 0 NA 59 0.09 2.4 28 0.28 58 217 0.49 22
+"Légumes (3-4 sortes en mélange), purée" légumes "légumes cuits" 61.8 62.75847559050849 86 1.94 4.25 3.4 2.4 3.3 NA 0 0.099 47 0.12 0.67 18 0.18 42 260 0.33 NA
+"Brocoli, purée" légumes "légumes cuits" NA 31.215135118625753 91.7 2.5 2.75 0.38 1.65 2.39 NA 0 NA 87 NA 0.9 NA NA NA NA NA 90
+"Tomate, coulis, appertisé (purée de tomates mi-réduite à 11%)" légumes "légumes cuits" NA 49.7932320695756 88.2 2.05 8.53 0.2 5.5 2.6 NA 0 NA NA NA NA NA NA NA NA NA NA
+"Tomate, double concentré, appertisé" légumes "légumes cuits" 92.8 91.89406056550662 74.3 3.73 17 0.29 16.5 3.62 0 0 NA NA NA NA NA NA NA NA NA NA
+"Macédoine de légumes, surgelée, pré-cuite (à recuire)" légumes "légumes cuits" 54.5 50.86939304147742 86.4 3.48 6.8 0.28 3.35 5.45 0.048 0 NA NA NA NA NA NA NA NA NA NA
+"Poivron rouge, appertisé, égoutté" légumes "légumes cuits" NA 33.546597165023414 90.3 0.91 4.42 0.77 3.64 1.7 NA 0 NA 25 0.098 0.63 12.5 0.12 19 156 0.15 109
+"Asperge blanche, bouillie/cuite à l'eau" légumes "légumes cuits" 18.6 20.872569399482387 94.9 1.44 1.63 0.3 1.2 1.3 NA 0 0.48 15 0.09 0.26 7.1 0.07 29 120 0.3 5.16
+"Céleri-rave, purée" légumes "légumes cuits" NA 24.066267373996094 91.4 1.37 2.83 0.18 2.11 4.01 NA 0 NA 50 NA 0.5 NA NA NA NA NA 8.3
+"Tomate, pulpe et peau, rôtie/cuite au four" légumes "légumes cuits" 31.1 30.667428759430674 92 0.88 4.13 0.6 3.7 2.2 NA 0 0.57 10 0.05 0.25 13 0.23 30 300 0.15 14.5
+"Chou romanesco ou brocoli à pomme, cuit" légumes "légumes cuits" 35.8 34.838932482047994 91.5 3 2.03 0.8 1.6 4.3 NA 0 0.088 32 0.05 0.53 13 0.19 55 260 0.32 15.1
+"Potimarron, pulpe, cuit à l'étouffée" légumes "légumes cuits" 44.8 43.21043425336533 87.3 1.31 7.05 0.5 4.5 3.3 NA 0 0.2 18 0.08 0.24 10 0.05 33 430 0.27 10.9
+"Carotte, purée cuisinée à la crème, préemballée" légumes "légumes cuits" 44.4 44.569227732759025 89.6 1.44 4.57 1.6 4.39 3 NA 0 0.0048 30 0.04 0.19 6.4 0.08 21 190 0.18 NA
+"Asperge verte, bouillie/cuite à l'eau" légumes "légumes cuits" 26.6 27.42867771611534 92.7 2.69 1.73 0.3 1.3 2.2 NA 0 0.73 21 0.11 0.64 10 0.13 49 220 0.49 4.73
+"Bette ou blette, côte et feuille, bouillie/cuite à l'eau" légumes "légumes cuits" 16.9 17.33141551429225 95.2 0.88 1.43 0.3 1 2.5 NA 0 0.12 60 0.04 0.52 10 0.34 18 160 0.11 NA
+"Brocoli, bouilli/cuit à l'eau, croquant" légumes "légumes cuits" 23.5 25.488033139464193 92.9 2.5 1.23 0.4 0.8 2.6 NA 0 0.071 42 0.11 0.41 12 0.18 44 110 0.23 22.7
+"Brocoli, bouilli/cuit à l'eau, fondant" légumes "légumes cuits" 23.1 24.12292339155044 93.8 2.19 1.03 0.5 0.6 3 NA 0 0.053 43 0.15 0.33 11 0.17 39 90 0.18 18.1
+"Brocoli, cuit à la vapeur" légumes "légumes cuits" 37.6 41.41710230776679 89.4 4.13 2.53 0.7 1.5 2.2 NA 0 0.24 36 0.04 0.58 23 0.28 72 340 0.53 20.7
+"Carotte, cuite à la vapeur" légumes "légumes cuits" 41.6 39.060031269034916 87.7 0.63 7.33 0.3 6.9 3.7 NA 0 0.043 26 0.04 0.22 10 0.18 19 240 0.21 1.28
+"Chou-fleur, cuit à la vapeur" légumes "légumes cuits" 30.1 33.325650081507185 91.1 2.56 3.41 0.3 2.4 1.8 NA 0 0.12 26 0.03 0.38 12 0.16 46 300 0.28 21.4
+"Céleri rave, bouilli/cuit à l'eau" légumes "légumes cuits" 26.2 28.874915963256413 91 0.94 4.32 0.3 1.2 2.6 1.8 0 0.06 41 0.11 0.27 10 0.16 38 300 0.17 0.87
+"Haricot beurre, bouilli/cuit à l'eau" légumes "légumes cuits" 34.6 35.547780212751206 89.6 2.19 4.45 0.3 2.2 2.7 NA 0 0.098 56 0.13 0.99 26 0.35 43 210 0.34 7.57
+"Oignon nouveau ou oignon frais ou cébette, sauté/poêlé sans matière grasse" légumes "légumes cuits" 27.6 26.85447112223474 91.2 1.13 3.56 0.3 2.8 3.1 NA 0 0.13 55 0.03 0.85 11 0.36 26 260 0.21 7.38
+"Panais, cuit à l'étouffée" légumes "légumes cuits" 90.8 83.48586817209204 73.6 1.94 16.6 0.5 6.2 5.6 NA 0 0.45 44 0.14 0.37 25 0.16 74 510 0.35 7.92
+"Petits pois, bouillis/cuits à l'eau" légumes "légumes cuits" 80.3 80.3746986905973 77.4 6.38 9.93 0.6 1.6 4.8 NA 0 0.16 38 0.14 1.2 29 0.29 100 190 0.72 11.4
+"Poivron jaune, sauté/poêlé sans matière grasse" légumes "légumes cuits" 35.8 35.92969057378515 90.5 1 5.33 0.6 4.9 2.2 NA 0 0.36 7.3 0.06 0.23 11 0.09 23 220 0.14 126
+"Poivron vert, sauté/poêlé sans matière grasse" légumes "légumes cuits" 28.6 27.329739689253877 92.4 1.25 3.53 0.3 3.1 3 NA 0 0.41 6.7 0.05 0.21 9.5 0.08 20 200 0.12 64.6
+"Potimarron, pulpe, bouilli/cuit à l'eau" légumes "légumes cuits" 38.2 39.430113400680845 88.9 1.06 6.88 0.3 3.5 1.8 NA 0 0.19 18 0.08 0.19 8.5 0.06 27 330 0.24 8.65
+"Tomate, rôtie/cuite au four" légumes "légumes cuits" 25.3 27.039015077026196 92.6 1 3.53 0.4 3.1 1.9 NA 0 0.069 12 0.03 0.22 9.2 0.18 29 310 0.11 14.9
+"Échalote, sautée/poêlée sans matière grasse" légumes "légumes cuits" 66.9 66.10420361597814 81.5 2 12.3 0.4 3.8 2.9 NA 0 0.25 22 0.09 0.25 11 0.12 48 270 0.27 0.84
+"Légumes pour couscous, cuits" légumes "légumes cuits" NA 26.122560740104454 91.7 1.53 2.55 0.43 1.1 2.6 NA 0 NA 39 0.1 0.7 15 0.2 38 208 0.3 18
+"Légume cuit (aliment moyen)" légumes "légumes cuits" 43.5 40.44603283590052 88.3 2.11 5.81 0.3 2.48 2.71 0.35 0 0.14 30.3 0.097 0.46 17 0.16 51.8 261 0.31 8.84
+"Gombo, fruit, cuit" légumes "légumes cuits" NA 23.624505220700573 92.6 1.87 2.01 0.21 2.01 2.5 NA 0 NA 77 0.085 0.28 36 0.29 32 135 0.43 16.3
+"Carotte, déshydratée" légumes "légumes séchés ou déshydratés" NA 276.54824930685305 4 8.1 56 1.49 38.8 23.6 NA 0 0 212 0.37 3.93 118 1.12 346 2540 1.57 14.6
+"Oignon, séché" légumes "légumes séchés ou déshydratés" NA 344.97778477283947 3.93 8.95 75 0.46 37.4 9.2 NA 0 0 257 0.42 1.55 92 1.39 303 1620 1.89 75
+"Tomate, séchée" légumes "légumes séchés ou déshydratés" NA 271.35604624382336 14.6 14.2 43.3 2.99 37.6 12.3 NA 0 0 110 1.42 9.09 194 1.85 356 3430 1.99 39.2
+"Champignon, lentin comestible ou shiitaké, séché" légumes "légumes séchés ou déshydratés" 316 309.88231497971384 9.5 9.58 63.9 0.99 2.21 11.5 6.24 0 0 11 5.17 1.72 132 1.18 294 1530 7.66 3.5
+"Tomate, séchée, à l'huile" légumes "légumes séchés ou déshydratés" 187 188.10493777557903 60.4 4.27 13.4 11.7 6.5 5.63 0.011 0 0 47 0.47 2.68 81 0.47 139 1570 0.78 102
+"Giraumon (variété locale), pulpe, cuit à la vapeur, prélevé à la Martinique" légumes "légumes et leurs produits de la Martinique" NA 28.490136886631582 91.8 1.1 4.51 0.097 1.91 2 NA 0 NA NA NA NA NA NA NA 321 NA NA
+"Giraumon (variété phoenix), pulpe, cuit à la vapeur, prélevé à la Martinique" légumes "légumes et leurs produits de la Martinique" NA 32.021708689202555 90.6 1.03 5.62 0.05 1.56 2 NA 0 NA NA NA NA NA NA NA 442 NA NA
+"Patate douce, pulpe, cuite à la vapeur, prélevée à la Martinique" légumes "légumes et leurs produits de la Martinique" NA 110.60475823787792 63.3 1.48 25.2 0.067 0.19 9.2 NA 0 NA NA 0.26 NA NA 0.026 NA 425 NA 12.5
+"Cassis, cru" fruits "fruits crus" NA 56.93828359598757 80.5 1.33 9.68 0.86 9.68 5.8 NA 0 2.63 57.1 0.093 1.17 23 0.28 53.5 330 0.28 181
+"Coing, cru" fruits "fruits crus" NA 60.206304326483675 83.8 0.51 13.4 0.1 6.3 1.9 NA 0 NA 11 0.13 0.7 8 NA 17 197 0.04 15
+"Framboise, crue" fruits "fruits crus" 49.2 40.698314438009355 86.8 1.19 5.83 0.8 5.4 4.3 NA 0 1.9 16 0.04 0.4 20 0.44 29 170 0.24 18.7
+"Fruit de la passion ou maracudja, pulpe et pépins, cru" fruits "fruits crus" 101 85.80610711626326 73.6 2.13 10.9 3 8.5 6.8 NA 0 3 8.1 0.15 0.56 26 0.19 46 240 0.76 25.6
+"Grenade, pulpe et pépins, crue" fruits "fruits crus" 80.6 78.66642957418424 79.4 1.44 14.3 1.2 13.3 2.3 NA 0 0.88 9.5 0.11 0.17 12 0.1 27 230 0.22 9.02
+"Groseille, crue" fruits "fruits crus" 68.5 46.36805679745334 82.1 1.56 7.06 0.7 6.63 4.6 NA 0 6.3 38 0.09 0.35 12 0.13 38 230 0.15 29.8
+"Kiwi, pulpe et graines, cru" fruits "fruits crus" 60.5 57.404537384791446 83.5 0.88 11 0.6 8.9 2.4 NA 0 1.05 29 0.15 0.16 12 0.05 26 290 0.12 81.9
+"Myrtille, crue" fruits "fruits crus" 57.7 53.25327487949445 84.2 0.87 10.6 0.33 9.96 2.4 0.014 0 1.37 6 0.057 0.28 6 0.34 12 77 0.16 9.7
+"Mûre (de ronce), crue" fruits "fruits crus" 47.3 42.183947525654055 86.1 1.13 6.53 0.7 6.1 5.2 NA 0 0.15 31 0.07 0.4 20 1.1 25 200 0.18 10.1
+"Nectarine ou brugnon, pulpe et peau, crue" fruits "fruits crus" NA 47.879299272864486 87.6 1.16 8.9 0.31 7.89 1.7 0.08 0 NA 3.38 0.078 0.28 8.31 0.061 26.7 201 0.091 5.4
+"Poire, pulpe et peau, crue" fruits "fruits crus" NA 51.98049410097513 83.5 0.49 10.9 0.27 9.01 2.9 1.89 0 NA 6.46 0.071 0.072 8.23 0.03 15.4 132 0.097 4.62
+"Pomme, pulpe et peau, crue" fruits "fruits crus" NA 53.33221824881784 85.4 0.25 11.6 0.25 9.35 1.4 NA 0 0.46 5.34 0.041 0.099 6.47 0.036 14.4 119 0.031 6.25
+"Pêche, pulpe et peau, crue" fruits "fruits crus" NA 48.0623346683215 88.6 1.08 9 0.33 8.16 1.6 0.84 0 NA 7.32 0.075 0.15 11.2 0.064 21 215 0.12 6.6
+"Raisin noir, cru" fruits "fruits crus" NA 72.18840985713912 84 0.63 15.6 0.4 15 1.4 0.2 0 NA 8.98 0.078 0.2 6.78 0.051 21.8 152 0.038 10.8
+"Rhubarbe, tige, crue" fruits "fruits crus" NA 16.33387450777351 92 0.78 1.47 0.23 1.47 2.47 NA 0 1.9 129 0.039 0.28 13.5 0.16 18.6 239 0.17 9.7
+"Pomme, pulpe, crue" fruits "fruits crus" NA 48.79701929791366 86.7 0.27 10.7 0.13 10.1 1.3 0.59 0 NA 5 0.031 0.07 4 0.038 11 90 0.05 4
+"Carambole, pulpe, crue" fruits "fruits crus" NA 28.464907730487262 91.4 1.15 3.9 0.32 3.9 2.8 NA 0 NA 3 0.14 0.08 10 0.037 12 133 0.12 34.4
+"Anone ou chérimole, pulpe, crue" fruits "fruits crus" NA 79.04997627537084 79.4 1.72 15.4 0.64 12.9 2.65 NA 0 NA 9 0.069 0.29 17 0.093 26 287 0.16 12.1
+"Feijoa, pulpe, crue" fruits "fruits crus" NA 43.97182803697807 83.3 0.71 8.2 0.42 8.2 6.4 NA 0 NA 17 0.036 0.14 9 0.084 19 172 0.06 32.9
+"Figue de Barbarie, pulpe et graines, crue" fruits "fruits crus" NA 32.69539780533711 88.4 0.37 6 0.31 1.02 4.45 NA 0 NA 118 0.019 0.25 77 0.58 17.5 175 0.14 12.5
+"Mûre noire (du mûrier), crue" fruits "fruits crus" NA 46.90132603962391 87.7 1.44 8.1 0.39 8.1 1.7 NA 0 NA 39 0.06 1.85 18 1.1 38 194 0.12 36.4
+"Tamarin, fruit mûr, pulpe, cru" fruits "fruits crus" NA 246.71940825101106 31.4 2.65 57.4 0.6 38.8 5.1 NA 0 NA 74 0.086 2.8 92 NA 113 628 0.1 3.5
+"Goyave, pulpe, crue" fruits "fruits crus" NA 54.426915131487604 83.5 1.59 9.02 0.73 8.92 5.15 NA 0 0.88 14 0.23 0.26 16 0.15 40 308 0.21 228
+"Pomme Canada, pulpe, crue" fruits "fruits crus" NA 52.65825922988253 84.4 0.4 11.6 0.1 11 1.6 0.59 0 NA 3.59 0.035 0.14 3.76 0.03 8.61 154 0.09 4
+"Prune, crue" fruits "fruits crus" NA 49.19370028815802 87 0.66 9.92 0.29 9.92 1.5 NA 0 1.27 7.29 0.06 0.16 6 0.076 17.8 149 0.096 7.25
+"Raisin Chasselas, cru" fruits "fruits crus" 79.1 78.78251787689074 79.4 0.75 16.9 0.5 16.5 2 NA 0 0.11 16 0.08 0.14 7.5 0.07 21 150 0.07 4.14
+"Poire, pulpe, crue" fruits "fruits crus" NA 47.49466816550822 85.1 0.3 10.4 0.1 10.4 2.47 NA 0 NA 11 0.06 0.2 7 0 13 150 0.1 6
+"Griotte, crue" fruits "fruits crus" NA 53.71600413263622 86.1 1.1 10.5 0.3 8.49 1.65 NA 0 NA 16 0.1 0.32 9 0.11 15 173 0.1 10
+"Raisin, cru" fruits "fruits crus" NA 70.7592312448642 80.5 0.72 15.7 0.16 15.5 0.9 0.2 0 NA 10 0.13 0.36 7 0.071 20 191 0.07 3.2
+"Canneberge ou cranberry, crue" fruits "fruits crus" NA 39.10033756838103 86.8 0.75 7.6 0.13 4.04 5.13 NA 0 NA 11 0.061 0.44 6 0.36 13.5 98.8 0.1 13.7
+"Citron, zeste, cru" fruits "fruits crus" NA 35.248886045846135 81.6 1.38 5.4 0.3 4.17 10.6 NA 0 NA 134 0.092 0.9 15 NA 12 160 0.25 129
+"Myrtille, surgelée, crue" fruits "fruits crus" NA 46.64239298836981 84.3 0.68 8.9 0.43 8.9 2.81 NA 0 NA 10 0.035 0.39 4.25 0.18 10 55.5 0.068 8.08
+"Salade de fruits, crue" fruits "fruits crus" NA 52.84456997529994 78 0.5 11.4 0.15 11.2 1.23 NA 0 NA 14.5 0.071 0.29 16.4 0.34 16.7 203 0.094 20
+"Framboise, surgelée, crue" fruits "fruits crus" NA 42.88542697027586 85.9 1.16 6.43 0.8 6.03 6.05 NA 0 NA 29.9 0.11 0.78 17 1.2 38 228 0.34 24.5
+"Pomelo (dit Pamplemousse) jaune, pulpe, cru" fruits "fruits crus" NA 37.39288670535214 90.5 0.69 7.31 0.1 7.31 1.1 NA 0 NA 12 0.05 0.06 9 0.013 8 148 0.07 33.3
+"Pomelo (dit Pamplemousse) rose, pulpe, cru" fruits "fruits crus" NA 33.844664094394545 88.1 0.77 6.2 0.14 6.2 1.6 NA 0 NA 22 0.032 0.08 9 0.022 18 135 0.07 31.2
+"Kumquat, sans pépin, cru" fruits "fruits crus" NA 60.82749468152922 81.9 1.57 9.6 1.18 9.36 5.45 NA 0 NA 65.5 0.095 0.67 17.5 0.14 19 158 0.13 45
+"Melon miel ou melon honeydew, pulpe, cru" fruits "fruits crus" NA 25.795547483757268 91.9 0.58 4.3 0.17 4.3 0.75 NA 0 NA 6 0.033 0.34 9.08 0.034 15.8 237 0.086 16.8
+"Fruits rouges, crus (framboises, fraises, groseilles, cassis)" fruits "fruits crus" NA 43.662920680611606 84.5 1.11 7.88 0.31 7.4 5.3 NA 0 NA 40 0.088 1 16.9 0.42 32.6 225 0.22 87
+"Fruit cru (aliment moyen)" fruits "fruits crus" 59.5 55.646576099623935 84.5 0.7 11.6 0.26 9.89 1.97 0.69 0 0.68 14.5 0.059 0.18 12.1 0.12 20.1 197 0.11 20.9
+"Compote de pomme" fruits "compotes et assimilés" 102 102.67234828154524 72.9 0.23 24.4 0.21 20.7 1.53 1.9 0 0.46 4.44 0.043 0.11 5.09 0.027 6 104 0.025 14.5
+"Rhubarbe, tige, cuite, sucrée" fruits "compotes et assimilés" NA 120.63440791924157 67.8 0.39 29.2 0.05 28.7 2 NA 0 NA 145 0.027 0.21 12 0.073 8 96 0.08 3.3
+"Chayote ou christophine ou chouchou, crue" fruits "compotes et assimilés" NA 20.17711620926436 94.2 0.72 2.8 0.12 1.66 1.7 NA 0 NA 17 0.12 0.34 12 0.19 18 125 0.74 7.7
+"Compote, tout type de fruits, allégée en sucres, rayon frais" fruits "compotes et assimilés" NA 68.68883594235655 83.9 0.32 14.9 0.48 14.3 1.4 NA 0 NA 4.7 0.04 0.09 4.7 0.03 9.6 120 NA 10.1
+"Dessert de fruits, tout type de fruits (en taux de sucres : compotes allégées en sucres < desserts de fruits < compotes allégée)" fruits "compotes et assimilés" NA 83.95196497943677 79.4 0.32 19.5 0.2 16.6 1.61 NA 0 NA 4 0.04 0.15 4 0.03 9.3 130 NA 11.8
+"Pomme, pulpe, bouillie/cuite à l'eau" fruits "compotes et assimilés" NA 52.86173359109354 85.5 0.26 11.2 0.36 11 2.4 NA 0 NA 5 0.035 0.19 3 0.12 8 88 0.04 0.2
+"Compote ou assimilé, tout type de fruits, teneur en sucre (allégée en sucres ou non, sans sucres ajoutés...) inconnue (aliment moyen)" fruits "compotes et assimilés" 80.1 79.63260948738889 78.9 0.25 18.6 0.15 16.7 1.68 0.82 0 0.3 7.87 0.046 0.092 5.59 0.05 10 132 0.033 19.6
+"Abricot au sirop (sans précision sur léger ou classique), appertisé, égoutté (aliment moyen)" fruits "fruits appertisés" NA 72.46817899571828 81 0.5 16.2 0.25 15.3 1.4 0.42 0 NA 16 0.04 0.13 5.3 0.02 10 130 0.06 0.25
+"Macédoine ou cocktail ou salade de fruits, au sirop (sans précision sur léger ou classique), appertisé, égouttée (aliment moyen)" fruits "fruits appertisés" NA 71.23479462096624 81.6 0.25 16.2 0.25 13.2 2.02 0.21 0 NA 11.6 0.07 0.11 4.24 0.084 9.04 70.3 0.025 2.91
+"Abricot au sirop léger, appertisé, non égoutté" fruits "fruits appertisés" NA 63.48416816878398 83.5 0.81 14 0.043 14 0.83 NA 0 NA 14.3 0.036 0.1 4.74 0.026 9.25 136 0.06 2.28
+"Pêche au sirop léger, appertisée, non égouttée" fruits "fruits appertisés" NA 61.35945287402649 84.3 0.31 14.1 0.038 12.9 0.92 NA 0 NA 9.57 0.038 0.13 4.88 0.02 9.79 100 0.054 3.32
+"Poire au sirop léger, appertisée, non égouttée" fruits "fruits appertisés" NA 63.63984427579754 83.7 0.3 14.5 0.12 12.1 1.23 NA 0 NA 5 0.049 0.28 4 0.033 7 66 0.08 0.7
+"Abricot, dénoyauté, sec" fruits "fruits séchés" 239 253.52763164209605 24.7 2.88 59.1 0.5 34.3 8.3 22.6 0 1.98 71 0.45 1.4 41 0.27 79 1400 0.35 NA
+"Datte, pulpe et peau, sèche" fruits "fruits séchés" NA 267.68653791272277 22.9 1.81 64.7 0.25 64.7 7.3 NA 0 1.26 44.9 0.22 0.9 47.3 0.3 62 696 0.23 3
+"Figue, sèche" fruits "fruits séchés" NA 238.87721263043304 30.1 2.99 54.3 0.87 49.2 9.72 NA 0 0.51 167 0.27 2.12 52.5 0.4 75.1 845 0.51 1.2
+"Pruneau, sec" fruits "fruits séchés" 229 232.01815161951825 34.9 1.63 55.4 0.4 38.1 5.1 9.6 0 0.9 50 0.23 0.38 30 0.25 66 610 0.28 NA
+"Raisin, sec" fruits "fruits séchés" 321 312.76558363713804 16 3 73.2 0.9 70.3 4.2 NA 0 0.22 54 0.38 1.7 35 0.28 82 960 0.24 NA
+"Mélange apéritif de fruits exotiques, sec" fruits "fruits séchés" 389 384.8648570789859 11.7 2.19 69.5 10.5 59.4 3.4 1.7 0 1.35 43 0.26 1.1 39 0.45 67 530 0.32 0.69
+"Banane, pulpe, sèche" fruits "fruits séchés" NA 345.97233087961206 3 3.89 78.4 1.81 47.3 9.9 NA 0 NA 22 0.39 1.15 108 0.57 74 1490 0.61 7
+"Pomme, sèche" fruits "fruits séchés" NA 233.98160693079967 31.8 0.78 57.2 0.31 54.6 8.7 2.63 0 NA 22 0.12 1.4 10.5 0.15 38 450 0.2 3.9
+"Abricot, dénoyauté, sec, moelleux (réhydraté à 35-45%)" fruits "fruits séchés" 200 218.63794007531374 39.3 2.31 51.1 0.4 29.9 3.5 17.6 0 1.43 53 0.29 0.86 32 0.19 59 980 0.3 NA
+"Abricot pays, pulpe, au sirop, appertisé, non égoutté, prélevé à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 58.682404258839014 84.5 0.28 13.3 0.1 7.3 1.8 NA 0 NA NA NA NA NA NA NA NA NA 0
+"Abricot pays, pulpe, cru, prélevé à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 49.46812080555868 85.4 0.48 10.8 0.05 3.7 3.1 NA 0 NA NA 0.095 NA NA NA NA NA NA NA
+"Chips d'abricot pays, pulpe, prélevé à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 452.9812149392204 5.13 0.96 68.7 18.7 33.3 6.2 NA 0 NA NA NA NA NA NA NA NA NA 0.2
+"Jus de mandarine commune, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 46.56596563521679 90 0.61 8.63 0.57 8.63 NA NA 0 NA NA NA NA NA NA NA 102 NA 26.7
+"Jus de mandarine macaque, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 49.58881542417748 88.2 0.6 10.8 0 3.87 NA NA 0 NA NA NA NA NA NA NA 199 NA 6
+"Jus de prune de cythère verte ""géante"" (variété locale), fruit mûr, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 35.56732989484978 91.1 0.29 7.13 0.19 4.34 1 NA 0 NA NA NA NA NA NA NA NA NA 16.5
+"Jus de prune de cythère verte ""géante"" (variété locale), fruit vert, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 34.89847293731072 91.7 0.44 6.55 0.28 0.03 0.8 NA 0 NA NA NA NA NA NA NA NA NA 21.1
+"Jus de prune de cythère verte ""naine"" (variété hybride), fruit mûr, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 48.78217182454518 87.8 0.69 9.97 0.21 6.14 0.9 NA 0 NA NA NA NA NA NA NA NA NA 34.3
+"Jus de prune de cythère verte ""naine"" (variété hybride), fruit vert, pur jus filtré, prélevée à la Martinique" fruits "fruits et leurs produits de la Martinique" NA 35.02736307954486 91.6 0.67 6.34 0.26 0.19 0.8 NA 0 NA NA NA NA NA NA NA NA NA 45.5
+"Mangue José, pulpe, crue, prélevée à La Réunion (Mangifera indica L.)" fruits "fruits et leurs produits de la Réunion" 88.8 88.12299250583773 77.1 0.75 19.3 0.5 18.4 1.8 NA 0 0.17 14 0.08 0.12 14 0.07 13 150 0.08 2.9
